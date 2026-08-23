@@ -7,8 +7,10 @@ from typing import Any
 
 from lxml import etree
 
+from src.processing.source_discovery import discover_document_sources
 from src.support.config import ProjectPaths
 from src.support.io_utils import read_json
+from src.support.models import SourceReference
 from src.support.normalization import clean_identifier, clean_text
 from src.support.parsing import combine_date_time
 
@@ -62,33 +64,17 @@ def _load_json_details(paths: ProjectPaths) -> dict[str, dict[str, Any]]:
     return details
 
 
-def _add_sources(root: etree._Element, paths: ProjectPaths, cig: str) -> None:
+def _add_sources(root: etree._Element, sources_for_cig: list[SourceReference]) -> None:
     sources = _add(root, "fonti")
-    csv_files = sorted(paths.csv_dir.glob("*.csv"))
-    for source in csv_files:
+    for source in sources_for_cig:
         _add(
             sources,
             "fonte",
-            "Riga del CSV esportato dal cruscotto ANAC",
-            tipo="csv",
-            formato="text/csv",
-            percorso=str(source.relative_to(paths.root)).replace("\\", "/"),
+            source.description,
+            tipo=source.kind,
+            formato=source.mime_type,
+            percorso=source.path,
         )
-    candidates = (
-        ("html", "text/html", paths.html_dir / f"dati-cig-{cig}.html"),
-        ("json", "application/json", paths.json_dir / f"CIG_{cig}.json"),
-        ("pdf", "application/pdf", paths.pdf_dir / f"CIG_{cig}.pdf"),
-    )
-    for kind, mime, source in candidates:
-        if source.exists():
-            _add(
-                sources,
-                "fonte",
-                f"Fonte originale {kind.upper()} del CIG",
-                tipo=kind,
-                formato=mime,
-                percorso=str(source.relative_to(paths.root)).replace("\\", "/"),
-            )
 
 
 def _add_description(root: etree._Element, contract_type: str, title: str, location: str, cpv_description: str, category: str) -> None:
@@ -114,7 +100,12 @@ def _add_description(root: etree._Element, contract_type: str, title: str, locat
         place.tail = "."
 
 
-def build_xml_record(cig: str, row: dict[str, str], data: dict[str, Any], paths: ProjectPaths) -> etree._Element:
+def build_xml_record(
+    cig: str,
+    row: dict[str, str],
+    data: dict[str, Any],
+    sources_for_cig: list[SourceReference],
+) -> etree._Element:
     bando = data.get("bando", {})
     authority = data.get("stazioneAppaltante", {})
     publications = data.get("pubblicazioni", {})
@@ -130,7 +121,7 @@ def build_xml_record(cig: str, row: dict[str, str], data: dict[str, Any], paths:
     award_amount = _first(award_rows[0] if award_rows else {}, "IMPORTO_AGGIUDICAZIONE") or row.get("VALORE AGGIUDICAZIONE", "")
 
     root = etree.Element("contratto", cig=cig, fonte="ANAC")
-    _add_sources(root, paths, cig)
+    _add_sources(root, sources_for_cig)
 
     info = _add(root, "informazioniGara")
     _add(info, "numeroGara", _first(bando, "NUMERO_GARA"))
@@ -254,6 +245,7 @@ def prepare_dataset(paths: ProjectPaths) -> list[Path]:
     details = _load_json_details(paths)
     if not details:
         raise RuntimeError("La preparazione richiede almeno una fonte JSON per individuare il perimetro del dataset.")
+    sources_by_cig = discover_document_sources(paths, details)
     paths.xml_dir.mkdir(parents=True, exist_ok=True)
     for old in paths.xml_dir.glob("*.xml"):
         old.unlink()
@@ -263,7 +255,7 @@ def prepare_dataset(paths: ProjectPaths) -> list[Path]:
         row = rows.get(cig, {})
         if not row:
             LOGGER.warning("CIG %s non trovato nel CSV: XML generato con i soli dati JSON", cig)
-        root = build_xml_record(cig, row, data, paths)
+        root = build_xml_record(cig, row, data, sources_by_cig.get(cig, []))
         output = paths.xml_dir / f"CIG_{cig}.xml"
         etree.ElementTree(root).write(output, encoding="utf-8", xml_declaration=True, pretty_print=True)
         outputs.append(output)

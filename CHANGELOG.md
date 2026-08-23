@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.2.0 — Fonti collegate e navigazione d’esame
+
+- generalizzata l’associazione delle fonti ai CIG tramite nome del file o contenuto testuale estraibile;
+- collegata la lettera di invito/disciplinare al CIG `B6DD95EE23`, mantenendo anche il PDF ANAC canonico;
+- sostituita la pagina autonoma “Metodologia” con “Progetto e metodo”, comprensiva della documentazione;
+- rinominate le voci di navigazione ambigue e rimossa la voce generica “PDF”;
+- resa esplicita la descrizione di ogni documento collegato nelle pagine di dettaglio;
+- sintetizzata la relazione di progetto entro il limite di tre pagine;
+- aggiunti test sul mapping generalizzato, sulla navigazione e sui download documentali.
+
 ## 2.1.0 — Pubblicazione GitHub Pages
 
 - rimossi la configurazione e gli artefatti specifici del precedente servizio di hosting;

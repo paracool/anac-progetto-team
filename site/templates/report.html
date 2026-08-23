@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Report territoriale, cronologico ed economico{% endblock %}
+{% block title %}Analisi territoriale, cronologica ed economica{% endblock %}
 {% block content %}
-<section class="page-header"><div class="container"><p class="eyebrow">Analisi</p><h1>Report del campione</h1><p>{{ analysis.methodology_notes.sample }}</p></div></section>
+<section class="page-header"><div class="container"><p class="eyebrow">Risultati</p><h1>Analisi del campione</h1><p>Distribuzione territoriale, sequenze cronologiche e importi dei CIG elaborati. {{ analysis.methodology_notes.sample }}</p></div></section>
 <section class="container section">
   <div class="kpi-grid">
     <article class="kpi"><span>{{ analysis.territorial.authority_cities.top.label if analysis.territorial.authority_cities.top else 'n.d.' }}</span><h3>Città più frequente</h3><p>{{ analysis.territorial.authority_cities.top.count if analysis.territorial.authority_cities.top else 0 }} record.</p></article>

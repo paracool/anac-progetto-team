@@ -3,168 +3,70 @@
 \usepackage[T1]{fontenc}
 \usepackage[italian,provide=*]{babel}
 \usepackage{geometry}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xurl}
 \usepackage[expansion=false]{microtype}
-\geometry{top=1.8cm,bottom=1.8cm,left=1.8cm,right=1.8cm}
-\setlist[itemize]{noitemsep,topsep=3pt,leftmargin=*}
+\geometry{top=1.45cm,bottom=1.45cm,left=1.55cm,right=1.55cm}
+\setlist[itemize]{noitemsep,topsep=2pt,leftmargin=*}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
 \newcommand{\code}[1]{\texttt{#1}}
 
-\title{\textbf{Archivio XML dei CIG ANAC}\\[3pt]\large Pipeline documentale, analisi dei dati e sito statico}
+\title{\vspace{-1.2cm}\textbf{Archivio XML dei CIG ANAC}\\[2pt]\large Relazione sintetica sulla preparazione documentale}
 \author{Massimiliano Ricchiuti\\Elaborazione di testi e gestione documentale}
 \date{A.A. 2025/2026}
 
 \begin{document}
 \maketitle
-\tableofcontents
+\vspace{-1.1cm}
+
+\section*{1. Obiettivo e dataset}
+Il progetto realizza una pipeline Python che processa fonti relative a contratti pubblici, le trasforma in XML, valida i documenti mediante DTD, estrae informazioni e genera una collezione HTML navigabile. Il dataset comprende 15 XML, soglia prevista per il progetto individuale, derivati da fonti CSV, JSON, HTML e PDF conservate in \code{fonti\_originali/}. Il campione è didattico e non rappresenta l'intero universo ANAC.
+
+La preparazione parte dai CIG presenti nei JSON, integra le righe omologhe del CSV e collega le ulteriori fonti. L'associazione non usa eccezioni dedicate: il programma cerca un CIG noto nel nome del file e, se il nome è descrittivo, nel testo estraibile. In questo modo il documento \emph{pn vsf15-25-sua lettera inv.-disciplinare indifferenziata 2025-26 Frascati} viene associato a \code{B6DD95EE23} perché il codice compare nel testo, insieme al PDF ANAC canonico. Lo stesso criterio si applica a nuovi documenti e ad altri CIG.
+
+\section*{2. Modello XML e validazione}
+Ogni radice \code{contratto} reca il CIG e contiene fonti, informazioni di gara, stazione appaltante, pubblicazioni, partecipanti, importi, date, CPV e descrizione documentale. Per ciascuna fonte sono conservati tipologia, MIME type, percorso e descrizione; le pagine di dettaglio propongono i relativi download.
+
+La DTD \code{schema/contratto\_cig.dtd} stabilisce ordine, cardinalità e attributi. Il requisito del contenuto testuale è soddisfatto da un content model misto conforme alla sintassi XML:
+\begin{verbatim}
+<!ELEMENT descrizioneDocumentale
+  (#PCDATA | tipologia | oggetto | categoria | termine | luogo)*>
+\end{verbatim}
+L'elemento alterna testo ed elementi semantici ripetibili; il dataset non è quindi composto soltanto da blocchi strutturati. La build valida tutti gli XML con \code{lxml}; un documento mal formato o non valido interrompe l'esecuzione e viene registrato in \code{output\_data/validation.xml}.
+
+\section*{3. Estrazione, analisi e output}
+Gli XPath convertono gli XML validi in istanze del modello intermedio \code{ContractRecord}. Su tale modello sono calcolate distribuzioni territoriali, copertura dei campi, sequenze cronologiche, statistiche economiche e frequenze testuali. I PDF sono esaminati con \code{pypdf}, con ripiego su \code{pdfminer.six}; gli importi usano \code{Decimal} e le incongruenze temporali restano visibili senza correzioni arbitrarie.
+
+Jinja2 genera \code{index.html}, un archivio filtrabile, una pagina per ciascun XML valido, l'analisi del campione, la qualità dei dati e la pagina unificata \emph{Progetto e metodo}. Quest'ultima incorpora metodologia e documentazione, sostituendo le precedenti voci ambigue “Metodologia” e “PDF”. Ogni dettaglio contiene parte del contenuto elaborato, il download dell'XML e delle fonti collegate. Tutte le pagine di dettaglio recano microdata \code{schema.org/GovernmentService}; CSS, JavaScript e grafici SVG sono locali e responsivi.
+
 \newpage
-
-\section{Obiettivo e perimetro}
-Il progetto costruisce un archivio documentale relativo ai CIG ANAC presenti nel repository. Le fonti eterogenee sono trasformate in documenti XML, validate mediante DTD, estratte in un modello intermedio e analizzate sotto il profilo territoriale, cronologico ed economico. Il risultato di pubblicazione è un sito statico autonomo nella directory \code{dist/}.
-
-Il campione coincide esclusivamente con i documenti inclusi nel progetto. Non è quindi rappresentativo della totalità dei contratti pubblici o delle procedure registrate da ANAC.
-
-\section{Fonti e provenienza dei dati}
-Le fonti originali sono conservate in \code{fonti\_originali/}. Il CSV fornisce il quadro tabellare; i JSON contengono i dati strutturati di dettaglio; gli HTML e i PDF documentano le rispettive rappresentazioni originali. La fase di preparazione individua dinamicamente i CIG presenti nella directory JSON e integra, quando disponibile, la riga corrispondente del CSV. Non viene utilizzato un numero di documenti scritto rigidamente nel codice.
-
-\section{Copertura effettiva dei formati disponibili}
-La copertura è calcolata durante la build esaminando i file effettivamente collegati a ciascun record. Le dichiarazioni precedenti secondo cui solo tre CIG disponevano di fonti complete erano obsolete e sono state rimosse.
-
-\input{generated/copertura.tex}
-
-\section{Struttura delle directory}
-L'albero semplificato è il seguente:
-\begin{verbatim}
-.
-|-- documenti_xml/          XML generati e validati
-|-- fonti_originali/        CSV, JSON, HTML e PDF
-|-- schema/                 DTD
-|-- src/
-|   |-- support/            componenti riutilizzabili
-|   `-- processing/         elaborazioni applicative
-|-- scripts/                entry point essenziali
-|-- site/                   template e asset
-|-- output_data/            risultati intermedi
-|-- report/                 relazione e frammenti generati
-|-- tests/                  test automatici
-`-- dist/                   sito statico pubblicabile
-\end{verbatim}
-
-\section{Architettura del software}
-L'architettura separa configurazione, I/O, parsing, formattazione e validazione dalle elaborazioni del dominio. Gli entry point in \code{scripts/} invocano funzioni esplicite e non contengono lunghe procedure né importazioni dinamiche dei vecchi file numerati.
-
-\section{Separazione tra supporto ed elaborazione}
-Il package \code{src/support/} comprende percorsi, lettura e scrittura sicura, parsing XML, DTD, date, importi, formattazione italiana, normalizzazione territoriale, dataclass, controllo dei collegamenti e logging. Il package \code{src/processing/} comprende preparazione, validazione, estrazione, analisi, grafici, sito, analisi PDF e testuale, microdata e report.
-
-Le funzioni di supporto non decidono quali analisi eseguire. Tale scelta resta nei moduli di elaborazione.
-
-\section{Modello XML}
-Ogni file XML rappresenta un contratto e mantiene sezioni distinte per fonti, informazioni di gara, stazione appaltante, pubblicazioni, partecipanti, aggiudicazione, esecuzione, quadro economico, categorie, CPV e descrizione documentale. La localizzazione della gara, la città della stazione appaltante, la provincia e la regione rimangono campi distinti.
-
-La sezione \code{descrizioneDocumentale} conserva un modello a contenuto misto, con testo ed elementi semantici interni quali \code{tipologia}, \code{oggetto}, \code{categoria}, \code{termine} e \code{luogo}.
-
-\section{DTD e validazione}
-La DTD in \code{schema/contratto\_cig.dtd} definisce ordine, cardinalità e attributi degli elementi. La build analizza ogni XML con un parser configurato senza accesso di rete e produce \code{output\_data/validation.xml}. La presenza di un XML non valido interrompe la build con un messaggio comprensibile.
-
-\section{Modello intermedio dei record}
-Gli XPath sono concentrati nel modulo di estrazione, che produce istanze della dataclass \code{ContractRecord}. Il modello comprende CIG, oggetto, tipologia, stato, stazione appaltante, campi territoriali distinti, tre importi, sei campi data, CPV, partecipanti, fonti e validità XML. Le funzioni di presentazione non interrogano ripetutamente gli XML.
-
-\section{Pipeline completa}
-Il flusso può essere rappresentato come segue:
-\begin{verbatim}
-CSV + JSON + HTML + PDF
-           |
-           v
-   preparazione XML
-           |
-           v
-      validazione DTD
-           |
-           v
- estrazione ContractRecord
-           |
-           v
- analysis.json + analisi PDF/testo
-       |                 |
-       v                 v
- sito statico        frammenti LaTeX
-       |                 |
-       `------ dist/ ----'
-\end{verbatim}
-
-\section{Metodologia dell'analisi territoriale}
-Le località sono normalizzate eliminando spazi ridondanti e uniformando le maiuscole, senza accorpare luoghi differenti per supposizione. Le denominazioni bilingui, come \emph{Bolzano/Bozen}, conservano entrambe le forme. Non sono usati servizi esterni di geocodifica né coordinate inventate.
-
-Sono calcolati conteggi, percentuali, valori mancanti, distribuzione delle tipologie, importo complessivo e mediano per città e regione, oltre alle divergenze testuali tra localizzazione della gara e città della stazione appaltante.
-
-\section{Risultati territoriali}
-\input{generated/territorio.tex}
-
-Le divergenze territoriali sono descrittive: la localizzazione della gara può indicare un ambito territoriale diverso dal comune della stazione appaltante e non costituisce, di per sé, un errore.
-
-\section{Metodologia dell'analisi delle scadenze}
-Sono trattate separatamente data di creazione, pubblicazione, scadenza delle offerte, aggiudicazione, avvio e fine prevista. Gli intervalli negativi non vengono corretti silenziosamente e sono esclusi dalle statistiche delle durate valide.
-
-Le classificazioni comprendono sequenza coerente, scadenza anteriore alla pubblicazione, aggiudicazione anteriore alla pubblicazione, aggiudicazione anteriore alla scadenza, data mancante e data non interpretabile.
-
-\section{Risultati cronologici e anomalie}
-\input{generated/anomalie.tex}
-
-Alcune date possono riferirsi a registrazioni o pubblicazioni successive rispetto allo svolgimento effettivo della procedura. In assenza di ulteriori prove, le incongruenze non sono attribuite automaticamente a errori della fonte.
-
-\section{Metodologia dell'analisi degli importi}
-Il parser monetario gestisce punto e virgola come separatori decimali o delle migliaia, simboli valutari, spazi e valori nulli. I calcoli utilizzano \code{Decimal}. Per ogni campo sono prodotti disponibilità, somma, media, mediana, minimo, massimo, quartili e intervallo interquartile.
-
-La mediana è riportata separatamente dalla media, poiché una distribuzione asimmetrica non può essere sintetizzata adeguatamente con la sola media. Gli eventuali valori anomali sono individuati tramite la regola di 1,5 volte l'intervallo interquartile.
-
-\section{Risultati economici}
-\input{generated/statistiche.tex}
-
-Quando importo di gara e importo di aggiudicazione sono entrambi disponibili e positivi, la pipeline calcola differenze assolute e percentuali. Tali scostamenti non sono denominati automaticamente ``ribassi'', poiché l'interpretazione dipende dal significato amministrativo dei campi.
-
-\section{Generazione del sito statico}
-Il sito è prodotto con Jinja2 e comprende pagina iniziale, archivio, report, dettaglio di ogni CIG, metodologia e qualità dei dati. Gli asset sono separati in \code{site/assets/}; il CSS non è generato come stringa Python. Tutti i file necessari vengono copiati in \code{dist/}.
-
-\section{Grafica, responsività e accessibilità}
-La grafica adotta una gerarchia tipografica sobria, KPI, pannelli, tabelle scorrevoli su schermi ridotti, stati di focus, navigazione adattiva e foglio di stampa. Le pagine di dettaglio includono breadcrumb e microdata. I grafici sono SVG locali con titolo, descrizione e valori testuali; i dati sono inoltre presentati in tabelle alternative.
-
-I grafici presenti nel sito rappresentano città delle stazioni appaltanti, regioni, fasce di importo e distribuzione mensile delle scadenze.
-
-\section{Pubblicazione su GitHub Pages}
-Il workflow \code{.github/workflows/pages.yml}, eseguito a ogni push sul branch \code{main}, installa le dipendenze, genera il sito con \code{python scripts/build.py}, esegue i test e pubblica esclusivamente la directory \code{dist/}. La build GitHub Pages non richiede LaTeX. L'output include il file \code{.nojekyll}; i collegamenti relativi restano validi anche nel percorso di progetto \code{/anac-progetto-team/}.
-
-\section{Verifiche automatiche}
-La build controlla validità XML, generazione delle pagine, microdata e collegamenti interni. Il link checker esamina gli attributi \code{href}, \code{src} e \code{data-src} nella sola directory pubblicata e interrompe il processo se un riferimento locale non esiste o esce da \code{dist/}.
-
-I test \code{pytest} verificano parser monetari e temporali, normalizzazione, estrazione, DTD, anomalie, statistiche, pagine principali, collegamenti e file indispensabili al deploy.
-
-\section{Riproducibilità}
+\section*{4. Riproducibilità, verifiche e uso di strumenti AI}
 I comandi principali sono:
 \begin{verbatim}
-python -m venv .venv
-source .venv/bin/activate       # Linux/macOS
-python -m pip install -r requirements.txt
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements.txt -r requirements-dev.txt
 python scripts/build_all.py
-pytest
+python -m pytest
 \end{verbatim}
+La suite verifica parsing, DTD, estrazione, statistiche, mapping dei documenti descrittivi, pagine, microdata e collegamenti interni. GitHub Actions ripete build e test a ogni push su \code{main} e pubblica \code{dist/} su GitHub Pages.
 
-Su Windows l'attivazione è \code{.venv\textbackslash Scripts\textbackslash activate}. Per una build senza rigenerazione degli XML e senza compilazione LaTeX si usa \code{python scripts/build.py}.
+Gli strumenti AI sono stati impiegati per la revisione architetturale, l'implementazione e il controllo della documentazione. Le proposte sono state sottoposte a validazione DTD, test automatici, build completa e ispezione dell'output. I prompt e le finalità d'uso sono riportati in \code{report/prompts\_utilizzati.md}. Le fonti originali, gli script di preparazione, la DTD, gli XML e gli output HTML restano disponibili e ispezionabili.
 
-\section{Uso degli strumenti AI}
-Gli strumenti AI sono stati impiegati per analizzare la struttura, proporre e implementare la rifattorizzazione, rivedere la modellazione, ampliare le analisi e aggiornare la documentazione. Gli output sono stati verificati eseguendo la pipeline, i test, la validazione DTD, il controllo dei link e, quando disponibile, la compilazione LaTeX. I prompt sono documentati in \code{report/prompts\_utilizzati.md}.
+\section*{5. Riscontro dei requisiti}
+\begin{itemize}
+  \item 15 file XML distinti e validi, con directory di input configurabile;
+  \item DTD creata per il progetto e content model misto effettivamente usato;
+  \item fonti eterogenee CSV, JSON, HTML e PDF, con script di preparazione consegnato;
+  \item una pagina HTML per ogni XML, indice navigabile e pagine aggiuntive di analisi;
+  \item download dell'XML e dei documenti originali collegati al relativo CIG;
+  \item foglio CSS comune, layout responsivo e annotazioni microdata generate;
+  \item relazione entro tre pagine e prompt conservati nella documentazione.
+\end{itemize}
 
-\section{Limiti del dataset}
-Il campione è piccolo e selezionato in base ai documenti disponibili nel progetto. Non consente inferenze sull'intero universo ANAC. Alcuni campi sono mancanti; le localizzazioni possono avere granularità differenti; le date possono riflettere momenti amministrativi diversi; gli importi non sempre sono semanticamente confrontabili.
-
-\section{Possibili sviluppi futuri}
-Sviluppi plausibili comprendono l'ampliamento del campione, un vocabolario controllato per le tipologie, schemi XML più espressivi, test di accessibilità automatizzati, confronto tra versioni dei dati e ulteriori visualizzazioni. Tali estensioni dovrebbero preservare la separazione tra supporto, analisi e presentazione.
+\section*{6. Limiti}
+Il dataset è circoscritto e presenta campi mancanti o semanticamente non omogenei; perciò le analisi sono descrittive. Il riconoscimento automatico richiede che il CIG sia presente nel nome o nel testo estraibile: per PDF costituiti esclusivamente da immagini è necessario un livello OCR. Tali limiti sono dichiarati nel sito e non vengono occultati mediante dati inventati.
 
 \end{document}

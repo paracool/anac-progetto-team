@@ -10,6 +10,6 @@
     {% if record.participants %}<section class="panel"><h2>Partecipanti</h2><ul class="plain-list">{% for item in record.participants %}<li><strong>{{ item.name }}</strong>{% if item.role %} — {{ item.role }}{% endif %}{% if item.winner %} <span class="badge">Aggiudicatario</span>{% endif %}</li>{% endfor %}</ul></section>{% endif %}
     {% if record.cpv %}<section class="panel"><h2>CPV</h2><ul>{% for item in record.cpv %}<li>{{ item }}</li>{% endfor %}</ul></section>{% endif %}
   </div>
-  <aside class="panel sticky"><h2>Download</h2><ul class="download-list"><li><a href="../downloads/xml/{{ record.xml_filename }}">Documento XML</a></li>{% for source in record.source_downloads %}<li><a href="{{ source.href }}">Fonte {{ source.kind|upper }}</a></li>{% endfor %}</ul><p class="status good">XML valido rispetto alla DTD</p></aside>
+  <aside class="panel sticky"><h2>Documenti collegati</h2><ul class="download-list"><li><a href="../downloads/xml/{{ record.xml_filename }}">Documento XML elaborato</a></li>{% for source in record.source_downloads %}<li><a href="{{ source.href }}">{{ source.label }}</a></li>{% endfor %}</ul><p class="status good">XML valido rispetto alla DTD</p></aside>
 </article>
 {% endblock %}

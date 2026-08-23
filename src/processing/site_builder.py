@@ -54,6 +54,7 @@ def _render_record(record: dict) -> dict:
     enriched["source_downloads"] = [
         {
             **source,
+            "label": source.get("description") or f"Fonte {source['kind'].upper()}",
             "href": f"../downloads/{source['kind']}/{Path(source['path']).name}.zip" if source["kind"] == "html" else f"../downloads/{source['kind']}/{Path(source['path']).name}",
         }
         for source in record.get("sources", [])
@@ -88,6 +89,10 @@ def _copy_downloads(paths: ProjectPaths) -> None:
     report_pdf = paths.report_dir / "report_progetto.pdf"
     if report_pdf.exists():
         copy_file(report_pdf, paths.dist / "downloads" / "report" / report_pdf.name)
+    copy_file(paths.dtd_file, paths.dist / "downloads" / "documentazione" / paths.dtd_file.name)
+    prompts = paths.report_dir / "prompts_utilizzati.md"
+    if prompts.exists():
+        copy_file(prompts, paths.dist / "downloads" / "documentazione" / prompts.name)
 
 
 def _generate_charts(paths: ProjectPaths, analysis: dict) -> None:
@@ -147,7 +152,7 @@ def build_site(paths: ProjectPaths, analysis: dict, pdf_analysis: list[dict], te
         "index.html": ("index.html", {"analysis": analysis, "records": records[:5], "base": "", **common}),
         "archivio.html": ("archive.html", {"records": records, "analysis": analysis, "base": "", **common}),
         "report.html": ("report.html", {"analysis": analysis, "base": "", **common}),
-        "metodologia.html": ("methodology.html", {"analysis": analysis, "pdf_analysis": pdf_analysis, "text_analysis": text_analysis, "base": "", **common}),
+        "progetto.html": ("project.html", {"analysis": analysis, "pdf_analysis": pdf_analysis, "text_analysis": text_analysis, "base": "", **common}),
         "qualita-dati.html": ("quality.html", {"analysis": analysis, "base": "", **common}),
     }
     for output_name, (template_name, context) in pages.items():

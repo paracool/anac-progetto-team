@@ -65,7 +65,7 @@ Campo & Disponibili & Mancanti & Somma & Media & Mediana & Q1 & Q3 \\\\
 
 def _write_coverage(paths: ProjectPaths, analysis: dict) -> None:
     source_rows = [
-        f"{latex_escape(row['format'].upper())} & {row['available']} & {row['missing']} & {latex_escape(format_percent(row['percent']))} \\\\"
+        f"{latex_escape(row['format'].upper())} & {row['available']} & {row['linked_files']} & {row['missing']} & {latex_escape(format_percent(row['percent']))} \\\\"
         for row in analysis["metadata"]["source_coverage"]
     ]
     date_rows = [
@@ -75,9 +75,9 @@ def _write_coverage(paths: ProjectPaths, analysis: dict) -> None:
     content = """\\begin{table}[htbp]
 \\centering
 \\caption{Copertura delle fonti}
-\\begin{tabular}{lrrr}
+\\begin{tabular}{lrrrr}
 \\toprule
-Formato & Disponibili & Mancanti & Copertura \\\\
+Formato & CIG coperti & File collegati & Mancanti & Copertura \\\\
 \\midrule
 %s
 \\bottomrule

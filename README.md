@@ -56,7 +56,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/prepare.py
 ```
 
-La preparazione individua dinamicamente i CIG presenti nelle fonti JSON e integra le righe corrispondenti del CSV. Il numero dei documenti non è scritto rigidamente nel codice.
+La preparazione individua dinamicamente i CIG presenti nelle fonti JSON e integra le righe corrispondenti del CSV. Le altre fonti vengono associate cercando il CIG prima nel nome del file e, per i nomi descrittivi, nel contenuto testuale estraibile. Il criterio vale per l’intero dataset e non contiene eccezioni dedicate a singoli CIG.
 
 ## Build del sito
 
@@ -99,7 +99,7 @@ dist/
 ├── index.html
 ├── archivio.html
 ├── report.html
-├── metodologia.html
+├── progetto.html
 ├── qualita-dati.html
 ├── cig/
 ├── assets/
@@ -115,10 +115,11 @@ Tutti i CSS, JavaScript, SVG, dati e download necessari sono locali. Nessun coll
 Il workflow `.github/workflows/pages.yml` viene eseguito a ogni push su `main` e può essere avviato anche manualmente. La procedura:
 
 1. installa Python e le dipendenze;
-2. genera il sito con `python scripts/build.py`;
-3. esegue l'intera suite `pytest`;
-4. carica esclusivamente `dist/` come artefatto GitHub Pages;
-5. pubblica il sito nell'ambiente `github-pages`.
+2. rigenera gli XML con `python scripts/prepare.py`, includendo gli eventuali nuovi documenti collegati;
+3. genera il sito con `python scripts/build.py`;
+4. esegue l'intera suite `pytest`;
+5. carica esclusivamente `dist/` come artefatto GitHub Pages;
+6. pubblica il sito nell'ambiente `github-pages`.
 
 Nel repository, la sorgente di pubblicazione deve essere impostata una sola volta su **Settings → Pages → Source: GitHub Actions**. Il sito viene quindi aggiornato automaticamente all'indirizzo:
 
@@ -141,7 +142,7 @@ Il sito è disponibile su <http://localhost:8000/>.
 - **XML non valido:** consultare `output_data/validation.xml`; la build si interrompe prima della pubblicazione.
 - **Link interrotto:** il messaggio indica pagina e percorso inesistente dentro `dist/`.
 - **Report PDF assente:** installare una distribuzione LaTeX ed eseguire `python scripts/build_report.py`; il sito funziona comunque.
-- **Fonte non trovata:** verificare che il nome del file includa il CIG nella forma prevista, per esempio `CIG_B...json`.
+- **Fonte non trovata:** verificare che il CIG compaia nel nome oppure nel testo estraibile del documento. Per i PDF acquisiti come sole immagini è necessaria una versione con testo OCR.
 - **Ambiente Windows non attivato:** usare `.venv\Scripts\Activate.ps1` in PowerShell oppure `.venv\Scripts\activate.bat` nel Prompt dei comandi.
 
 ## Provenienza e limiti dei dati
@@ -150,4 +151,4 @@ Il campione coincide con i documenti conservati nel progetto e non rappresenta n
 
 ## Modifiche principali
 
-La versione corrente introduce separazione tra supporto ed elaborazione, modello `ContractRecord`, `analysis.json`, analisi territoriali/temporali/economiche, template Jinja2, grafici SVG, sito responsivo, pubblicazione automatica su GitHub Pages, controllo dei link, report LaTeX dinamico e test automatici. Il dettaglio è riportato in `CHANGELOG.md`.
+La versione corrente introduce associazione generalizzata delle fonti per CIG, navigazione orientata alla discussione d’esame, pagina unificata “Progetto e metodo”, relazione sintetica conforme al limite di tre pagine, modello `ContractRecord`, analisi territoriali/temporali/economiche, microdata, pubblicazione automatica su GitHub Pages e test automatici. Il dettaglio è riportato in `CHANGELOG.md`.

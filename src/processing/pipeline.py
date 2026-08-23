@@ -9,6 +9,7 @@ from src.processing.pdf_analysis import analyze_pdfs
 from src.processing.preparation import prepare_dataset
 from src.processing.report_builder import compile_report, generate_report_fragments
 from src.processing.site_builder import build_site
+from src.processing.source_discovery import merge_document_sources
 from src.processing.text_analysis import analyze_text
 from src.processing.validation import validate_documents
 from src.support.config import ProjectPaths
@@ -27,6 +28,7 @@ def build(paths: ProjectPaths, *, prepare: bool = False, compile_pdf: bool = Fal
         details = "; ".join(f"{item.path.name}: {item.error}" for item in invalid)
         raise RuntimeError(f"La build si interrompe: XML non validi: {details}")
     records = extract_records(validation)
+    merge_document_sources(paths, records)
     analysis = analyze_records(records)
     write_json(paths.output_data / "analysis.json", analysis)
     pdf_analysis = analyze_pdfs(paths)

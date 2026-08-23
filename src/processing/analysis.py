@@ -325,13 +325,19 @@ def analyze_records(records: list[ContractRecord]) -> dict:
     locations = _distribution(records, lambda record: record.tender_location)
     cities = _distribution(records, lambda record: record.authority_city)
     regions = _distribution(records, lambda record: record.region)
-    source_counts = Counter(source.kind for record in records for source in record.sources)
+    source_file_counts = Counter(source.kind for record in records for source in record.sources)
+    source_record_counts = Counter(
+        kind
+        for record in records
+        for kind in {source.kind for source in record.sources}
+    )
     source_coverage = [
         {
             "format": kind,
-            "available": source_counts.get(kind, 0),
-            "missing": total - source_counts.get(kind, 0),
-            "percent": round(source_counts.get(kind, 0) / total * 100, 2) if total else 0,
+            "available": source_record_counts.get(kind, 0),
+            "linked_files": source_file_counts.get(kind, 0),
+            "missing": total - source_record_counts.get(kind, 0),
+            "percent": round(source_record_counts.get(kind, 0) / total * 100, 2) if total else 0,
         }
         for kind in ("csv", "json", "html", "pdf")
     ]

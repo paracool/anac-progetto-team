@@ -16,7 +16,11 @@ def validate_documents(paths: ProjectPaths) -> list[ValidationResult]:
     dtd = load_dtd(paths.dtd_file)
     results = [validate_xml(path, dtd) for path in sorted(paths.xml_dir.glob("*.xml"))]
 
-    report = etree.Element("validazione", date=date.today().isoformat(), docs_dir=str(paths.xml_dir))
+    report = etree.Element(
+        "validazione",
+        date=date.today().isoformat(),
+        docs_dir=paths.xml_dir.relative_to(paths.root).as_posix(),
+    )
     for result in results:
         item = etree.SubElement(
             report,
