@@ -87,6 +87,10 @@ def discover_document_sources(paths: ProjectPaths, known_cigs) -> dict[str, list
         return {cig: [] for cig in cigs}
 
     for source in sorted(path for path in paths.sources.rglob("*") if path.is_file()):
+        if source.resolve() == paths.web_sources_file.resolve():
+            # Il manifesto descrive collegamenti esterni: non è una fonte locale
+            # da duplicare nell'elenco dei file scaricabili di ciascun CIG.
+            continue
         source_type = _SOURCE_TYPES.get(source.suffix.casefold())
         if source_type is None:
             continue

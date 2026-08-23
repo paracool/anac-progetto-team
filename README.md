@@ -1,6 +1,6 @@
 # Archivio XML dei CIG ANAC
 
-Progetto universitario di elaborazione documentale che trasforma fonti CSV e JSON in documenti XML, li valida mediante DTD, estrae un modello intermedio normalizzato e genera analisi territoriali, cronologiche ed economiche. La build produce un sito statico autonomo in `dist/`, pubblicato su GitHub Pages senza backend, database o servizi esterni.
+Progetto universitario di elaborazione documentale che trasforma fonti CSV, JSON, HTML e PDF in documenti XML, integra un catalogo qualificato di fonti web istituzionali, valida il corpus mediante DTD, estrae un modello intermedio normalizzato e genera analisi territoriali, cronologiche ed economiche. La build produce un sito statico autonomo in `dist/`, pubblicato su GitHub Pages senza backend o database.
 
 Sito: [https://paracool.github.io/anac-progetto-team/](https://paracool.github.io/anac-progetto-team/)
 
@@ -15,7 +15,7 @@ Sito: [https://paracool.github.io/anac-progetto-team/](https://paracool.github.i
 
 ```text
 documenti_xml/       XML del dataset
-fonti_originali/     CSV, JSON, HTML e PDF originali
+fonti_originali/     CSV, JSON, HTML e PDF locali; catalogo web JSON
 schema/              DTD
 src/support/         configurazione, I/O, parsing, formattazione e controlli
 src/processing/      preparazione, estrazione, analisi, sito e report
@@ -56,7 +56,9 @@ python -m pip install -r requirements-dev.txt
 python scripts/prepare.py
 ```
 
-La preparazione individua dinamicamente i CIG presenti nelle fonti JSON e integra le righe corrispondenti del CSV. Le altre fonti vengono associate cercando il CIG prima nel nome del file e, per i nomi descrittivi, nel contenuto testuale estraibile. Il criterio vale per l’intero dataset e non contiene eccezioni dedicate a singoli CIG.
+La preparazione individua dinamicamente i CIG presenti nelle fonti JSON e integra le righe corrispondenti del CSV. Le altre fonti locali vengono associate cercando il CIG prima nel nome del file e, per i nomi descrittivi, nel contenuto testuale estraibile. Il criterio vale per l’intero dataset e non contiene eccezioni dedicate a singoli CIG.
+
+Le risorse reperite sul web sono descritte in `fonti_originali/web/fonti_web.json`. Il caricatore pretende la corrispondenza esatta con l’insieme dei CIG, almeno una fonte per record, URL HTTP(S) validi e metadati completi. Ogni voce distingue il nesso probatorio (`cig-esatto`, lotto o accordo quadro, CUP e oggetto, procedura, fase antecedente, contesto o repertorio) affinché una fonte indiretta non venga presentata come atto della gara.
 
 ## Build del sito
 
@@ -90,7 +92,7 @@ La build GitHub Pages non richiede LaTeX. Se `report/report_progetto.pdf` è gi�
 pytest
 ```
 
-I test coprono parsing di importi e date, normalizzazione, estrazione XML, validazione DTD, anomalie cronologiche, statistiche, pagine principali, collegamenti e file indispensabili al deploy.
+I test coprono parsing di importi e date, normalizzazione, estrazione XML, validazione dei due content model misti, copertura integrale del catalogo web, anomalie cronologiche, statistiche, pagine principali, collegamenti e file indispensabili al deploy.
 
 ## Contenuto di `dist/`
 
@@ -108,7 +110,7 @@ dist/
 └── .nojekyll
 ```
 
-Tutti i CSS, JavaScript, SVG, dati e download necessari sono locali. Nessun collegamento relativo deve uscire da `dist/`.
+Tutti i CSS, JavaScript, SVG, dati e download necessari sono locali. `assets/css/stile.css` è il foglio comune applicato a tutte le pagine e importa i moduli di base e delle fonti. Nessun collegamento relativo deve uscire da `dist/`.
 
 ## Pubblicazione su GitHub Pages
 
@@ -147,8 +149,8 @@ Il sito è disponibile su <http://localhost:8000/>.
 
 ## Provenienza e limiti dei dati
 
-Il campione coincide con i documenti conservati nel progetto e non rappresenta necessariamente l'intero sistema degli appalti pubblici. Le incongruenze cronologiche vengono segnalate senza correggere i dati e senza attribuirle automaticamente a errori della fonte. Le differenze tra importo di gara e aggiudicazione sono descrittive e non vengono denominate automaticamente ribassi.
+Il campione coincide con i documenti conservati nel progetto e non rappresenta necessariamente l'intero sistema degli appalti pubblici. Le incongruenze cronologiche vengono segnalate senza correggere i dati e senza attribuirle automaticamente a errori della fonte. Le differenze tra importo di gara e aggiudicazione sono descrittive e non vengono denominate automaticamente ribassi. Le fonti web sono state verificate nella data dichiarata dal manifesto; disponibilità e contenuto delle pagine esterne possono mutare. Il tipo di nesso resta quindi sempre visibile nel sito e negli XML.
 
 ## Modifiche principali
 
-La versione corrente introduce associazione generalizzata delle fonti per CIG, navigazione orientata alla discussione d’esame, pagina unificata “Progetto e metodo”, relazione sintetica conforme al limite di tre pagine, modello `ContractRecord`, analisi territoriali/temporali/economiche, microdata, pubblicazione automatica su GitHub Pages e test automatici. Il dettaglio è riportato in `CHANGELOG.md`.
+La versione corrente introduce 26 fonti web qualificate per tutti i 15 CIG, un secondo content model misto dedicato agli approfondimenti, associazione generalizzata delle fonti locali, navigazione orientata alla discussione d’esame, pagina unificata “Progetto e metodo”, relazione sintetica conforme al limite di tre pagine, modello `ContractRecord`, analisi territoriali/temporali/economiche, microdata, pubblicazione automatica su GitHub Pages e test automatici. Il dettaglio è riportato in `CHANGELOG.md`.

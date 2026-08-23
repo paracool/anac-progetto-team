@@ -1,6 +1,52 @@
 {% extends "base.html" %}
 {% block title %}Qualità dei dati{% endblock %}
 {% block content %}
-<section class="page-header"><div class="container"><p class="eyebrow">Qualità</p><h1>Copertura, valori mancanti e anomalie</h1><p>I dati mancanti sono resi visibili e non sostituiti con valori inventati.</p></div></section>
-<section class="container section"><h2>Copertura delle fonti</h2><div class="table-wrap"><table><thead><tr><th>Formato</th><th>CIG coperti</th><th>File collegati</th><th>Mancanti</th><th>Copertura</th></tr></thead><tbody>{% for row in analysis.metadata.source_coverage %}<tr><td>{{ row.format|upper }}</td><td>{{ row.available }}</td><td>{{ row.linked_files }}</td><td>{{ row.missing }}</td><td>{{ row.percent|percent }}</td></tr>{% endfor %}</tbody></table></div><p class="note">“CIG coperti” conta ogni record una sola volta; “File collegati” conserva anche più documenti dello stesso formato associati al medesimo CIG.</p><h2>Copertura dei campi data</h2><div class="table-wrap"><table><thead><tr><th>Campo</th><th>Disponibili</th><th>Mancanti</th><th>Copertura</th></tr></thead><tbody>{% for row in analysis.dates.coverage %}<tr><td>{{ row.field }}</td><td>{{ row.available }}</td><td>{{ row.missing }}</td><td>{{ row.percent|percent }}</td></tr>{% endfor %}</tbody></table></div><h2>Valori economici mancanti</h2><div class="kpi-grid"><article class="kpi"><span>{{ analysis.amounts.statistics.tender_amount.missing }}</span><h3>Importo gara</h3></article><article class="kpi"><span>{{ analysis.amounts.statistics.lot_amount.missing }}</span><h3>Importo lotto</h3></article><article class="kpi"><span>{{ analysis.amounts.statistics.award_amount.missing }}</span><h3>Importo aggiudicazione</h3></article></div><p class="note warning">Le durate negative sono escluse dalle medie e mediane, ma restano elencate nel report e nelle pagine di dettaglio.</p></section>
+<section class="page-header">
+  <div class="container">
+    <p class="eyebrow">Controlli e trasparenza</p>
+    <h1>Qualità dei dati</h1>
+    <p>Copertura delle fonti, completezza dei campi e criteri adottati per non sovrainterpretare i dati.</p>
+  </div>
+</section>
+<section class="container section">
+  <h2>Copertura delle fonti locali</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Formato</th><th>CIG coperti</th><th>File collegati</th><th>Mancanti</th><th>Copertura</th></tr></thead>
+      <tbody>{% for row in analysis.metadata.source_coverage %}<tr><td>{{ row.format|upper }}</td><td>{{ row.available }}</td><td>{{ row.linked_files }}</td><td>{{ row.missing }}</td><td>{{ row.percent|percent }}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+  <p class="note">“CIG coperti” conta ogni record una sola volta; “File collegati” conserva anche più documenti dello stesso formato associati al medesimo CIG.</p>
+
+  <h2>Copertura delle fonti web qualificate</h2>
+  <div class="kpi-grid">
+    <article class="kpi"><span>{{ analysis.metadata.web_source_coverage.available }}</span><h3>CIG arricchiti</h3><p>su {{ analysis.metadata.record_count }} record</p></article>
+    <article class="kpi"><span>{{ analysis.metadata.web_source_coverage.linked_sources }}</span><h3>Risorse collegate</h3><p>fonti istituzionali o primarie</p></article>
+    <article class="kpi"><span>{{ analysis.metadata.web_source_coverage.percent|percent }}</span><h3>Copertura</h3><p>record con almeno una risorsa</p></article>
+    <article class="kpi"><span>{{ analysis.metadata.web_source_coverage.missing }}</span><h3>CIG privi di fonte</h3><p>controllo bloccante in preparazione</p></article>
+  </div>
+  <div class="table-wrap compact-table">
+    <table>
+      <thead><tr><th>Classe di relazione</th><th>Fonti</th></tr></thead>
+      <tbody>{% for row in analysis.metadata.web_source_relations %}<tr><td>{{ web_relation_label(row.relation) }}</td><td>{{ row.count }}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+  <p class="note">La classe di relazione impedisce di presentare un repertorio, una fonte contestuale o una procedura antecedente come se fosse un atto recante il CIG esatto.</p>
+
+  <h2>Copertura dei campi data</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Campo</th><th>Disponibili</th><th>Mancanti</th><th>Copertura</th></tr></thead>
+      <tbody>{% for row in analysis.dates.coverage %}<tr><td>{{ row.field }}</td><td>{{ row.available }}</td><td>{{ row.missing }}</td><td>{{ row.percent|percent }}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+
+  <h2>Valori economici mancanti</h2>
+  <div class="kpi-grid">
+    <article class="kpi"><span>{{ analysis.amounts.statistics.tender_amount.missing }}</span><h3>Importo gara</h3></article>
+    <article class="kpi"><span>{{ analysis.amounts.statistics.lot_amount.missing }}</span><h3>Importo lotto</h3></article>
+    <article class="kpi"><span>{{ analysis.amounts.statistics.award_amount.missing }}</span><h3>Importo aggiudicazione</h3></article>
+  </div>
+  <p class="note warning">Le durate negative sono escluse dalle medie e mediane, ma restano elencate nel report e nelle pagine di dettaglio.</p>
+</section>
 {% endblock %}

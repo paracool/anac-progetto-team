@@ -8,9 +8,10 @@ from typing import Any
 from lxml import etree
 
 from src.processing.source_discovery import discover_document_sources
+from src.processing.web_sources import load_web_sources
 from src.support.config import ProjectPaths
 from src.support.io_utils import read_json
-from src.support.models import SourceReference
+from src.support.models import SourceReference, WebSource
 from src.support.normalization import clean_identifier, clean_text
 from src.support.parsing import combine_date_time
 
@@ -77,6 +78,36 @@ def _add_sources(root: etree._Element, sources_for_cig: list[SourceReference]) -
         )
 
 
+def _add_web_sources(root: etree._Element, web_sources_for_cig: list[WebSource]) -> None:
+    container = _add(root, "approfondimentiWeb")
+    for source in web_sources_for_cig:
+        item = etree.SubElement(
+            container,
+            "fonteWeb",
+            tipo=source.document_type,
+            formato=source.mime_type,
+            url=source.url,
+            relazione=source.relation,
+            verificataIl=source.verified_on,
+        )
+        item.text = "La fonte "
+        title = etree.SubElement(item, "titoloFonte")
+        title.text = source.title
+        title.tail = ", pubblicata da "
+        publisher = etree.SubElement(item, "enteFonte")
+        publisher.text = source.publisher
+        publisher.tail = ", riguarda la fase "
+        phase = etree.SubElement(item, "faseFonte")
+        phase.text = source.phase
+        phase.tail = ". Il nesso verificato con la gara è il seguente: "
+        evidence = etree.SubElement(item, "nessoFonte")
+        evidence.text = source.evidence
+        evidence.tail = ". In sintesi, "
+        summary = etree.SubElement(item, "datoFonte")
+        summary.text = source.summary
+        summary.tail = "."
+
+
 def _add_description(root: etree._Element, contract_type: str, title: str, location: str, cpv_description: str, category: str) -> None:
     description = etree.SubElement(root, "descrizioneDocumentale")
     description.text = "Procedura relativa a "
@@ -105,6 +136,7 @@ def build_xml_record(
     row: dict[str, str],
     data: dict[str, Any],
     sources_for_cig: list[SourceReference],
+    web_sources_for_cig: list[WebSource],
 ) -> etree._Element:
     bando = data.get("bando", {})
     authority = data.get("stazioneAppaltante", {})
@@ -122,6 +154,7 @@ def build_xml_record(
 
     root = etree.Element("contratto", cig=cig, fonte="ANAC")
     _add_sources(root, sources_for_cig)
+    _add_web_sources(root, web_sources_for_cig)
 
     info = _add(root, "informazioniGara")
     _add(info, "numeroGara", _first(bando, "NUMERO_GARA"))
@@ -246,6 +279,7 @@ def prepare_dataset(paths: ProjectPaths) -> list[Path]:
     if not details:
         raise RuntimeError("La preparazione richiede almeno una fonte JSON per individuare il perimetro del dataset.")
     sources_by_cig = discover_document_sources(paths, details)
+    web_sources_by_cig = load_web_sources(paths, details)
     paths.xml_dir.mkdir(parents=True, exist_ok=True)
     for old in paths.xml_dir.glob("*.xml"):
         old.unlink()
@@ -255,7 +289,13 @@ def prepare_dataset(paths: ProjectPaths) -> list[Path]:
         row = rows.get(cig, {})
         if not row:
             LOGGER.warning("CIG %s non trovato nel CSV: XML generato con i soli dati JSON", cig)
-        root = build_xml_record(cig, row, data, sources_by_cig.get(cig, []))
+        root = build_xml_record(
+            cig,
+            row,
+            data,
+            sources_by_cig.get(cig, []),
+            web_sources_by_cig[cig],
+        )
         output = paths.xml_dir / f"CIG_{cig}.xml"
         etree.ElementTree(root).write(output, encoding="utf-8", xml_declaration=True, pretty_print=True)
         outputs.append(output)

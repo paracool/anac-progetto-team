@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B675CE0615.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B675CE0615.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="relazione istituzionale" formato="application/pdf" url="https://www.milomb.camcom.it/documents/d/guest/relazione-performance-anno-2025-pdf" relazione="oggetto-ente" verificataIl="2026-08-23">La fonte <titoloFonte>Relazione sulla performance 2025 — progetto Finanzia la tua impresa</titoloFonte>, pubblicata da <enteFonte>Camera di commercio Milano Monza Brianza Lodi</enteFonte>, riguarda la fase <faseFonte>rendicontazione</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>La relazione della stazione appaltante rendiconta il progetto 2025 realizzato con Innexta e le attività svolte.</nessoFonte>. In sintesi, <datoFonte>Il documento aggiunge risultati e indicatori dell’intervento, inclusi webinar e imprese coinvolte.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="pagina di progetto" formato="text/html" url="https://www.innexta.it/finanzia-tua-impresa/" relazione="oggetto-ente" verificataIl="2026-08-23">La fonte <titoloFonte>Finanzia la tua impresa</titoloFonte>, pubblicata da <enteFonte>Innexta S.c.r.l.</enteFonte>, riguarda la fase <faseFonte>erogazione del servizio</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Coincidono affidatario in-house, denominazione del servizio e collaborazione con la Camera di commercio.</nessoFonte>. In sintesi, <datoFonte>La fonte descrive destinatari, finalità e attività del servizio oggetto dell’affidamento.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>tender://milomb_camcom/id/1431</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B5FDE25326.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B5FDE25326.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="determina a contrarre" formato="text/html" url="https://prefettura.interno.gov.it/it/prefetture/pesaro-urbino/amministrazione-trasparente/bandi-gara-e-contratti/pubblicazione-determina-contrarre-08052025-0" relazione="accordo-quadro" verificataIl="2026-08-23">La fonte <titoloFonte>Determina a contrarre per adesione a Buoni Pasto 10 — lotto 14</titoloFonte>, pubblicata da <enteFonte>Prefettura di Pesaro e Urbino</enteFonte>, riguarda la fase <faseFonte>adesione all’accordo quadro</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>L’atto ufficiale documenta lo stesso accordo Buoni Pasto 10, lotto 14, CIG padre 93762305C4 e fornitore Pluxee.</nessoFonte>. In sintesi, <datoFonte>La determina chiarisce il funzionamento dell’accordo quadro nazionale cui aderisce anche il Comune di Spoleto.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="scheda CIG" formato="text/html" url="https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=B5FDE25326" relazione="cig-esatto" verificataIl="2026-08-23">La fonte <titoloFonte>Scheda BDNCP del CIG B5FDE25326</titoloFonte>, pubblicata da <enteFonte>ANAC — Banca Dati Nazionale dei Contratti Pubblici</enteFonte>, riguarda la fase <faseFonte>tracciabilità della procedura</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il parametro della scheda identifica esattamente il CIG del record.</nessoFonte>. In sintesi, <datoFonte>Il collegamento conserva il riferimento pubblico diretto alla procedura derivata del Comune di Spoleto.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>CONSIP_ORDINE_8430917</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

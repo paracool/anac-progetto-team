@@ -1,0 +1,75 @@
+.web-source-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.web-source-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fbfcfc;
+}
+
+.web-source-card h3 {
+  margin: .4rem 0;
+  line-height: 1.35;
+}
+
+.web-source-card > p:not(.source-kicker) {
+  color: var(--muted);
+}
+
+.source-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.badge.source-relation {
+  margin-right: .35rem;
+  background: #e5f0f3;
+  color: var(--accent-dark);
+}
+
+.source-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem 1rem;
+  margin: 1rem 0 0;
+}
+
+.source-details div {
+  border-top: 1px solid var(--line);
+  padding-top: .55rem;
+}
+
+.source-details dt {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+.source-details dd {
+  margin: .15rem 0 0;
+  font-size: .9rem;
+}
+
+.source-count {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.compact-table {
+  margin: 1rem 0;
+}
+
+.compact-table table {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .source-details {
+    grid-template-columns: 1fr;
+  }
+}

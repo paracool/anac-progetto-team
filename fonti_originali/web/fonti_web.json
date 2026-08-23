@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-08-23",
+  "methodology": "Fonti web istituzionali o primarie selezionate per integrare i documenti ANAC locali. Il campo relazione distingue un riscontro diretto da un collegamento per lotto, CUP, procedura, oggetto o contesto; una fonte contestuale non è presentata come atto della gara.",
+  "records": {
+    "B474D3250C": [
+      {
+        "title": "Manutenzione straordinaria per la strada verso l’impianto delle Strillaie",
+        "publisher": "Comune di Grosseto",
+        "document_type": "comunicato istituzionale",
+        "mime_type": "text/html",
+        "url": "https://www.comune.grosseto.it/notizia/manutenzione-straordinaria-per-la-strada-verso-limpianto-delle-strillaie/",
+        "relation": "oggetto-ente",
+        "phase": "programmazione e lavori",
+        "evidence": "Coincidono amministrazione, località Strillaie e manutenzione straordinaria della strada di accesso all’impianto.",
+        "summary": "La notizia descrive finalità, quadro economico e cofinanziamento ATO dell’intervento cui si riferisce la gara."
+      }
+    ],
+    "B55BB8E397": [
+      {
+        "title": "Procedura regionale per piastre e placche per defibrillatori — lotto 14",
+        "publisher": "START Toscana / ESTAR",
+        "document_type": "pagina di gara",
+        "mime_type": "text/html",
+        "url": "https://www.sanita.start.toscana.it/portalegare/index.php/bandi?RicQ=NO&VisQ=SI&bando=112315&getdettaglio=yes&jk=&scadenzaBando=2024-06-07T18%3A00%3A00&tipoDoc=BANDO_GARA_PORTALE&tipobando=Bando&xslt=XSLT_BANDO_GARA_PORTALE",
+        "relation": "cig-padre-lotto",
+        "phase": "gara dell’accordo quadro",
+        "evidence": "La pagina ufficiale identifica il lotto 14 e il CIG padre B14E074380, dal quale deriva l’affidamento del campione.",
+        "summary": "La procedura documenta il perimetro merceologico delle piastre monouso per defibrillatori e la struttura per lotti dell’accordo quadro."
+      },
+      {
+        "title": "Pubblicità legale della procedura ESTAR per dispositivi da defibrillazione",
+        "publisher": "ANAC — Pubblicità a valore legale",
+        "document_type": "avviso di gara",
+        "mime_type": "text/html",
+        "url": "https://pubblicitalegale.anticorruzione.it/bandi/20d7aec2-1631-47e7-8890-5ef626308dbb",
+        "relation": "cig-padre-lotto",
+        "phase": "pubblicazione della gara",
+        "evidence": "L’avviso legale riguarda la medesima procedura ESTAR articolata nei lotti delle piastre per defibrillatori.",
+        "summary": "La fonte affianca al dato applicativo la pubblicazione legale della gara originaria."
+      }
+    ],
+    "B5F0937C10": [
+      {
+        "title": "Sistema di condensazione ad aria connesso all’impianto TL800 di Turbigo",
+        "publisher": "Ministero dell’Ambiente e della Sicurezza Energetica",
+        "document_type": "scheda di procedimento ambientale",
+        "mime_type": "text/html",
+        "url": "https://va.mite.gov.it/it-IT/Oggetti/Info/11883",
+        "relation": "oggetto-ente",
+        "phase": "autorizzazione ambientale",
+        "evidence": "Coincidono Iren Energia, centrale di Turbigo, impianto TL800 e sistema di condensazione ad aria.",
+        "summary": "La scheda ministeriale inquadra il procedimento autorizzativo per il progetto cui afferiscono le prestazioni tecniche affidate."
+      },
+      {
+        "title": "Documentazione tecnica del nuovo condensatore ad aria TL800",
+        "publisher": "Ministero dell’Ambiente e della Sicurezza Energetica",
+        "document_type": "documento tecnico",
+        "mime_type": "application/pdf",
+        "url": "https://va.mite.gov.it/File/Documento/1311973",
+        "relation": "oggetto-ente",
+        "phase": "istruttoria tecnica",
+        "evidence": "Il documento tecnico riguarda la modifica della centrale di Turbigo mediante il nuovo condensatore ad aria collegato al TL800.",
+        "summary": "Il PDF aggiunge contenuto tecnico-progettuale alla scheda contrattuale ANAC."
+      }
+    ],
+    "B5F77EC7CD": [
+      {
+        "title": "Fornitura di farmaci biologici — lotto 9 Pasireotide",
+        "publisher": "Regione Lazio — Centrale Acquisti",
+        "document_type": "pagina di gara",
+        "mime_type": "text/html",
+        "url": "https://centraleacquisti.regione.lazio.it/dettaglio-bando?id_doc=2979216&tipo_doc=BANDO_GARA_PORTALE",
+        "relation": "cig-padre-lotto",
+        "phase": "gara dell’accordo quadro",
+        "evidence": "Il lotto 9, identificato dal CIG padre B1EB307B1E, riguarda il Pasireotide poi affidato a Recordati Rare Diseases Italy.",
+        "summary": "La fonte ricostruisce la gara aggregata e il lotto farmaceutico da cui discende l’ordinativo presente nel campione."
+      }
+    ],
+    "B5FDE25326": [
+      {
+        "title": "Determina a contrarre per adesione a Buoni Pasto 10 — lotto 14",
+        "publisher": "Prefettura di Pesaro e Urbino",
+        "document_type": "determina a contrarre",
+        "mime_type": "text/html",
+        "url": "https://prefettura.interno.gov.it/it/prefetture/pesaro-urbino/amministrazione-trasparente/bandi-gara-e-contratti/pubblicazione-determina-contrarre-08052025-0",
+        "relation": "accordo-quadro",
+        "phase": "adesione all’accordo quadro",
+        "evidence": "L’atto ufficiale documenta lo stesso accordo Buoni Pasto 10, lotto 14, CIG padre 93762305C4 e fornitore Pluxee.",
+        "summary": "La determina chiarisce il funzionamento dell’accordo quadro nazionale cui aderisce anche il Comune di Spoleto."
+      },
+      {
+        "title": "Scheda BDNCP del CIG B5FDE25326",
+        "publisher": "ANAC — Banca Dati Nazionale dei Contratti Pubblici",
+        "document_type": "scheda CIG",
+        "mime_type": "text/html",
+        "url": "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=B5FDE25326",
+        "relation": "cig-esatto",
+        "phase": "tracciabilità della procedura",
+        "evidence": "Il parametro della scheda identifica esattamente il CIG del record.",
+        "summary": "Il collegamento conserva il riferimento pubblico diretto alla procedura derivata del Comune di Spoleto."
+      }
+    ],
+    "B6646262E7": [
+      {
+        "title": "Portale acquisti ENAV — procedura 501-3023",
+        "publisher": "ENAV S.p.A.",
+        "document_type": "portale di e-procurement",
+        "mime_type": "text/html",
+        "url": "https://app.albofornitori.it/alboeproc/albo_enavprocurement",
+        "relation": "procedura-oggetto",
+        "phase": "affidamento",
+        "evidence": "Il portale indicato dalla stazione appaltante consente la ricerca della procedura ENAV 501-3023 richiamata nei dati originari.",
+        "summary": "La fonte rende verificabile il canale istituzionale di pubblicazione dell’affidamento per l’adeguamento security dei VCS."
+      },
+      {
+        "title": "Voice communication systems per la gestione del traffico aereo",
+        "publisher": "Frequentis",
+        "document_type": "documentazione tecnica del fornitore",
+        "mime_type": "text/html",
+        "url": "https://www.frequentis.com/en/air-traffic-management/products-and-technologies",
+        "relation": "contesto-tecnico",
+        "phase": "inquadramento tecnologico",
+        "evidence": "Frequentis è il produttore dei Voice Communication Systems citato nell’oggetto del CIG.",
+        "summary": "La pagina primaria del produttore integra la descrizione delle tecnologie VCS interessate dall’adeguamento di sicurezza."
+      }
+    ],
+    "B675CE0615": [
+      {
+        "title": "Relazione sulla performance 2025 — progetto Finanzia la tua impresa",
+        "publisher": "Camera di commercio Milano Monza Brianza Lodi",
+        "document_type": "relazione istituzionale",
+        "mime_type": "application/pdf",
+        "url": "https://www.milomb.camcom.it/documents/d/guest/relazione-performance-anno-2025-pdf",
+        "relation": "oggetto-ente",
+        "phase": "rendicontazione",
+        "evidence": "La relazione della stazione appaltante rendiconta il progetto 2025 realizzato con Innexta e le attività svolte.",
+        "summary": "Il documento aggiunge risultati e indicatori dell’intervento, inclusi webinar e imprese coinvolte."
+      },
+      {
+        "title": "Finanzia la tua impresa",
+        "publisher": "Innexta S.c.r.l.",
+        "document_type": "pagina di progetto",
+        "mime_type": "text/html",
+        "url": "https://www.innexta.it/finanzia-tua-impresa/",
+        "relation": "oggetto-ente",
+        "phase": "erogazione del servizio",
+        "evidence": "Coincidono affidatario in-house, denominazione del servizio e collaborazione con la Camera di commercio.",
+        "summary": "La fonte descrive destinatari, finalità e attività del servizio oggetto dell’affidamento."
+      }
+    ],
+    "B6A106A32A": [
+      {
+        "title": "Determine dirigenziali del Comune di San Fratello",
+        "publisher": "Comune di San Fratello",
+        "document_type": "repertorio di determine",
+        "mime_type": "text/html",
+        "url": "https://www.comune.sanfratello.me.it/amministrazione/documenti-e-dati/provvedimenti/determine-dirigenziali/",
+        "relation": "repository-istituzionale",
+        "phase": "pubblicazione degli atti",
+        "evidence": "È il repertorio ufficiale dell’amministrazione che ha affidato l’intervento sull’ex Palazzo comunale.",
+        "summary": "Il collegamento offre il contesto documentale istituzionale senza attribuire al CIG un atto non indicizzato in modo univoco."
+      },
+      {
+        "title": "Scheda BDNCP del CIG B6A106A32A",
+        "publisher": "ANAC — Banca Dati Nazionale dei Contratti Pubblici",
+        "document_type": "scheda CIG",
+        "mime_type": "text/html",
+        "url": "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=B6A106A32A",
+        "relation": "cig-esatto",
+        "phase": "tracciabilità della procedura",
+        "evidence": "Il parametro della scheda identifica esattamente il CIG del record.",
+        "summary": "La scheda costituisce l’ancoraggio puntuale per l’affidamento relativo a fotovoltaico e accumulo."
+      }
+    ],
+    "B6DD95EE23": [
+      {
+        "title": "Gara PN VSF 15/25/SUA: determina, disciplinare, verbale, graduatoria ed esito",
+        "publisher": "Città metropolitana di Roma Capitale",
+        "document_type": "fascicolo di gara ed esito",
+        "mime_type": "text/html",
+        "url": "https://portalegare.cittametropolitanaroma.it/portalegare/index.php/bandi?RicQ=YES&VisQ=SI&bando=556469&getdettaglio=yes&scadenzaBando=2025-05-29T09%3A00%3A00&tipoDoc=BANDO_GARA_PORTALE&tipobando=Bando&xslt=XSLT_BANDO_GARA_PORTALE",
+        "relation": "procedura-oggetto",
+        "phase": "gara e aggiudicazione",
+        "evidence": "Coincidono il numero PN VSF 15/25/SUA, il Comune di Frascati e il servizio di trattamento dei rifiuti EER 20.03.01.",
+        "summary": "Il fascicolo ufficiale espone la determina iniziale e gli atti successivi, compresi verbale, graduatoria e determina di aggiudicazione."
+      }
+    ],
+    "B74941928B": [
+      {
+        "title": "Fornitura di arredi sanitari e non sanitari per il Policlinico Tor Vergata",
+        "publisher": "Fondazione PTV Policlinico Tor Vergata",
+        "document_type": "pagina di procedura",
+        "mime_type": "text/html",
+        "url": "https://www.ptvonline.it/index.php/mnu-professionisti/2013-03-01-09-32-03/soprasoglia-concluse/5984-fornitura-arredi-sanitari-e-non-sanitari",
+        "relation": "fase-antecedente",
+        "phase": "indizione e annullamento della prima procedura",
+        "evidence": "Coincidono stazione appaltante e oggetto; la pagina documenta la procedura antecedente, poi annullata, non il CIG della riedizione.",
+        "summary": "La pagina conserva documenti di gara, determina di indizione DCS 830/2025 e successivo annullamento in autotutela."
+      },
+      {
+        "title": "DCS 935/2025 — annullamento in autotutela della procedura arredi",
+        "publisher": "Fondazione PTV Policlinico Tor Vergata",
+        "document_type": "determina",
+        "mime_type": "application/pdf",
+        "url": "https://www.ptvonline.it/index.php/component/phocadownload/category/7-gare?Itemid=101&download=8715%3Adcs-935-2025-annullamento-in-autotutela",
+        "relation": "fase-antecedente",
+        "phase": "annullamento e riedizione",
+        "evidence": "L’atto conclude la prima procedura per lo stesso oggetto e spiega il presupposto della successiva riedizione cui appartiene il CIG del campione.",
+        "summary": "La determina ricostruisce una fase amministrativa non visibile nella sola scheda ANAC del nuovo affidamento."
+      }
+    ],
+    "B7B0353822": [
+      {
+        "title": "Procedura G09464 — biobanca di ricerca dell’AOU San Luigi Gonzaga",
+        "publisher": "Università degli Studi di Torino",
+        "document_type": "pagina di gara",
+        "mime_type": "text/html",
+        "url": "https://unito.ubuy.cineca.it/PortaleAppalti/it/procedure/codice/G09464",
+        "relation": "procedura-oggetto",
+        "phase": "gara",
+        "evidence": "Il codice procedura G09464, l’ente e l’oggetto coincidono con i dati del CIG.",
+        "summary": "La pagina collega il record al fascicolo di gara dell’Ateneo per la realizzazione della biobanca."
+      },
+      {
+        "title": "Programma triennale delle opere pubbliche 2025–2027",
+        "publisher": "Università degli Studi di Torino",
+        "document_type": "programma triennale",
+        "mime_type": "application/pdf",
+        "url": "https://www.unito.it/sites/default/files/2025-06/programma_triennale_opere_pubbliche_2025_2027.pdf",
+        "relation": "cup-oggetto",
+        "phase": "programmazione",
+        "evidence": "Il programma riporta il CUP D83C22002330001 e l’intervento della biobanca presso l’AOU San Luigi Gonzaga.",
+        "summary": "Il documento aggiunge il quadro programmatorio e finanziario dell’opera."
+      }
+    ],
+    "B8297EE856": [
+      {
+        "title": "Determina per servizi di cybersecurity — CIG B8297EE856",
+        "publisher": "Comune di Colleferro",
+        "document_type": "determina a contrarre e affidamento",
+        "mime_type": "text/html",
+        "url": "https://colleferro.soluzionipa.it/openweb/albo/albo_dettagli_full.php?id=40634",
+        "relation": "cig-esatto",
+        "phase": "affidamento",
+        "evidence": "La pagina dell’albo pretorio riporta espressamente CIG, oggetto e affidatario Engage S.p.A.",
+        "summary": "La fonte completa la scheda ANAC con il provvedimento amministrativo e i relativi allegati."
+      },
+      {
+        "title": "Atto digitale relativo ai servizi di cybersecurity",
+        "publisher": "Comune di Colleferro",
+        "document_type": "atto amministrativo",
+        "mime_type": "application/pdf",
+        "url": "https://colleferro.soluzionipa.it/openweb/portal/doc.php?id=pfile%7Cid%7C18281%7C2025-10-02T13%3A55%3A37%7Cfile",
+        "relation": "cig-esatto",
+        "phase": "affidamento",
+        "evidence": "È il documento allegato alla pubblicazione dell’albo che identifica il CIG B8297EE856.",
+        "summary": "Il PDF rende disponibile il testo dell’atto oltre alla scheda descrittiva dell’albo."
+      }
+    ],
+    "B82A8FBA72": [
+      {
+        "title": "Esito del servizio di trasporto scolastico 2025/2026",
+        "publisher": "Comune di Poggio Torriana",
+        "document_type": "provvedimento di affidamento",
+        "mime_type": "text/html",
+        "url": "https://poggiotorriana.nuvolapalitalsoft.it/?page_id=753&voceamt=95&dettaglio=8780",
+        "relation": "cig-esatto",
+        "phase": "aggiudicazione",
+        "evidence": "Il collegamento del sito committente è registrato nei dati ANAC del CIG e conduce al dettaglio 8780 della procedura.",
+        "summary": "La pubblicazione comunale integra la scheda nazionale con l’esito esposto dall’ente affidante."
+      },
+      {
+        "title": "Servizio comunale di trasporto scolastico",
+        "publisher": "Comune di Poggio Torriana",
+        "document_type": "scheda di servizio",
+        "mime_type": "text/html",
+        "url": "https://comune.poggiotorriana.rn.it/servizio/iscrizione-trasporto-scolastico/",
+        "relation": "contesto-istituzionale",
+        "phase": "erogazione del servizio",
+        "evidence": "La scheda ufficiale descrive il servizio sul territorio comunale cui si riferisce l’affidamento.",
+        "summary": "La fonte aggiunge destinatari, modalità di accesso e contesto operativo del trasporto scolastico."
+      }
+    ],
+    "B82CB38B8D": [
+      {
+        "title": "Scheda BDNCP del CIG B82CB38B8D",
+        "publisher": "ANAC — Banca Dati Nazionale dei Contratti Pubblici",
+        "document_type": "scheda CIG",
+        "mime_type": "text/html",
+        "url": "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=B82CB38B8D",
+        "relation": "cig-esatto",
+        "phase": "tracciabilità della procedura",
+        "evidence": "Il parametro della scheda identifica esattamente il CIG del collocamento disposto dall’autorità giudiziaria.",
+        "summary": "Il collegamento conserva l’ancoraggio puntuale alla procedura evitando di replicare documenti contenenti dati potenzialmente sensibili sui minori."
+      },
+      {
+        "title": "Strutture residenziali per minori dell’Amministrazione della giustizia",
+        "publisher": "Ministero della Giustizia",
+        "document_type": "pagina istituzionale",
+        "mime_type": "text/html",
+        "url": "https://www.giustizia.it/giustizia/it/mg_1_25_3.page",
+        "relation": "contesto-istituzionale",
+        "phase": "esecuzione del collocamento",
+        "evidence": "La pagina ministeriale descrive la funzione delle strutture residenziali nell’area penale minorile cui appartiene il servizio acquistato.",
+        "summary": "La fonte arricchisce il significato amministrativo del servizio senza esporre informazioni personali sui beneficiari."
+      }
+    ],
+    "B85DEBAAC9": [
+      {
+        "title": "Programma investimenti SABES — impianto di evacuazione Bressanone e Vipiteno",
+        "publisher": "Provincia autonoma di Bolzano / Azienda Sanitaria dell’Alto Adige",
+        "document_type": "programma degli investimenti",
+        "mime_type": "application/pdf",
+        "url": "https://home.sabes.it/download/BLR-DGP_918-22.10.24_Prog.Invest.SABES.pdf",
+        "relation": "cup-oggetto",
+        "phase": "programmazione e finanziamento",
+        "evidence": "Il documento riporta il CUP I82C22001070003 e l’adattamento e ampliamento dell’impianto di evacuazione negli ospedali di Bressanone e Vipiteno.",
+        "summary": "Il programma aggiunge importo, collocazione e quadro di finanziamento dell’intervento sanitario."
+      }
+    ]
+  }
+}

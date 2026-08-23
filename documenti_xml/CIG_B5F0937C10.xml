@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B5F0937C10.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B5F0937C10.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="scheda di procedimento ambientale" formato="text/html" url="https://va.mite.gov.it/it-IT/Oggetti/Info/11883" relazione="oggetto-ente" verificataIl="2026-08-23">La fonte <titoloFonte>Sistema di condensazione ad aria connesso all’impianto TL800 di Turbigo</titoloFonte>, pubblicata da <enteFonte>Ministero dell’Ambiente e della Sicurezza Energetica</enteFonte>, riguarda la fase <faseFonte>autorizzazione ambientale</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Coincidono Iren Energia, centrale di Turbigo, impianto TL800 e sistema di condensazione ad aria.</nessoFonte>. In sintesi, <datoFonte>La scheda ministeriale inquadra il procedimento autorizzativo per il progetto cui afferiscono le prestazioni tecniche affidate.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="documento tecnico" formato="application/pdf" url="https://va.mite.gov.it/File/Documento/1311973" relazione="oggetto-ente" verificataIl="2026-08-23">La fonte <titoloFonte>Documentazione tecnica del nuovo condensatore ad aria TL800</titoloFonte>, pubblicata da <enteFonte>Ministero dell’Ambiente e della Sicurezza Energetica</enteFonte>, riguarda la fase <faseFonte>istruttoria tecnica</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il documento tecnico riguarda la modifica della centrale di Turbigo mediante il nuovo condensatore ad aria collegato al TL800.</nessoFonte>. In sintesi, <datoFonte>Il PDF aggiunge contenuto tecnico-progettuale alla scheda contrattuale ANAC.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>682422_18146</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

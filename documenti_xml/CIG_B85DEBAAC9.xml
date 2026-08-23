@@ -6,6 +6,9 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B85DEBAAC9.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B85DEBAAC9.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="programma degli investimenti" formato="application/pdf" url="https://home.sabes.it/download/BLR-DGP_918-22.10.24_Prog.Invest.SABES.pdf" relazione="cup-oggetto" verificataIl="2026-08-23">La fonte <titoloFonte>Programma investimenti SABES — impianto di evacuazione Bressanone e Vipiteno</titoloFonte>, pubblicata da <enteFonte>Provincia autonoma di Bolzano / Azienda Sanitaria dell’Alto Adige</enteFonte>, riguarda la fase <faseFonte>programmazione e finanziamento</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il documento riporta il CUP I82C22001070003 e l’adattamento e ampliamento dell’impianto di evacuazione negli ospedali di Bressanone e Vipiteno.</nessoFonte>. In sintesi, <datoFonte>Il programma aggiunge importo, collocazione e quadro di finanziamento dell’intervento sanitario.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>bolzano_05/09/2025 10:15:27_069917/2025</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

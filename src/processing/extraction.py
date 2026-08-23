@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from src.support.models import ContractRecord, Participant, SourceReference
+from src.support.models import ContractRecord, Participant, SourceReference, WebSource
 from src.support.normalization import normalize_place, normalize_string
 from src.support.parsing import parse_datetime, parse_decimal
 from src.support.xml_utils import parse_xml, xpath_text
@@ -38,6 +38,21 @@ def extract_record(xml_path: Path, *, xml_valid: bool) -> ContractRecord:
             description=" ".join(node.itertext()).strip(),
         )
         for node in tree.xpath("/contratto/fonti/fonte")
+    ]
+    web_sources = [
+        WebSource(
+            title=(node.findtext("titoloFonte") or "").strip(),
+            publisher=(node.findtext("enteFonte") or "").strip(),
+            document_type=node.get("tipo", ""),
+            mime_type=node.get("formato", ""),
+            url=node.get("url", ""),
+            relation=node.get("relazione", ""),
+            phase=(node.findtext("faseFonte") or "").strip(),
+            evidence=(node.findtext("nessoFonte") or "").strip(),
+            summary=(node.findtext("datoFonte") or "").strip(),
+            verified_on=node.get("verificataIl", ""),
+        )
+        for node in tree.xpath("/contratto/approfondimentiWeb/fonteWeb")
     ]
     participants = []
     for node in tree.xpath("/contratto/partecipanti/partecipante"):
@@ -82,6 +97,7 @@ def extract_record(xml_path: Path, *, xml_valid: bool) -> ContractRecord:
         cpv=cpv,
         participants=participants,
         sources=sources,
+        web_sources=web_sources,
         xml_valid=xml_valid,
         xml_filename=xml_path.name,
         raw_dates=raw_dates,

@@ -12,6 +12,7 @@ class ProjectPaths:
     json_dir: Path
     html_dir: Path
     pdf_dir: Path
+    web_sources_file: Path
     xml_dir: Path
     dtd_file: Path
     output_data: Path
@@ -33,6 +34,7 @@ class ProjectPaths:
             json_dir=sources / "json",
             html_dir=sources / "html",
             pdf_dir=sources / "pdf",
+            web_sources_file=sources / "web" / "fonti_web.json",
             xml_dir=project_root / "documenti_xml",
             dtd_file=project_root / "schema" / "contratto_cig.dtd",
             output_data=project_root / "output_data",

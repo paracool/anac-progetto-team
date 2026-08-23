@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B6646262E7.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B6646262E7.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="portale di e-procurement" formato="text/html" url="https://app.albofornitori.it/alboeproc/albo_enavprocurement" relazione="procedura-oggetto" verificataIl="2026-08-23">La fonte <titoloFonte>Portale acquisti ENAV — procedura 501-3023</titoloFonte>, pubblicata da <enteFonte>ENAV S.p.A.</enteFonte>, riguarda la fase <faseFonte>affidamento</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il portale indicato dalla stazione appaltante consente la ricerca della procedura ENAV 501-3023 richiamata nei dati originari.</nessoFonte>. In sintesi, <datoFonte>La fonte rende verificabile il canale istituzionale di pubblicazione dell’affidamento per l’adeguamento security dei VCS.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="documentazione tecnica del fornitore" formato="text/html" url="https://www.frequentis.com/en/air-traffic-management/products-and-technologies" relazione="contesto-tecnico" verificataIl="2026-08-23">La fonte <titoloFonte>Voice communication systems per la gestione del traffico aereo</titoloFonte>, pubblicata da <enteFonte>Frequentis</enteFonte>, riguarda la fase <faseFonte>inquadramento tecnologico</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Frequentis è il produttore dei Voice Communication Systems citato nell’oggetto del CIG.</nessoFonte>. In sintesi, <datoFonte>La pagina primaria del produttore integra la descrizione delle tecnologie VCS interessate dall’adeguamento di sicurezza.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>501-3023</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

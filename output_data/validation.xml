@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<validazione date="2026-08-23" docs_dir="/workspace/scratch/b2698dac5f51/work/anac-progetto-team/documenti_xml">
+<validazione date="2026-08-23" docs_dir="documenti_xml">
   <file name="CIG_B474D3250C.xml" wellformed="true" valid="true"/>
   <file name="CIG_B55BB8E397.xml" wellformed="true" valid="true"/>
   <file name="CIG_B5F0937C10.xml" wellformed="true" valid="true"/>

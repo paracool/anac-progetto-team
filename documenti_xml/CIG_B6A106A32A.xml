@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B6A106A32A.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B6A106A32A.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="repertorio di determine" formato="text/html" url="https://www.comune.sanfratello.me.it/amministrazione/documenti-e-dati/provvedimenti/determine-dirigenziali/" relazione="repository-istituzionale" verificataIl="2026-08-23">La fonte <titoloFonte>Determine dirigenziali del Comune di San Fratello</titoloFonte>, pubblicata da <enteFonte>Comune di San Fratello</enteFonte>, riguarda la fase <faseFonte>pubblicazione degli atti</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>È il repertorio ufficiale dell’amministrazione che ha affidato l’intervento sull’ex Palazzo comunale.</nessoFonte>. In sintesi, <datoFonte>Il collegamento offre il contesto documentale istituzionale senza attribuire al CIG un atto non indicizzato in modo univoco.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="scheda CIG" formato="text/html" url="https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=B6A106A32A" relazione="cig-esatto" verificataIl="2026-08-23">La fonte <titoloFonte>Scheda BDNCP del CIG B6A106A32A</titoloFonte>, pubblicata da <enteFonte>ANAC — Banca Dati Nazionale dei Contratti Pubblici</enteFonte>, riguarda la fase <faseFonte>tracciabilità della procedura</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il parametro della scheda identifica esattamente il CIG del record.</nessoFonte>. In sintesi, <datoFonte>La scheda costituisce l’ancoraggio puntuale per l’affidamento relativo a fotovoltaico e accumulo.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>CONSIP_RDO_5312490</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

@@ -24,24 +24,29 @@
 \vspace{-1.1cm}
 
 \section*{1. Obiettivo e dataset}
-Il progetto realizza una pipeline Python che processa fonti relative a contratti pubblici, le trasforma in XML, valida i documenti mediante DTD, estrae informazioni e genera una collezione HTML navigabile. Il dataset comprende 15 XML, soglia prevista per il progetto individuale, derivati da fonti CSV, JSON, HTML e PDF conservate in \code{fonti\_originali/}. Il campione è didattico e non rappresenta l'intero universo ANAC.
+Il progetto realizza una pipeline Python che processa fonti relative a contratti pubblici, le trasforma in XML, valida i documenti mediante DTD, estrae informazioni e genera una collezione HTML navigabile. Il dataset comprende 15 XML, soglia prevista per il progetto individuale, derivati da fonti CSV, JSON, HTML e PDF conservate in \code{fonti\_originali/}. A queste si affiancano 26 risorse web istituzionali o primarie, qualificate e riferite a tutti i CIG. Il campione è didattico e non rappresenta l'intero universo ANAC.
 
-La preparazione parte dai CIG presenti nei JSON, integra le righe omologhe del CSV e collega le ulteriori fonti. L'associazione non usa eccezioni dedicate: il programma cerca un CIG noto nel nome del file e, se il nome è descrittivo, nel testo estraibile. In questo modo il documento \emph{pn vsf15-25-sua lettera inv.-disciplinare indifferenziata 2025-26 Frascati} viene associato a \code{B6DD95EE23} perché il codice compare nel testo, insieme al PDF ANAC canonico. Lo stesso criterio si applica a nuovi documenti e ad altri CIG.
+La preparazione parte dai CIG presenti nei JSON, integra le righe omologhe del CSV e collega le ulteriori fonti locali. L'associazione non usa eccezioni dedicate: cerca un CIG noto nel nome e, se il nome è descrittivo, nel testo estraibile. Così il disciplinare di Frascati viene associato a \code{B6DD95EE23} perché il codice compare nel testo. Le risorse online sono invece governate da un manifesto: per ciascuna conserva URL, ente, formato, fase, sintesi e nesso probatorio. Il caricamento fallisce se manca un CIG o un metadato.
 
 \section*{2. Modello XML e validazione}
-Ogni radice \code{contratto} reca il CIG e contiene fonti, informazioni di gara, stazione appaltante, pubblicazioni, partecipanti, importi, date, CPV e descrizione documentale. Per ciascuna fonte sono conservati tipologia, MIME type, percorso e descrizione; le pagine di dettaglio propongono i relativi download.
+Ogni radice \code{contratto} reca il CIG e contiene fonti locali, approfondimenti web, informazioni di gara, stazione appaltante, pubblicazioni, partecipanti, importi, date, CPV e descrizione documentale. I file locali conservano tipo, MIME type e percorso; le risorse online mantengono inoltre URL, relazione e data di verifica.
 
 La DTD \code{schema/contratto\_cig.dtd} stabilisce ordine, cardinalità e attributi. Il requisito del contenuto testuale è soddisfatto da un content model misto conforme alla sintassi XML:
 \begin{verbatim}
 <!ELEMENT descrizioneDocumentale
   (#PCDATA | tipologia | oggetto | categoria | termine | luogo)*>
 \end{verbatim}
-L'elemento alterna testo ed elementi semantici ripetibili; il dataset non è quindi composto soltanto da blocchi strutturati. La build valida tutti gli XML con \code{lxml}; un documento mal formato o non valido interrompe l'esecuzione e viene registrato in \code{output\_data/validation.xml}.
+Un secondo modello applica lo stesso principio alle fonti esterne:
+\begin{verbatim}
+<!ELEMENT fonteWeb
+  (#PCDATA | titoloFonte | enteFonte | faseFonte | nessoFonte | datoFonte)*>
+\end{verbatim}
+I due elementi alternano testo ed elementi semantici ripetibili; il corpus non è quindi composto soltanto da blocchi strutturati. La build valida tutti gli XML con \code{lxml}; un documento mal formato o non valido interrompe l'esecuzione ed è registrato in \code{output\_data/validation.xml}.
 
 \section*{3. Estrazione, analisi e output}
 Gli XPath convertono gli XML validi in istanze del modello intermedio \code{ContractRecord}. Su tale modello sono calcolate distribuzioni territoriali, copertura dei campi, sequenze cronologiche, statistiche economiche e frequenze testuali. I PDF sono esaminati con \code{pypdf}, con ripiego su \code{pdfminer.six}; gli importi usano \code{Decimal} e le incongruenze temporali restano visibili senza correzioni arbitrarie.
 
-Jinja2 genera \code{index.html}, un archivio filtrabile, una pagina per ciascun XML valido, l'analisi del campione, la qualità dei dati e la pagina unificata \emph{Progetto e metodo}. Quest'ultima incorpora metodologia e documentazione, sostituendo le precedenti voci ambigue “Metodologia” e “PDF”. Ogni dettaglio contiene parte del contenuto elaborato, il download dell'XML e delle fonti collegate. Tutte le pagine di dettaglio recano microdata \code{schema.org/GovernmentService}; CSS, JavaScript e grafici SVG sono locali e responsivi.
+Jinja2 genera \code{index.html}, un archivio filtrabile, una pagina per ciascun XML valido, l'analisi, la qualità dei dati e la pagina unificata \emph{Progetto e metodo}. Quest'ultima sostituisce le voci ambigue “Metodologia” e “PDF”. Ogni dettaglio separa i download locali dalle fonti web verificate e mostra per queste ultime ente, fase, sintesi e ragione del collegamento. Per \code{B6DD95EE23} il fascicolo ufficiale espone determina iniziale, disciplinare, verbale, graduatoria ed esito. Le pagine recano microdata \code{schema.org/GovernmentService}; CSS, JavaScript e grafici SVG sono locali e responsivi.
 
 \newpage
 \section*{4. Riproducibilità, verifiche e uso di strumenti AI}
@@ -51,15 +56,15 @@ python -m pip install -r requirements.txt -r requirements-dev.txt
 python scripts/build_all.py
 python -m pytest
 \end{verbatim}
-La suite verifica parsing, DTD, estrazione, statistiche, mapping dei documenti descrittivi, pagine, microdata e collegamenti interni. GitHub Actions ripete build e test a ogni push su \code{main} e pubblica \code{dist/} su GitHub Pages.
+La suite verifica parsing, DTD, uso dei due modelli misti, copertura 15/15 del manifesto, estrazione, statistiche, mapping dei documenti descrittivi, pagine, microdata e collegamenti interni. GitHub Actions ripete build e test a ogni push su \code{main} e pubblica \code{dist/} su GitHub Pages.
 
 Gli strumenti AI sono stati impiegati per la revisione architetturale, l'implementazione e il controllo della documentazione. Le proposte sono state sottoposte a validazione DTD, test automatici, build completa e ispezione dell'output. I prompt e le finalità d'uso sono riportati in \code{report/prompts\_utilizzati.md}. Le fonti originali, gli script di preparazione, la DTD, gli XML e gli output HTML restano disponibili e ispezionabili.
 
 \section*{5. Riscontro dei requisiti}
 \begin{itemize}
   \item 15 file XML distinti e validi, con directory di input configurabile;
-  \item DTD creata per il progetto e content model misto effettivamente usato;
-  \item fonti eterogenee CSV, JSON, HTML e PDF, con script di preparazione consegnato;
+  \item DTD creata per il progetto e due content model misti effettivamente usati;
+  \item fonti eterogenee CSV, JSON, HTML, PDF e 26 risorse web qualificate, con copertura 15/15;
   \item una pagina HTML per ogni XML, indice navigabile e pagine aggiuntive di analisi;
   \item download dell'XML e dei documenti originali collegati al relativo CIG;
   \item foglio CSS comune, layout responsivo e annotazioni microdata generate;
@@ -67,6 +72,6 @@ Gli strumenti AI sono stati impiegati per la revisione architetturale, l'impleme
 \end{itemize}
 
 \section*{6. Limiti}
-Il dataset è circoscritto e presenta campi mancanti o semanticamente non omogenei; perciò le analisi sono descrittive. Il riconoscimento automatico richiede che il CIG sia presente nel nome o nel testo estraibile: per PDF costituiti esclusivamente da immagini è necessario un livello OCR. Tali limiti sono dichiarati nel sito e non vengono occultati mediante dati inventati.
+Il dataset è circoscritto e presenta campi mancanti o semanticamente non omogenei; perciò le analisi sono descrittive. Il riconoscimento locale richiede il CIG nel nome o nel testo estraibile: i PDF immagine necessitano di OCR. Le pagine web possono inoltre mutare dopo la data di verifica. Per questo ogni nesso è classificato: lotto, accordo quadro, CUP, fase antecedente o contesto non sono presentati come atti con CIG esatto. I limiti restano dichiarati e non sono colmati con dati inventati.
 
 \end{document}

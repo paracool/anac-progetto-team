@@ -1,9 +1,18 @@
-<!ELEMENT contratto (fonti, informazioniGara, stazioneAppaltante, incaricati?, pubblicazioni?, partecipanti?, aggiudicazione?, contrattoEsecuzione?, quadroEconomico?, categorieOpera?, cpv?, descrizioneDocumentale)>
+<!ELEMENT contratto (fonti, approfondimentiWeb, informazioniGara, stazioneAppaltante, incaricati?, pubblicazioni?, partecipanti?, aggiudicazione?, contrattoEsecuzione?, quadroEconomico?, categorieOpera?, cpv?, descrizioneDocumentale)>
 <!ATTLIST contratto cig CDATA #REQUIRED fonte CDATA #REQUIRED>
 
 <!ELEMENT fonti (fonte+)>
 <!ELEMENT fonte (#PCDATA)>
 <!ATTLIST fonte tipo CDATA #REQUIRED formato CDATA #REQUIRED percorso CDATA #REQUIRED>
+
+<!ELEMENT approfondimentiWeb (fonteWeb+)>
+<!ELEMENT fonteWeb (#PCDATA | titoloFonte | enteFonte | faseFonte | nessoFonte | datoFonte)*>
+<!ATTLIST fonteWeb tipo CDATA #REQUIRED formato CDATA #REQUIRED url CDATA #REQUIRED relazione CDATA #REQUIRED verificataIl CDATA #REQUIRED>
+<!ELEMENT titoloFonte (#PCDATA)>
+<!ELEMENT enteFonte (#PCDATA)>
+<!ELEMENT faseFonte (#PCDATA)>
+<!ELEMENT nessoFonte (#PCDATA)>
+<!ELEMENT datoFonte (#PCDATA)>
 
 <!ELEMENT informazioniGara (numeroGara?, tipoCig?, stato?, oggettoGara, oggettoLotto?, importoGara?, importoLotto?, provincia?, settore?, cup?, oggettoPrincipaleContratto?, tipologiaContratto?, localizzazione?, scadenzaOfferte?, dataAggiudicazione?)>
 <!ELEMENT numeroGara (#PCDATA)>

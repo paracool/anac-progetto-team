@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B82A8FBA72.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B82A8FBA72.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="provvedimento di affidamento" formato="text/html" url="https://poggiotorriana.nuvolapalitalsoft.it/?page_id=753&amp;voceamt=95&amp;dettaglio=8780" relazione="cig-esatto" verificataIl="2026-08-23">La fonte <titoloFonte>Esito del servizio di trasporto scolastico 2025/2026</titoloFonte>, pubblicata da <enteFonte>Comune di Poggio Torriana</enteFonte>, riguarda la fase <faseFonte>aggiudicazione</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il collegamento del sito committente è registrato nei dati ANAC del CIG e conduce al dettaglio 8780 della procedura.</nessoFonte>. In sintesi, <datoFonte>La pubblicazione comunale integra la scheda nazionale con l’esito esposto dall’ente affidante.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="scheda di servizio" formato="text/html" url="https://comune.poggiotorriana.rn.it/servizio/iscrizione-trasporto-scolastico/" relazione="contesto-istituzionale" verificataIl="2026-08-23">La fonte <titoloFonte>Servizio comunale di trasporto scolastico</titoloFonte>, pubblicata da <enteFonte>Comune di Poggio Torriana</enteFonte>, riguarda la fase <faseFonte>erogazione del servizio</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>La scheda ufficiale descrive il servizio sul territorio comunale cui si riferisce l’affidamento.</nessoFonte>. In sintesi, <datoFonte>La fonte aggiunge destinatari, modalità di accesso e contesto operativo del trasporto scolastico.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>CONSIP_RDO_5596457</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

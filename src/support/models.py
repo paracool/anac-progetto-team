@@ -15,6 +15,20 @@ class SourceReference:
 
 
 @dataclass(frozen=True)
+class WebSource:
+    title: str
+    publisher: str
+    document_type: str
+    mime_type: str
+    url: str
+    relation: str
+    phase: str
+    evidence: str
+    summary: str
+    verified_on: str
+
+
+@dataclass(frozen=True)
 class Participant:
     name: str
     role: str = ""
@@ -46,6 +60,7 @@ class ContractRecord:
     cpv: list[str] = field(default_factory=list)
     participants: list[Participant] = field(default_factory=list)
     sources: list[SourceReference] = field(default_factory=list)
+    web_sources: list[WebSource] = field(default_factory=list)
     xml_valid: bool = False
     xml_filename: str = ""
     raw_dates: dict[str, str] = field(default_factory=dict)

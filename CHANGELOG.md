@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.3.0 — Fonti web qualificate e doppio modello misto
+
+- catalogate 26 risorse istituzionali o primarie, con copertura dei 15 CIG del dataset;
+- distinti i riscontri diretti dai collegamenti per lotto, accordo quadro, CUP, procedura, fase antecedente o contesto;
+- aggiunto un caricatore bloccante che verifica copertura, metadati, URL e duplicati del catalogo;
+- introdotto l’elemento misto `fonteWeb`, con titolo, ente, fase, nesso e dato utile intercalati al testo;
+- serializzate le fonti web negli XML ed esposte nelle pagine di dettaglio con link ufficiali e provenienza;
+- collegato `B6DD95EE23` al fascicolo ufficiale contenente determina, disciplinare, verbale, graduatoria ed esito;
+- aggiunti metriche di copertura, manifesto scaricabile, documentazione e test di regressione.
+
 ## 2.2.0 — Fonti collegate e navigazione d’esame
 
 - generalizzata l’associazione delle fonti ai CIG tramite nome del file o contenuto testuale estraibile;

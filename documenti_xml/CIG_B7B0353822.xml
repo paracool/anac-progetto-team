@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B7B0353822.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B7B0353822.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="pagina di gara" formato="text/html" url="https://unito.ubuy.cineca.it/PortaleAppalti/it/procedure/codice/G09464" relazione="procedura-oggetto" verificataIl="2026-08-23">La fonte <titoloFonte>Procedura G09464 — biobanca di ricerca dell’AOU San Luigi Gonzaga</titoloFonte>, pubblicata da <enteFonte>Università degli Studi di Torino</enteFonte>, riguarda la fase <faseFonte>gara</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il codice procedura G09464, l’ente e l’oggetto coincidono con i dati del CIG.</nessoFonte>. In sintesi, <datoFonte>La pagina collega il record al fascicolo di gara dell’Ateneo per la realizzazione della biobanca.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="programma triennale" formato="application/pdf" url="https://www.unito.it/sites/default/files/2025-06/programma_triennale_opere_pubbliche_2025_2027.pdf" relazione="cup-oggetto" verificataIl="2026-08-23">La fonte <titoloFonte>Programma triennale delle opere pubbliche 2025–2027</titoloFonte>, pubblicata da <enteFonte>Università degli Studi di Torino</enteFonte>, riguarda la fase <faseFonte>programmazione</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il programma riporta il CUP D83C22002330001 e l’intervento della biobanca presso l’AOU San Luigi Gonzaga.</nessoFonte>. In sintesi, <datoFonte>Il documento aggiunge il quadro programmatorio e finanziario dell’opera.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>G09464-d3009c4e-8dab-4a1f-a085-5e9e86aff7c1</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>

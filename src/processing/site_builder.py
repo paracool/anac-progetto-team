@@ -35,6 +35,19 @@ _ANOMALY_LABELS = {
     "data_non_interpretabile": "Data non interpretabile",
 }
 
+_WEB_RELATION_LABELS = {
+    "cig-esatto": "CIG esatto",
+    "cig-padre-lotto": "CIG padre / lotto",
+    "accordo-quadro": "Accordo quadro",
+    "cup-oggetto": "CUP e oggetto",
+    "procedura-oggetto": "Procedura e oggetto",
+    "oggetto-ente": "Oggetto ed ente",
+    "fase-antecedente": "Fase antecedente",
+    "contesto-tecnico": "Contesto tecnico",
+    "contesto-istituzionale": "Contesto istituzionale",
+    "repository-istituzionale": "Repertorio istituzionale",
+}
+
 
 def _to_decimal(value):
     return Decimal(value) if value not in (None, "") else None
@@ -59,6 +72,16 @@ def _render_record(record: dict) -> dict:
         }
         for source in record.get("sources", [])
     ]
+    enriched["web_source_links"] = [
+        {
+            **source,
+            "relation_label": _WEB_RELATION_LABELS.get(
+                source.get("relation", ""),
+                source.get("relation", "").replace("-", " ").capitalize(),
+            ),
+        }
+        for source in record.get("web_sources", [])
+    ]
     return enriched
 
 
@@ -73,6 +96,10 @@ def _environment(paths: ProjectPaths) -> Environment:
     environment.filters["number"] = lambda value: format_decimal_it(Decimal(str(value))) if value is not None else "n.d."
     environment.filters["percent"] = lambda value: format_percent(value)
     environment.globals["anomaly_label"] = lambda value: _ANOMALY_LABELS.get(value, value.replace("_", " ").capitalize())
+    environment.globals["web_relation_label"] = lambda value: _WEB_RELATION_LABELS.get(
+        value,
+        value.replace("-", " ").capitalize(),
+    )
     return environment
 
 
@@ -90,6 +117,10 @@ def _copy_downloads(paths: ProjectPaths) -> None:
     if report_pdf.exists():
         copy_file(report_pdf, paths.dist / "downloads" / "report" / report_pdf.name)
     copy_file(paths.dtd_file, paths.dist / "downloads" / "documentazione" / paths.dtd_file.name)
+    copy_file(
+        paths.web_sources_file,
+        paths.dist / "downloads" / "documentazione" / paths.web_sources_file.name,
+    )
     prompts = paths.report_dir / "prompts_utilizzati.md"
     if prompts.exists():
         copy_file(prompts, paths.dist / "downloads" / "documentazione" / prompts.name)
@@ -146,6 +177,9 @@ def build_site(paths: ProjectPaths, analysis: dict, pdf_analysis: list[dict], te
         "generated_at": generated_at,
         "record_count": analysis["metadata"]["record_count"],
         "report_available": report_available,
+        "web_manifest_available": (
+            paths.dist / "downloads" / "documentazione" / paths.web_sources_file.name
+        ).exists(),
     }
 
     pages = {

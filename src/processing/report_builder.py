@@ -72,6 +72,7 @@ def _write_coverage(paths: ProjectPaths, analysis: dict) -> None:
         f"{latex_escape(row['field'])} & {row['available']} & {row['missing']} & {latex_escape(format_percent(row['percent']))} \\\\"
         for row in analysis["dates"]["coverage"]
     ]
+    web = analysis["metadata"]["web_source_coverage"]
     content = """\\begin{table}[htbp]
 \\centering
 \\caption{Copertura delle fonti}
@@ -80,6 +81,18 @@ def _write_coverage(paths: ProjectPaths, analysis: dict) -> None:
 Formato & CIG coperti & File collegati & Mancanti & Copertura \\\\
 \\midrule
 %s
+\\bottomrule
+\\end{tabular}
+\\end{table}
+
+\\begin{table}[htbp]
+\\centering
+\\caption{Copertura delle fonti web qualificate}
+\\begin{tabular}{rrrr}
+\\toprule
+CIG coperti & Risorse collegate & Mancanti & Copertura \\\\
+\\midrule
+%s & %s & %s & %s \\\\
 \\bottomrule
 \\end{tabular}
 \\end{table}
@@ -96,7 +109,14 @@ Campo & Disponibili & Mancanti & Copertura \\\\
 \\bottomrule
 \\end{tabular}
 \\end{table}
-""" % ("\n".join(source_rows), "\n".join(date_rows))
+""" % (
+        "\n".join(source_rows),
+        web["available"],
+        web["linked_sources"],
+        web["missing"],
+        latex_escape(format_percent(web["percent"])),
+        "\n".join(date_rows),
+    )
     write_text(paths.report_generated / "copertura.tex", content)
 
 

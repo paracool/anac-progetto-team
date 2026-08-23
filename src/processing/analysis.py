@@ -341,6 +341,11 @@ def analyze_records(records: list[ContractRecord]) -> dict:
         }
         for kind in ("csv", "json", "html", "pdf")
     ]
+    web_linked_sources = sum(len(record.web_sources) for record in records)
+    web_available = sum(bool(record.web_sources) for record in records)
+    web_relations = Counter(source.relation for record in records for source in record.web_sources)
+    web_types = Counter(source.document_type for record in records for source in record.web_sources)
+    web_formats = Counter(source.mime_type for record in records for source in record.web_sources)
 
     differences = []
     for record in records:
@@ -358,6 +363,24 @@ def analyze_records(records: list[ContractRecord]) -> dict:
             "record_count": total,
             "valid_xml_count": sum(record.xml_valid for record in records),
             "source_coverage": source_coverage,
+            "web_source_coverage": {
+                "available": web_available,
+                "linked_sources": web_linked_sources,
+                "missing": total - web_available,
+                "percent": round(web_available / total * 100, 2) if total else 0,
+            },
+            "web_source_relations": [
+                {"relation": relation, "count": count}
+                for relation, count in sorted(web_relations.items())
+            ],
+            "web_source_types": [
+                {"type": source_type, "count": count}
+                for source_type, count in sorted(web_types.items())
+            ],
+            "web_source_formats": [
+                {"format": mime_type, "count": count}
+                for mime_type, count in sorted(web_formats.items())
+            ],
         },
         "territorial": {
             "tender_locations": locations,
@@ -376,5 +399,6 @@ def analyze_records(records: list[ContractRecord]) -> dict:
             "sample": "Il campione coincide con i documenti inclusi nel progetto e non è rappresentativo dell'intero sistema degli appalti pubblici.",
             "dates": "Le incongruenze sono segnalate senza attribuirle automaticamente a errori della fonte: alcune date possono riferirsi a eventi o pubblicazioni successive alla procedura effettiva.",
             "amounts": "Le differenze tra importo iniziale e importo di aggiudicazione sono descrittive e non sono denominate automaticamente ribassi.",
+            "web_sources": "Le fonti web sono qualificate mediante un nesso esplicito. Le fonti di contesto, di accordo quadro o di fase antecedente non sono presentate come atti recanti il CIG esatto.",
         },
     }

@@ -25,3 +25,9 @@ Revisiona il report LaTeX del progetto affinché descriva in modo sintetico la f
 È stato richiesto di analizzare integralmente il progetto, separare il codice di supporto dalle elaborazioni, introdurre un modello intermedio dei record, implementare analisi territoriali, cronologiche ed economiche, trasformare l'output in un sito statico responsivo e accessibile, predisporre la pubblicazione automatizzata, ampliare il report LaTeX e aggiungere test automatici.
 
 Gli output generati sono stati verificati mediante esecuzione della pipeline completa, validazione DTD, confronto dei conteggi delle fonti, controllo automatico dei collegamenti nella directory `dist/`, test `pytest`, verifica dei microdata e compilazione LaTeX quando disponibile. Le metriche del report non sono state trascritte manualmente: derivano da `output_data/analysis.json` e dai frammenti in `report/generated/`.
+
+## Prompt 7 — Ricerca e qualificazione delle fonti web
+
+Per ogni CIG presente nell’archivio, reperisci documenti, determine o altre fonti web autorevoli riferibili alla gara. Le risorse devono arricchire le fonti originarie e consolidare il content model misto. Evita soluzioni limitate a un CIG: conserva provenienza, formato, fase e criterio di collegamento, distinguendo un riscontro esatto da una fonte relativa a lotto, accordo quadro, CUP, fase antecedente o contesto.
+
+Le risorse selezionate sono state registrate in un manifesto dati e integrate nella pipeline comune. La verifica non si limita alla raggiungibilità del collegamento: il nesso dichiarato evita di attribuire a una gara un atto che documenta soltanto il suo contesto. Per i procedimenti relativi a minori è stata inoltre privilegiata la minimizzazione, collegando fonti istituzionali senza ripubblicare documenti potenzialmente sensibili.

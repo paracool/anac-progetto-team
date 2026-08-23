@@ -13,9 +13,12 @@ def test_main_pages_generated(built_project):
         "report.html",
         "qualita-dati.html",
         "assets/css/app.css",
+        "assets/css/sources.css",
+        "assets/css/stile.css",
         "assets/js/app.js",
         "data/analysis.json",
         "downloads/documentazione/contratto_cig.dtd",
+        "downloads/documentazione/fonti_web.json",
         "downloads/documentazione/prompts_utilizzati.md",
         ".nojekyll",
     ]
@@ -39,6 +42,10 @@ def test_descriptive_pdf_is_linked_to_its_cig(built_project):
     filename = "pn vsf15-25-sua_lettera inv.-disciplinare_indifferenziata_2025-26_frascati.pdf"
     assert filename in detail
     assert detail.count("../downloads/pdf/") == 2
+    assert "Fonti web verificate" in detail
+    assert "determina, disciplinare, verbale, graduatoria ed esito" in detail
+    assert 'target="_blank"' in detail
+    assert "portalegare.cittametropolitanaroma.it" in detail
 
 
 def test_navigation_uses_explicit_exam_labels(built_project):
@@ -55,6 +62,8 @@ def test_no_broken_internal_links(built_project):
 
 def test_analysis_contains_required_sections(built_project):
     analysis = json.loads((built_project.output_data / "analysis.json").read_text(encoding="utf-8"))
+    web_catalog = json.loads(built_project.web_sources_file.read_text(encoding="utf-8"))
+    expected_web_sources = sum(len(sources) for sources in web_catalog["records"].values())
     assert analysis["territorial"]["authority_cities"]["rows"]
     assert analysis["dates"]["coverage"]
     assert analysis["amounts"]["statistics"]["tender_amount"]["median"] is not None
@@ -67,6 +76,13 @@ def test_analysis_contains_required_sections(built_project):
         "missing": 0,
         "percent": 100.0,
     }
+    assert analysis["metadata"]["web_source_coverage"] == {
+        "available": analysis["metadata"]["record_count"],
+        "linked_sources": expected_web_sources,
+        "missing": 0,
+        "percent": 100.0,
+    }
+    assert analysis["metadata"]["web_source_relations"]
 
 
 def test_exam_output_constraints(built_project):

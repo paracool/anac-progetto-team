@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 from decimal import Decimal
 
@@ -6,6 +7,7 @@ from lxml import etree
 from src.processing.analysis import amount_statistics, classify_chronology
 from src.processing.extraction import extract_record
 from src.processing.source_discovery import discover_document_sources, merge_document_sources
+from src.processing.web_sources import load_web_sources
 from src.support.config import PATHS
 from src.support.models import ContractRecord
 from src.support.xml_utils import load_dtd, validate_xml
@@ -18,6 +20,7 @@ def test_extract_record():
     assert record.title
     assert record.xml_valid is True
     assert any(source.kind == "json" for source in record.sources)
+    assert record.web_sources
 
 
 def test_dtd_validation():
@@ -31,12 +34,36 @@ def test_dtd_validation():
 def test_mixed_content_model_is_declared_and_used():
     dtd = PATHS.dtd_file.read_text(encoding="utf-8")
     assert "<!ELEMENT descrizioneDocumentale (#PCDATA | tipologia | oggetto | categoria | termine | luogo)*>" in dtd
+    assert "<!ELEMENT fonteWeb (#PCDATA | titoloFonte | enteFonte | faseFonte | nessoFonte | datoFonte)*>" in dtd
     record = extract_record(PATHS.xml_dir / "CIG_B6DD95EE23.xml", xml_valid=True)
     assert record.title
     tree = etree.parse(str(PATHS.xml_dir / "CIG_B6DD95EE23.xml"))
     description = tree.xpath("/contratto/descrizioneDocumentale")[0]
     assert description.text and description.text.strip()
     assert len(description) >= 2
+    web_source = tree.xpath("/contratto/approfondimentiWeb/fonteWeb")[0]
+    assert web_source.text and web_source.text.strip()
+    assert len(web_source) == 5
+    assert web_source.get("url", "").startswith("https://")
+
+
+def test_web_source_manifest_covers_every_cig():
+    known_cigs = {path.stem.removeprefix("CIG_") for path in PATHS.json_dir.glob("CIG_*.json")}
+    catalog = load_web_sources(PATHS, known_cigs)
+    raw_catalog = json.loads(PATHS.web_sources_file.read_text(encoding="utf-8"))
+    assert set(catalog) == known_cigs
+    assert len(catalog) == 15
+    assert sum(len(sources) for sources in catalog.values()) >= len(catalog)
+    assert all(sources for sources in catalog.values())
+    assert raw_catalog["methodology"]
+
+
+def test_b6dd_web_source_exposes_official_gara_acts():
+    record = extract_record(PATHS.xml_dir / "CIG_B6DD95EE23.xml", xml_valid=True)
+    source = record.web_sources[0]
+    assert "determina" in source.title.casefold()
+    assert "aggiudicazione" in source.summary.casefold()
+    assert "cittametropolitanaroma.it" in source.url
 
 
 def test_chronology_classification():
@@ -68,6 +95,11 @@ def test_source_discovery_uses_embedded_cig_for_descriptive_documents():
     assert len(linked_pdfs) == 2
     assert any(path.startswith("fonti_originali/pdf/pn vsf15-25-sua_") for path in linked_pdfs)
     assert all(any(source.kind == "pdf" for source in sources[cig]) for cig in known_cigs)
+    assert all(
+        source.path != "fonti_originali/web/fonti_web.json"
+        for cig_sources in sources.values()
+        for source in cig_sources
+    )
 
 
 def test_discovered_sources_are_merged_without_xml_regeneration():

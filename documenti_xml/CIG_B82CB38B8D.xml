@@ -6,6 +6,10 @@
     <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B82CB38B8D.json">Fonte originale JSON del CIG</fonte>
     <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B82CB38B8D.pdf">Fonte originale PDF del CIG</fonte>
   </fonti>
+  <approfondimentiWeb>
+    <fonteWeb tipo="scheda CIG" formato="text/html" url="https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=B82CB38B8D" relazione="cig-esatto" verificataIl="2026-08-23">La fonte <titoloFonte>Scheda BDNCP del CIG B82CB38B8D</titoloFonte>, pubblicata da <enteFonte>ANAC — Banca Dati Nazionale dei Contratti Pubblici</enteFonte>, riguarda la fase <faseFonte>tracciabilità della procedura</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>Il parametro della scheda identifica esattamente il CIG del collocamento disposto dall’autorità giudiziaria.</nessoFonte>. In sintesi, <datoFonte>Il collegamento conserva l’ancoraggio puntuale alla procedura evitando di replicare documenti contenenti dati potenzialmente sensibili sui minori.</datoFonte>.</fonteWeb>
+    <fonteWeb tipo="pagina istituzionale" formato="text/html" url="https://www.giustizia.it/giustizia/it/mg_1_25_3.page" relazione="contesto-istituzionale" verificataIl="2026-08-23">La fonte <titoloFonte>Strutture residenziali per minori dell’Amministrazione della giustizia</titoloFonte>, pubblicata da <enteFonte>Ministero della Giustizia</enteFonte>, riguarda la fase <faseFonte>esecuzione del collocamento</faseFonte>. Il nesso verificato con la gara è il seguente: <nessoFonte>La pagina ministeriale descrive la funzione delle strutture residenziali nell’area penale minorile cui appartiene il servizio acquistato.</nessoFonte>. In sintesi, <datoFonte>La fonte arricchisce il significato amministrativo del servizio senza esporre informazioni personali sui beneficiari.</datoFonte>.</fonteWeb>
+  </approfondimentiWeb>
   <informazioniGara>
     <numeroGara>PCP-20250909-04648</numeroGara>
     <tipoCig>ORDINARIO</tipoCig>
