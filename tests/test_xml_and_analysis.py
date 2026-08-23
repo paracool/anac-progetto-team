@@ -92,7 +92,7 @@ def test_source_discovery_uses_embedded_cig_for_descriptive_documents():
     known_cigs = {path.stem.removeprefix("CIG_") for path in PATHS.xml_dir.glob("CIG_*.xml")}
     sources = discover_document_sources(PATHS, known_cigs)
     linked_pdfs = [source.path for source in sources["B6DD95EE23"] if source.kind == "pdf"]
-    assert len(linked_pdfs) == 2
+    assert len(linked_pdfs) >= 6
     assert any(path.startswith("fonti_originali/pdf/pn vsf15-25-sua_") for path in linked_pdfs)
     assert all(any(source.kind == "pdf" for source in sources[cig]) for cig in known_cigs)
     assert all(
@@ -106,4 +106,4 @@ def test_discovered_sources_are_merged_without_xml_regeneration():
     record = extract_record(PATHS.xml_dir / "CIG_B6DD95EE23.xml", xml_valid=True)
     record.sources = [source for source in record.sources if source.path.endswith("CIG_B6DD95EE23.pdf")]
     merge_document_sources(PATHS, [record])
-    assert len([source for source in record.sources if source.kind == "pdf"]) == 2
+    assert len([source for source in record.sources if source.kind == "pdf"]) >= 6

@@ -41,8 +41,14 @@ def test_descriptive_pdf_is_linked_to_its_cig(built_project):
     detail = (built_project.dist / "cig" / "B6DD95EE23.html").read_text(encoding="utf-8")
     filename = "pn vsf15-25-sua_lettera inv.-disciplinare_indifferenziata_2025-26_frascati.pdf"
     assert filename in detail
-    assert detail.count("../downloads/pdf/") == 2
-    assert "Fonti web verificate" in detail
+    assert detail.count("../downloads/pdf/") >= 6
+    assert "B6DD95EE23_determina_65.pdf" in detail
+    assert "B6DD95EE23_determina_aggiudicazione_2475.pdf" in detail
+    assert "B6DD95EE23_graduatoria.pdf" in detail
+    assert "B6DD95EE23_verbale_aggiudicazione.pdf" in detail
+    assert "Fonti web" in detail
+    assert "Fonti web verificate" not in detail
+    assert "Risorse esterne selezionate per ampliare il contesto" not in detail
     assert "determina, disciplinare, verbale, graduatoria ed esito" in detail
     assert 'target="_blank"' in detail
     assert "portalegare.cittametropolitanaroma.it" in detail
@@ -69,10 +75,11 @@ def test_analysis_contains_required_sections(built_project):
     assert analysis["amounts"]["statistics"]["tender_amount"]["median"] is not None
     assert analysis["amounts"]["statistics"]["tender_amount"]["mean"] is not None
     pdf_coverage = next(row for row in analysis["metadata"]["source_coverage"] if row["format"] == "pdf")
+    expected_pdf_files = len(list(built_project.pdf_dir.glob("*.pdf")))
     assert pdf_coverage == {
         "format": "pdf",
         "available": analysis["metadata"]["record_count"],
-        "linked_files": analysis["metadata"]["record_count"] + 1,
+        "linked_files": expected_pdf_files,
         "missing": 0,
         "percent": 100.0,
     }

@@ -11,8 +11,7 @@
     {% if record.cpv %}<section class="panel"><h2>CPV</h2><ul>{% for item in record.cpv %}<li>{{ item }}</li>{% endfor %}</ul></section>{% endif %}
     {% if record.web_source_links %}
     <section class="panel" aria-labelledby="fonti-web-title">
-      <h2 id="fonti-web-title">Fonti web verificate</h2>
-      <p class="note">Risorse esterne selezionate per ampliare il contesto. Il badge dichiara il nesso verificato con la gara: una fonte contestuale non equivale a un atto recante il CIG.</p>
+      <h2 id="fonti-web-title">Fonti web</h2>
       <div class="web-source-list">
         {% for source in record.web_source_links %}
         <article class="web-source-card">
@@ -31,6 +30,6 @@
     </section>
     {% endif %}
   </div>
-  <aside class="panel sticky"><h2>File del dataset</h2><ul class="download-list"><li><a href="../downloads/xml/{{ record.xml_filename }}">Documento XML elaborato</a></li>{% for source in record.source_downloads %}<li><a href="{{ source.href }}">{{ source.label }}</a></li>{% endfor %}</ul><p class="status good">XML valido rispetto alla DTD</p><p class="source-count">{{ record.web_source_links|length }} fonti web qualificate</p></aside>
+  <aside class="panel sticky"><h2>File del dataset</h2><ul class="download-list"><li><a href="../downloads/xml/{{ record.xml_filename }}">Documento XML elaborato</a></li>{% for source in record.source_downloads %}<li><a href="{{ source.href }}">{{ source.label }}</a></li>{% endfor %}</ul><p class="status good">XML valido rispetto alla DTD</p><p class="source-count">{{ record.web_source_links|length }} fonti web</p></aside>
 </article>
 {% endblock %}
