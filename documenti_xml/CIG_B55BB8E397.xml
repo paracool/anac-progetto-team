@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B55BB8E397" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B55BB8E397.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B55BB8E397.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B55BB8E397.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>c2bc1a63-6889-4986-8ef6-c4e88597142b</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>DET. 1492 DEL 20/12/2024 AGG. FORN. PIASTRE /PLACCHE MONOUSO PER DEFIBR. TRANSTORAC. 14 DAL 01/03/2025 AL 28/02/2030 ZOLL MEDICAL ITALIA S.R.L.</oggettoGara>
+    <oggettoLotto>DET. 1492 DEL 20/12/2024 AGG. FORN. PIASTRE /PLACCHE MONOUSO PER DEFIBR. TRANSTORAC. 14 DAL 01/03/2025 AL 28/02/2030 ZOLL MEDICAL ITALIA S.R.L.</oggettoLotto>
+    <importoGara valuta="EUR">319800</importoGara>
+    <importoLotto valuta="EUR">319800</importoLotto>
+    <provincia>FIRENZE</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>FORNITURE</oggettoPrincipaleContratto>
+    <tipologiaContratto>FORNITURE</tipologiaContratto>
+    <localizzazione>Firenze</localizzazione>
+    <scadenzaOfferte>2025-01-27T12:23</scadenzaOfferte>
+    <dataAggiudicazione>2025-01-27</dataAggiudicazione>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>06485540485</codiceFiscale>
+    <denominazione>ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)</denominazione>
+    <centroCosto>FARMACEUTICA E LOGISTICA</centroCosto>
+    <citta>FIRENZE</citta>
+    <regione>TOSCANA</regione>
+    <indirizzo>VIA DI SANA SALVI 12</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>LEONARDO</nome>
+      <cognome>BECHINI</cognome>
+      <codiceFiscale>BCHLRD65A10D612K</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-01-27</dataCreazione>
+    <dataPubblicazione>2025-01-27</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante aggiudicatario="14891646">
+      <denominazione>ZOLL MEDICAL ITALIA S.R.L.</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>03301251207</codiceFiscale>
+      <ruolo>OPERATORE ECONOMICO MONOSOGGETTIVO</ruolo>
+    </partecipante>
+  </partecipanti>
+  <aggiudicazione>
+    <aggiudicatario>
+      <denominazione/>
+      <codiceFiscale/>
+      <importoAggiudicazione valuta="EUR">319800</importoAggiudicazione>
+    </aggiudicatario>
+  </aggiudicazione>
+  <contrattoEsecuzione>
+    <dataAvvio>2025-03-01</dataAvvio>
+    <dataFinePrevista>2030-02-28</dataFinePrevista>
+  </contrattoEsecuzione>
+  <quadroEconomico>
+    <voceEconomica nome="IMPORTO_FORNITURE" valuta="EUR">319800</voceEconomica>
+    <voceEconomica nome="SOMME_A_DISPOSIZIONE" valuta="EUR">319800</voceEconomica>
+  </quadroEconomico>
+  <categorieOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>FB</idCategoria>
+      <descrizione>FORNITURA DI BENI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>33190000</codice>
+      <descrizione/>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>forniture</tipologia> avente per oggetto <oggetto>DET. 1492 DEL 20/12/2024 AGG. FORN. PIASTRE /PLACCHE MONOUSO PER DEFIBR. TRANSTORAC. 14 DAL 01/03/2025 AL 28/02/2030 ZOLL MEDICAL ITALIA S.R.L.</oggetto>. <categoria>fornitura di beni</categoria>. <luogo>Firenze</luogo>.</descrizioneDocumentale>
+</contratto>

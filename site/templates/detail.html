@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}CIG {{ record.cig }}{% endblock %}
+{% block content %}
+<section class="page-header"><div class="container"><nav class="breadcrumbs" aria-label="Percorso"><ol><li><a href="../index.html">Home</a></li><li><a href="../archivio.html">Archivio</a></li><li aria-current="page">{{ record.cig }}</li></ol></nav><p class="eyebrow">Dettaglio CIG</p><h1>{{ record.cig }}</h1><p>{{ record.title }}</p></div></section>
+<article class="container section detail-layout" itemscope itemtype="https://schema.org/GovernmentService">
+  <div>
+    <section class="panel"><h2 itemprop="name">Informazioni principali</h2><dl class="definition-grid"><div><dt>Oggetto</dt><dd itemprop="description">{{ record.title }}</dd></div><div><dt>Tipologia</dt><dd>{{ record.contract_type or 'n.d.' }}</dd></div><div><dt>Stato</dt><dd>{{ record.status or 'n.d.' }}</dd></div><div><dt>Importo gara</dt><dd>{{ record.tender_amount_formatted }}</dd></div><div><dt>Importo lotto</dt><dd>{{ record.lot_amount_formatted }}</dd></div><div><dt>Importo aggiudicazione</dt><dd>{{ record.award_amount_formatted }}</dd></div></dl></section>
+    <section class="panel"><h2>Territorio e stazione appaltante</h2><dl class="definition-grid"><div><dt>Stazione appaltante</dt><dd>{{ record.contracting_authority or 'n.d.' }}</dd></div><div><dt>Città</dt><dd>{{ record.authority_city or 'n.d.' }}</dd></div><div><dt>Provincia</dt><dd>{{ record.province or 'n.d.' }}</dd></div><div><dt>Regione</dt><dd>{{ record.region or 'n.d.' }}</dd></div><div><dt>Localizzazione gara</dt><dd>{{ record.tender_location or 'n.d.' }}</dd></div></dl></section>
+    <section class="panel"><h2>Date</h2><dl class="definition-grid">{% for row in record.date_rows %}<div><dt>{{ row.label }}</dt><dd>{{ row.value }}</dd></div>{% endfor %}</dl>{% if anomalies %}<div class="alert"><strong>Segnalazioni cronologiche</strong><ul>{% for anomaly in anomalies %}<li>{{ anomaly_label(anomaly.type) }}</li>{% endfor %}</ul></div>{% endif %}</section>
+    {% if record.participants %}<section class="panel"><h2>Partecipanti</h2><ul class="plain-list">{% for item in record.participants %}<li><strong>{{ item.name }}</strong>{% if item.role %} — {{ item.role }}{% endif %}{% if item.winner %} <span class="badge">Aggiudicatario</span>{% endif %}</li>{% endfor %}</ul></section>{% endif %}
+    {% if record.cpv %}<section class="panel"><h2>CPV</h2><ul>{% for item in record.cpv %}<li>{{ item }}</li>{% endfor %}</ul></section>{% endif %}
+  </div>
+  <aside class="panel sticky"><h2>Download</h2><ul class="download-list"><li><a href="../downloads/xml/{{ record.xml_filename }}">Documento XML</a></li>{% for source in record.source_downloads %}<li><a href="{{ source.href }}">Fonte {{ source.kind|upper }}</a></li>{% endfor %}</ul><p class="status good">XML valido rispetto alla DTD</p></aside>
+</article>
+{% endblock %}

@@ -1,0 +1,5 @@
+lxml>=5.0
+Jinja2>=3.1
+pypdf>=5.0
+pdfminer.six>=20231228
+pdflatex>=0.1.3

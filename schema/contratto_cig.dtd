@@ -1,0 +1,80 @@
+<!ELEMENT contratto (fonti, informazioniGara, stazioneAppaltante, incaricati?, pubblicazioni?, partecipanti?, aggiudicazione?, contrattoEsecuzione?, quadroEconomico?, categorieOpera?, cpv?, descrizioneDocumentale)>
+<!ATTLIST contratto cig CDATA #REQUIRED fonte CDATA #REQUIRED>
+
+<!ELEMENT fonti (fonte+)>
+<!ELEMENT fonte (#PCDATA)>
+<!ATTLIST fonte tipo CDATA #REQUIRED formato CDATA #REQUIRED percorso CDATA #REQUIRED>
+
+<!ELEMENT informazioniGara (numeroGara?, tipoCig?, stato?, oggettoGara, oggettoLotto?, importoGara?, importoLotto?, provincia?, settore?, cup?, oggettoPrincipaleContratto?, tipologiaContratto?, localizzazione?, scadenzaOfferte?, dataAggiudicazione?)>
+<!ELEMENT numeroGara (#PCDATA)>
+<!ELEMENT tipoCig (#PCDATA)>
+<!ELEMENT stato (#PCDATA)>
+<!ELEMENT oggettoGara (#PCDATA)>
+<!ELEMENT oggettoLotto (#PCDATA)>
+<!ELEMENT importoGara (#PCDATA)>
+<!ATTLIST importoGara valuta CDATA #IMPLIED>
+<!ELEMENT importoLotto (#PCDATA)>
+<!ATTLIST importoLotto valuta CDATA #IMPLIED>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT settore (#PCDATA)>
+<!ELEMENT cup (#PCDATA)>
+<!ELEMENT oggettoPrincipaleContratto (#PCDATA)>
+<!ELEMENT tipologiaContratto (#PCDATA)>
+<!ELEMENT localizzazione (#PCDATA)>
+<!ELEMENT scadenzaOfferte (#PCDATA)>
+<!ELEMENT dataAggiudicazione (#PCDATA)>
+
+<!ELEMENT stazioneAppaltante (codiceFiscale?, denominazione, centroCosto?, citta?, regione?, indirizzo?)>
+<!ELEMENT codiceFiscale (#PCDATA)>
+<!ELEMENT denominazione (#PCDATA)>
+<!ELEMENT centroCosto (#PCDATA)>
+<!ELEMENT citta (#PCDATA)>
+<!ELEMENT regione (#PCDATA)>
+<!ELEMENT indirizzo (#PCDATA)>
+
+<!ELEMENT incaricati (incaricato+)>
+<!ELEMENT incaricato (nome?, cognome?, codiceFiscale?)>
+<!ATTLIST incaricato ruolo CDATA #IMPLIED>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT cognome (#PCDATA)>
+
+<!ELEMENT pubblicazioni (dataCreazione?, dataPubblicazione?)>
+<!ELEMENT dataCreazione (#PCDATA)>
+<!ELEMENT dataPubblicazione (#PCDATA)>
+
+<!ELEMENT partecipanti (partecipante+)>
+<!ELEMENT partecipante (denominazione, tipoSoggetto?, codiceFiscale?, ruolo?)>
+<!ATTLIST partecipante aggiudicatario CDATA #IMPLIED>
+<!ELEMENT tipoSoggetto (#PCDATA)>
+<!ELEMENT ruolo (#PCDATA)>
+
+<!ELEMENT aggiudicazione (aggiudicatario+)>
+<!ELEMENT aggiudicatario (denominazione?, codiceFiscale?, importoAggiudicazione?)>
+<!ELEMENT importoAggiudicazione (#PCDATA)>
+<!ATTLIST importoAggiudicazione valuta CDATA #IMPLIED>
+
+<!ELEMENT contrattoEsecuzione (dataAvvio?, dataFinePrevista?)>
+<!ELEMENT dataAvvio (#PCDATA)>
+<!ELEMENT dataFinePrevista (#PCDATA)>
+
+<!ELEMENT quadroEconomico (voceEconomica+)>
+<!ELEMENT voceEconomica (#PCDATA)>
+<!ATTLIST voceEconomica nome CDATA #REQUIRED valuta CDATA #IMPLIED>
+
+<!ELEMENT categorieOpera (categoriaOpera+)>
+<!ELEMENT categoriaOpera (idCategoria, descrizione)>
+<!ATTLIST categoriaOpera tipo CDATA #IMPLIED>
+<!ELEMENT idCategoria (#PCDATA)>
+<!ELEMENT descrizione (#PCDATA)>
+
+<!ELEMENT cpv (voceCpv+)>
+<!ELEMENT voceCpv (codice, descrizione)>
+<!ATTLIST voceCpv tipo CDATA #IMPLIED>
+<!ELEMENT codice (#PCDATA)>
+
+<!ELEMENT descrizioneDocumentale (#PCDATA | tipologia | oggetto | categoria | termine | luogo)*>
+<!ELEMENT tipologia (#PCDATA)>
+<!ELEMENT oggetto (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT termine (#PCDATA)>
+<!ELEMENT luogo (#PCDATA)>

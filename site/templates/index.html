@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Archivio CIG ANAC — Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">ELABORAZIONE DI TESTI E GESTIONE DOCUMENTALE</p>
+      <h1>Un archivio XML dei contratti pubblici italiani</h1>
+      <div class="actions"><a class="button" href="archivio.html">Esplora i CIG</a><a class="button secondary" href="report.html">Leggi il report</a></div>
+    </div>
+  </div>
+</section>
+<section class="container section">
+  <h2>Indicatori principali</h2>
+  <div class="kpi-grid">
+    <article class="kpi"><span>{{ analysis.metadata.record_count }}</span><h3>Documenti XML</h3><p>Record elaborati dal modello intermedio.</p></article>
+    <article class="kpi"><span>{{ analysis.metadata.valid_xml_count }}</span><h3>XML validi</h3><p>Validazione rispetto alla DTD.</p></article>
+    <article class="kpi"><span>{{ analysis.amounts.statistics.tender_amount.median|currency }}</span><h3>Importo mediano</h3><p>Distinto dalla media per la distribuzione asimmetrica.</p></article>
+    <article class="kpi"><span>{{ analysis.dates.anomalies|length }}</span><h3>Segnalazioni data</h3><p>Valori mancanti o sequenze da esaminare.</p></article>
+  </div>
+</section>
+<section class="container section">
+  <div>
+    <div class="section-heading"><div><p class="eyebrow">Archivio</p><h2>CIG in evidenza</h2></div><a href="archivio.html">Apri l'archivio completo</a></div>
+    <div class="card-list">
+      {% for record in records %}
+      <article class="record-card"><p class="record-code">{{ record.cig }}</p><h3><a href="cig/{{ record.cig }}.html">{{ record.title }}</a></h3><p>{{ record.contracting_authority }}</p><dl><div><dt>Tipologia</dt><dd>{{ record.contract_type or "n.d." }}</dd></div><div><dt>Importo</dt><dd>{{ record.tender_amount_formatted }}</dd></div></dl></article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

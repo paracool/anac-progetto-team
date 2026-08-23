@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B82A8FBA72" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B82A8FBA72.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B82A8FBA72.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B82A8FBA72.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>CONSIP_RDO_5596457</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>AFFIDAMENTO DEL SERVIZIO DI TRASPORTO SCOLASTICO NEL TERRITORIO DEL COMUNE DI POGGIO TORRIANA (PER GLI ISTITUTI SCOLASTICI PRESENTI SUL TERRITORIO DI TORRIANA), PER ANNO SCOLASTICO 2025/2026</oggettoGara>
+    <oggettoLotto>AFFIDAMENTO DI SERVIZIO TRASPORTO SCOLASTICO - AS 2025/2026</oggettoLotto>
+    <importoGara valuta="EUR">60000</importoGara>
+    <importoLotto valuta="EUR">60000</importoLotto>
+    <provincia>RIMINI</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>SERVIZI</oggettoPrincipaleContratto>
+    <tipologiaContratto>SERVIZI</tipologiaContratto>
+    <localizzazione/>
+    <scadenzaOfferte>2025-09-08T19:26</scadenzaOfferte>
+    <dataAggiudicazione>2025-10-31</dataAggiudicazione>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>04110220409</codiceFiscale>
+    <denominazione>COMUNE DI POGGIO TORRIANA</denominazione>
+    <centroCosto>SETTORE URBANISTICA, EDILIZIA E AMBIENTE</centroCosto>
+    <citta>TORRIANA</citta>
+    <regione>EMILIA-ROMAGNA</regione>
+    <indirizzo>VIA ROMA, 19</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>FRANCESCA</nome>
+      <cognome>GOBBI</cognome>
+      <codiceFiscale>GBBFNC72R64I304F</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-09-08</dataCreazione>
+    <dataPubblicazione>2025-09-09</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante aggiudicatario="17650679">
+      <denominazione>S.A.M. DI BIANCHINI BERNARDINO E C. S.N.C.</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>01315780401</codiceFiscale>
+      <ruolo>OPERATORE ECONOMICO MONOSOGGETTIVO</ruolo>
+    </partecipante>
+  </partecipanti>
+  <aggiudicazione>
+    <aggiudicatario>
+      <denominazione/>
+      <codiceFiscale/>
+      <importoAggiudicazione valuta="EUR">60000</importoAggiudicazione>
+    </aggiudicatario>
+  </aggiudicazione>
+  <quadroEconomico>
+    <voceEconomica nome="IMPORTO_SERVIZI" valuta="EUR">59950</voceEconomica>
+    <voceEconomica nome="IMPORTO_SICUREZZA" valuta="EUR">600</voceEconomica>
+    <voceEconomica nome="SOMME_A_DISPOSIZIONE" valuta="EUR">7550</voceEconomica>
+  </quadroEconomico>
+  <categorieOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>FS</idCategoria>
+      <descrizione>FORNITURA DI SERVIZI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>60130000-8</codice>
+      <descrizione>SERVIZI SPECIALI DI TRASPORTO PASSEGGERI SU STRADA</descrizione>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>servizi</tipologia> avente per oggetto <oggetto>AFFIDAMENTO DI SERVIZIO TRASPORTO SCOLASTICO - AS 2025/2026</oggetto>. <termine>servizi speciali di trasporto passeggeri su strada</termine>. <categoria>fornitura di servizi</categoria>. </descrizioneDocumentale>
+</contratto>

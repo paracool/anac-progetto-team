@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B474D3250C" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B474D3250C.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B474D3250C.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B474D3250C.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>start_22/11/2024 12:31:48_051048/2024</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>MANUTENZIONE STRAORDINARIA DELLA STRADA BIANCA DI ACCESSO IMPIANTO TRATTAMENTO RIFIUTI. LOC. STRILLAIE COMUNE DI GROSSETO</oggettoGara>
+    <oggettoLotto>MANUTENZIONE STRAORDINARIA DELLA STRADA BIANCA DI ACCESSO IMPIANTO TRATTAMENTO RIFIUTI. LOC. STRILLAIE COMUNE DI GROSSETO</oggettoLotto>
+    <importoGara valuta="EUR">76216.47</importoGara>
+    <importoLotto valuta="EUR">76216.47</importoLotto>
+    <provincia>GROSSETO</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup>[{'CUP': 'F57H24002420009'}]</cup>
+    <oggettoPrincipaleContratto>LAVORI</oggettoPrincipaleContratto>
+    <tipologiaContratto>LAVORI</tipologiaContratto>
+    <localizzazione>Grosseto</localizzazione>
+    <scadenzaOfferte>2024-11-26T12:37</scadenzaOfferte>
+    <dataAggiudicazione>2024-11-26</dataAggiudicazione>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>00082520537</codiceFiscale>
+    <denominazione>COMUNE DI GROSSETO</denominazione>
+    <centroCosto>SERVIZIO MANUTENZIONI</centroCosto>
+    <citta>GROSSETO</citta>
+    <regione>TOSCANA</regione>
+    <indirizzo>VIA GRAMSCI</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>STEFANO</nome>
+      <cognome>SPALLONE</cognome>
+      <codiceFiscale>SPLSFN61T08E202I</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2024-11-26</dataCreazione>
+    <dataPubblicazione>2025-01-13</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante aggiudicatario="14001548">
+      <denominazione>ARTIGIANA ASFALTI S.R.L.</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>00957150535</codiceFiscale>
+      <ruolo>OPERATORE ECONOMICO MONOSOGGETTIVO</ruolo>
+    </partecipante>
+  </partecipanti>
+  <aggiudicazione>
+    <aggiudicatario>
+      <denominazione/>
+      <codiceFiscale/>
+      <importoAggiudicazione valuta="EUR">76216.47</importoAggiudicazione>
+    </aggiudicatario>
+  </aggiudicazione>
+  <contrattoEsecuzione>
+    <dataAvvio>2025-01-27</dataAvvio>
+    <dataFinePrevista>2025-03-01</dataFinePrevista>
+  </contrattoEsecuzione>
+  <quadroEconomico>
+    <voceEconomica nome="IMPORTO_LAVORI" valuta="EUR">75644.77</voceEconomica>
+    <voceEconomica nome="IMPORTO_SICUREZZA" valuta="EUR">4505.23</voceEconomica>
+    <voceEconomica nome="SOMME_A_DISPOSIZIONE" valuta="EUR">22392.63</voceEconomica>
+  </quadroEconomico>
+  <categorieOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>OG 3</idCategoria>
+      <descrizione>OG 3 - STRADE, AUTOSTRADE, PONTI, VIADOTTI, FERROVIE, METROPOLITANE</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>45233141-9</codice>
+      <descrizione>LAVORI DI MANUTENZIONE STRADALE</descrizione>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>lavori</tipologia> avente per oggetto <oggetto>MANUTENZIONE STRAORDINARIA DELLA STRADA BIANCA DI ACCESSO IMPIANTO TRATTAMENTO RIFIUTI. LOC. STRILLAIE COMUNE DI GROSSETO</oggetto>. <termine>lavori di manutenzione stradale</termine>. <categoria>og 3 - strade, autostrade, ponti, viadotti, ferrovie, metropolitane</categoria>. <luogo>Grosseto</luogo>.</descrizioneDocumentale>
+</contratto>

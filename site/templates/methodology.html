@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Metodologia e pipeline{% endblock %}
+{% block content %}
+<section class="page-header"><div class="container"><p class="eyebrow">Metodo</p><h1>Pipeline e riproducibilità</h1><p>La presentazione consuma metriche già calcolate dal modulo di analisi.</p></div></section>
+<section class="container section prose"><h2>Flusso dei dati</h2><ol class="process"><li><strong>Preparazione</strong><span>CSV e JSON alimentano la generazione degli XML; HTML e PDF restano fonti collegate.</span></li><li><strong>Validazione</strong><span>Ogni XML viene analizzato e verificato rispetto alla DTD.</span></li><li><strong>Estrazione</strong><span>Gli XPath sono concentrati nel convertitore verso <code>ContractRecord</code>.</span></li><li><strong>Analisi</strong><span>Territorio, date e importi confluiscono in <code>output_data/analysis.json</code>.</span></li><li><strong>Pubblicazione</strong><span>Jinja2 genera un sito autonomo nella directory <code>dist/</code>.</span></li></ol><h2>Analisi PDF e testuale</h2><p>Sono stati esaminati {{ pdf_analysis|length }} PDF. L’analisi testuale comprende {{ text_analysis.documents }} descrizioni e {{ text_analysis.tokens }} token selezionati.</p><h2>Comandi essenziali</h2><pre><code>python -m pip install -r requirements.txt
+python scripts/build_all.py
+pytest</code></pre></section>
+{% endblock %}

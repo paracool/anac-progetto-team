@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B5F0937C10" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B5F0937C10.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B5F0937C10.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B5F0937C10.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>682422_18146</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>CONTRATTO APPLICATIVO SU ORDINE QUADRO N° 8820004336 - T_46450/2024 - TL-PROGETTAZIONE PER PREDISPOSIZIONE PRATICA AUTORIZZATIVACONDENSATORE AD ARIA CICLO COMBINATO TL800 - CENTRALE TURBIGO</oggettoGara>
+    <oggettoLotto>CONTRATTO APPLICATIVO SU ORDINE QUADRO N° 8820004336 - T_46450/2024 - TL-PROGETTAZIONE PER PREDISPOSIZIONE PRATICA AUTORIZZATIVACONDENSATORE AD ARIA CICLO COMBINATO TL800 - CENTRALE TURBIGO</oggettoLotto>
+    <importoGara valuta="EUR">188700</importoGara>
+    <importoLotto valuta="EUR">188700</importoLotto>
+    <provincia>MILANO</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>SERVIZI</oggettoPrincipaleContratto>
+    <tipologiaContratto>SERVIZI</tipologiaContratto>
+    <localizzazione>Torino</localizzazione>
+    <scadenzaOfferte>2025-03-06T16:58</scadenzaOfferte>
+    <dataAggiudicazione>2025-03-06</dataAggiudicazione>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>09357630012</codiceFiscale>
+    <denominazione>IREN ENERGIA SPA</denominazione>
+    <centroCosto>DIREZIONE</centroCosto>
+    <citta>TORINO</citta>
+    <regione>PIEMONTE</regione>
+    <indirizzo>CSO SVIZZERA</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>JUAN CARLOS</nome>
+      <cognome>PICCININI</cognome>
+      <codiceFiscale>PCCJCR70C22Z600H</codiceFiscale>
+    </incaricato>
+    <incaricato ruolo="DELEGATO DAL RESPONSABILE DEL PROGETTO PER LA FASE DI AFFIDAMENTO">
+      <nome>ENRICO</nome>
+      <cognome>PASQUALINI</cognome>
+      <codiceFiscale>PSQNRC59M19D969H</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-03-06</dataCreazione>
+    <dataPubblicazione>2025-03-06</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante aggiudicatario="15460617">
+      <denominazione>INCICO S.P.A.</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>00296780299</codiceFiscale>
+      <ruolo>MANDATARIA</ruolo>
+    </partecipante>
+    <partecipante aggiudicatario="15460617">
+      <denominazione>AMBIENTE S.P.A.</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>00262540453</codiceFiscale>
+      <ruolo>MANDANTE</ruolo>
+    </partecipante>
+  </partecipanti>
+  <aggiudicazione>
+    <aggiudicatario>
+      <denominazione/>
+      <codiceFiscale/>
+      <importoAggiudicazione valuta="EUR">188700</importoAggiudicazione>
+    </aggiudicatario>
+  </aggiudicazione>
+  <quadroEconomico>
+    <voceEconomica nome="IMPORTO_SERVIZI" valuta="EUR">188700</voceEconomica>
+    <voceEconomica nome="SOMME_A_DISPOSIZIONE" valuta="EUR">41514</voceEconomica>
+  </quadroEconomico>
+  <categorieOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>FS</idCategoria>
+      <descrizione>FORNITURA DI SERVIZI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>71330000-0</codice>
+      <descrizione>VARI SERVIZI DI INGEGNERIA</descrizione>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>servizi</tipologia> avente per oggetto <oggetto>CONTRATTO APPLICATIVO SU ORDINE QUADRO N° 8820004336 - T_46450/2024 - TL-PROGETTAZIONE PER PREDISPOSIZIONE PRATICA AUTORIZZATIVACONDENSATORE AD ARIA CICLO COMBINATO TL800 - CENTRALE TURBIGO</oggetto>. <termine>vari servizi di ingegneria</termine>. <categoria>fornitura di servizi</categoria>. <luogo>Torino</luogo>.</descrizioneDocumentale>
+</contratto>

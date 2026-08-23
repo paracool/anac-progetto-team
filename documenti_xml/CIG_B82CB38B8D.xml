@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B82CB38B8D" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B82CB38B8D.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B82CB38B8D.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B82CB38B8D.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>PCP-20250909-04648</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>COLLOCAMENTO MINORI IN COMUNITA INNOCENTI LUGLIO - DICEMBRE 2025 - IMPORTO MERAMENTE PRESUNTO IN QUANTO DETERMINATO DA DISPOSIZIONI A.G. NON PREVENTIVAMENTE VALUTABILI</oggettoGara>
+    <oggettoLotto>COLLOCAMENTO MINORI IN COMUNITA INNOCENTI LUGLIO - DICEMBRE 2025 - IMPORTO MERAMENTE PRESUNTO IN QUANTO DETERMINATO DA DISPOSIZIONI A.G. NON PREVENTIVAMENTE VALUTABILI</oggettoLotto>
+    <importoGara valuta="EUR">80457.59</importoGara>
+    <importoLotto valuta="EUR">80457.59</importoLotto>
+    <provincia/>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>SERVIZI</oggettoPrincipaleContratto>
+    <tipologiaContratto>SERVIZI</tipologiaContratto>
+    <localizzazione>Napoli</localizzazione>
+    <scadenzaOfferte/>
+    <dataAggiudicazione/>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>80050040635</codiceFiscale>
+    <denominazione>CENTRO GIUSTIZIA MINORILE CAMPANIA E MOLISE</denominazione>
+    <centroCosto>CENTRO GIUSTIZIA MINORILE CAMPANIA</centroCosto>
+    <citta>NAPOLI</citta>
+    <regione>CAMPANIA</regione>
+    <indirizzo>VLE COLLI AMINEI</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>NICOLA</nome>
+      <cognome>PALMIERO</cognome>
+      <codiceFiscale>PLMNCL71T12A512O</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-09-09</dataCreazione>
+    <dataPubblicazione>2025-09-09</dataPubblicazione>
+  </pubblicazioni>
+  <categorieOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>999</idCategoria>
+      <descrizione>OO.CC. - Categoria non definita</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>servizi</tipologia> avente per oggetto <oggetto>COLLOCAMENTO MINORI IN COMUNITA INNOCENTI LUGLIO - DICEMBRE 2025 - IMPORTO MERAMENTE PRESUNTO IN QUANTO DETERMINATO DA DISPOSIZIONI A.G. NON PREVENTIVAMENTE VALUTABILI</oggetto>. <categoria>oo.cc. - categoria non definita</categoria>. <luogo>Napoli</luogo>.</descrizioneDocumentale>
+</contratto>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B7B0353822" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B7B0353822.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B7B0353822.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B7B0353822.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>G09464-d3009c4e-8dab-4a1f-a085-5e9e86aff7c1</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>AZIENDA OSPEDALIERO-UNIVERSITARIA SAN LUIGI GONZAGA,ORBASSANO (TO) - LAVORI DI REALIZZAZIONE DI UNA BIOBANCA DIRICERCA E SVILUPPO PER IL DIPARTIMENTO DI SCIENZE CLINICHE EBIOLOGICHE.</oggettoGara>
+    <oggettoLotto>AZIENDA OSPEDALIERO-UNIVERSITARIA SAN LUIGI GONZAGA,ORBASSANO (TO) - LAVORI DI REALIZZAZIONE DI UNA BIOBANCA DIRICERCA E SVILUPPO PER IL DIPARTIMENTO DI SCIENZE CLINICHE EBIOLOGICHE.</oggettoLotto>
+    <importoGara valuta="EUR">563554.34</importoGara>
+    <importoLotto valuta="EUR">563554.34</importoLotto>
+    <provincia>TORINO</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup>[{'CUP': 'D83C22002330001'}]</cup>
+    <oggettoPrincipaleContratto>LAVORI</oggettoPrincipaleContratto>
+    <tipologiaContratto>LAVORI</tipologiaContratto>
+    <localizzazione>Torino</localizzazione>
+    <scadenzaOfferte>2025-08-27T12:00</scadenzaOfferte>
+    <dataAggiudicazione/>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>80088230018</codiceFiscale>
+    <denominazione>UNIVERSITA' DEGLI STUDI DI TORINO</denominazione>
+    <centroCosto>DIREZIONE EDILIZIA E SOSTENIBILITA</centroCosto>
+    <citta>TORINO</citta>
+    <regione>PIEMONTE</regione>
+    <indirizzo>VIA PO 31</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>BATTISTA</nome>
+      <cognome>TORTORELLA</cognome>
+      <codiceFiscale>TRTBTS67E05D005J</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-07-17</dataCreazione>
+    <dataPubblicazione>2025-07-17</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante>
+      <denominazione>MEDIGAS ITALIA S.R.L.</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>02466440167</codiceFiscale>
+      <ruolo>OPERATORE ECONOMICO MONOSOGGETTIVO</ruolo>
+    </partecipante>
+  </partecipanti>
+  <categorieOpera>
+    <categoriaOpera tipo="SCORPORABILE">
+      <idCategoria>OG 1</idCategoria>
+      <descrizione>OG 1 - EDIFICI CIVILI E INDUSTRIALI</descrizione>
+    </categoriaOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>OS 3</idCategoria>
+      <descrizione>OS 3 - IMPIANTI IDRICO-SANITARIO, CUCINE, LAVANDERIE</descrizione>
+    </categoriaOpera>
+    <categoriaOpera tipo="SCORPORABILE">
+      <idCategoria>OG 11</idCategoria>
+      <descrizione>OG 11 - IMPIANTI TECNOLOGICI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>45300000-0</codice>
+      <descrizione>LAVORI DI INSTALLAZIONE DI IMPIANTI IN EDIFICI</descrizione>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>lavori</tipologia> avente per oggetto <oggetto>AZIENDA OSPEDALIERO-UNIVERSITARIA SAN LUIGI GONZAGA,ORBASSANO (TO) - LAVORI DI REALIZZAZIONE DI UNA BIOBANCA DIRICERCA E SVILUPPO PER IL DIPARTIMENTO DI SCIENZE CLINICHE EBIOLOGICHE.</oggetto>. <termine>lavori di installazione di impianti in edifici</termine>. <categoria>og 1 - edifici civili e industriali</categoria>. <luogo>Torino</luogo>.</descrizioneDocumentale>
+</contratto>

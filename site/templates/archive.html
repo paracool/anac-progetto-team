@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Archivio dei CIG{% endblock %}
+{% block content %}
+<section class="page-header"><div class="container"><p class="eyebrow">Archivio</p><h1>Documenti CIG</h1><p>Ricerca, filtra e ordina i record senza backend.</p></div></section>
+<section class="container section">
+  <form class="filters" data-table-filters>
+    <label>Ricerca<input type="search" id="search" placeholder="CIG, oggetto o stazione appaltante"></label>
+    <label>Tipologia<select id="type-filter"><option value="">Tutte</option>{% for row in analysis.amounts.by_contract_type %}<option>{{ row.label }}</option>{% endfor %}</select></label>
+    <label>Città<select id="city-filter"><option value="">Tutte</option>{% for row in analysis.territorial.authority_cities.rows %}{% if row.label != 'Dati mancanti' %}<option>{{ row.label }}</option>{% endif %}{% endfor %}</select></label>
+    <label>Regione<select id="region-filter"><option value="">Tutte</option>{% for row in analysis.territorial.regions.rows %}{% if row.label != 'Dati mancanti' %}<option>{{ row.label }}</option>{% endif %}{% endfor %}</select></label>
+    <button class="button secondary" type="reset">Azzera</button>
+  </form>
+  <p class="results-count" aria-live="polite"><span id="visible-count">{{ records|length }}</span> record visibili</p>
+  <div class="table-wrap">
+    <table id="archive-table" class="sortable-table">
+      <thead><tr><th><button data-sort="cig">CIG</button></th><th><button data-sort="title">Oggetto</button></th><th><button data-sort="authority">Stazione appaltante</button></th><th><button data-sort="type">Tipologia</button></th><th><button data-sort="city">Città</button></th><th><button data-sort="region">Regione</button></th><th><button data-sort="amount" data-sort-type="number">Importo</button></th></tr></thead>
+      <tbody>{% for record in records %}<tr data-cig="{{ record.cig }}" data-title="{{ record.title }}" data-authority="{{ record.contracting_authority }}" data-type="{{ record.contract_type }}" data-city="{{ record.authority_city }}" data-region="{{ record.region }}" data-amount="{{ record.tender_amount or '' }}"><td><a href="cig/{{ record.cig }}.html">{{ record.cig }}</a></td><td>{{ record.title }}</td><td>{{ record.contracting_authority or "n.d." }}</td><td>{{ record.contract_type or "n.d." }}</td><td>{{ record.authority_city or "n.d." }}</td><td>{{ record.region or "n.d." }}</td><td>{{ record.tender_amount_formatted }}</td></tr>{% endfor %}</tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

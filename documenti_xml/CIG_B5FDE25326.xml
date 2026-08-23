@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B5FDE25326" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B5FDE25326.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B5FDE25326.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B5FDE25326.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>CONSIP_ORDINE_8430917</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>BUONI PASTO 10</oggettoGara>
+    <oggettoLotto>ACQUISTO BUONI PASTO 10 LOTTO 14</oggettoLotto>
+    <importoGara valuta="EUR">96150</importoGara>
+    <importoLotto valuta="EUR">96150</importoLotto>
+    <provincia>PERUGIA</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>SERVIZI</oggettoPrincipaleContratto>
+    <tipologiaContratto>SERVIZI</tipologiaContratto>
+    <localizzazione>Perugia</localizzazione>
+    <scadenzaOfferte>2025-03-11T12:41</scadenzaOfferte>
+    <dataAggiudicazione>2025-03-17</dataAggiudicazione>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>00316820547</codiceFiscale>
+    <denominazione>COMUNE DI SPOLETO</denominazione>
+    <centroCosto>DIPARTIMENTO 5 PER IL BENESSERE E LA INNOVAZIONE SOCIALE - FORMAZIONE GENERALE E SPORTIVA PER LA VALORIZZAZIONE DELLA PERSONA</centroCosto>
+    <citta>SPOLETO</citta>
+    <regione>UMBRIA</regione>
+    <indirizzo>PIAZZA DEL COMUNE 1</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>NORA</nome>
+      <cognome>BELMONTE</cognome>
+      <codiceFiscale>BLMNRO61A46I921B</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-03-11</dataCreazione>
+    <dataPubblicazione>2025-03-11</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante aggiudicatario="15507376">
+      <denominazione>PLUXEE ITALIA SRL</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>05892970152</codiceFiscale>
+      <ruolo>OPERATORE ECONOMICO MONOSOGGETTIVO</ruolo>
+    </partecipante>
+  </partecipanti>
+  <aggiudicazione>
+    <aggiudicatario>
+      <denominazione/>
+      <codiceFiscale/>
+      <importoAggiudicazione valuta="EUR">96150</importoAggiudicazione>
+    </aggiudicatario>
+  </aggiudicazione>
+  <quadroEconomico>
+    <voceEconomica nome="IMPORTO_SERVIZI" valuta="EUR">96150</voceEconomica>
+    <voceEconomica nome="SOMME_A_DISPOSIZIONE" valuta="EUR">3846</voceEconomica>
+  </quadroEconomico>
+  <categorieOpera>
+    <categoriaOpera tipo="SCORPORABILE">
+      <idCategoria>FS</idCategoria>
+      <descrizione>FORNITURA DI SERVIZI</descrizione>
+    </categoriaOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>FS</idCategoria>
+      <descrizione>FORNITURA DI SERVIZI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>30199770-8</codice>
+      <descrizione>BUONI PASTO</descrizione>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>servizi</tipologia> avente per oggetto <oggetto>ACQUISTO BUONI PASTO 10 LOTTO 14</oggetto>. <termine>buoni pasto</termine>. <categoria>fornitura di servizi</categoria>. <luogo>Perugia</luogo>.</descrizioneDocumentale>
+</contratto>

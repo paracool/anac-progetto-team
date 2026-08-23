@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B5F77EC7CD" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B5F77EC7CD.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B5F77EC7CD.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B5F77EC7CD.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>e417efb0-48a1-45d0-a239-3da2a944bfb2</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>RECORDATI RARE DISEASES ITALY SRL - LOTTO 9</oggettoGara>
+    <oggettoLotto>RECORDATI RARE DISEASES ITALY SRL - LOTTO 9</oggettoLotto>
+    <importoGara valuta="EUR">137493.9</importoGara>
+    <importoLotto valuta="EUR">137493.9</importoLotto>
+    <provincia>LATINA</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>FORNITURE</oggettoPrincipaleContratto>
+    <tipologiaContratto>FORNITURE</tipologiaContratto>
+    <localizzazione>Latina</localizzazione>
+    <scadenzaOfferte>2025-03-10T11:33</scadenzaOfferte>
+    <dataAggiudicazione>2025-03-10</dataAggiudicazione>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>01684950593</codiceFiscale>
+    <denominazione>AZIENDA UNITA SANITARIA LOCALE LATINA</denominazione>
+    <centroCosto>UOC INTERAZIENDALE ASL LATINA / ASL FROSINONE PROVVEDITORATO</centroCosto>
+    <citta>LATINA</citta>
+    <regione>LAZIO</regione>
+    <indirizzo>VLE PIER LUIGI NERVI C.C. LATINAFIORI TORRE G2</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>SIMONA</nome>
+      <cognome>CONTENTA</cognome>
+      <codiceFiscale>CNTSMN68H54E472E</codiceFiscale>
+    </incaricato>
+    <incaricato ruolo="DIRETTORE DELL'ESECUZIONE DEL CONTRATTO">
+      <nome>MICHELE</nome>
+      <cognome>RENNELLA</cognome>
+      <codiceFiscale>RNNMHL80M26B963O</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-03-10</dataCreazione>
+    <dataPubblicazione>2025-03-10</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante aggiudicatario="15487271">
+      <denominazione>RECORDATI RARE DISEASES ITALY S.R.L.</denominazione>
+      <tipoSoggetto>IMPRESA</tipoSoggetto>
+      <codiceFiscale>12736110151</codiceFiscale>
+      <ruolo>OPERATORE ECONOMICO MONOSOGGETTIVO</ruolo>
+    </partecipante>
+  </partecipanti>
+  <aggiudicazione>
+    <aggiudicatario>
+      <denominazione/>
+      <codiceFiscale/>
+      <importoAggiudicazione valuta="EUR">137493.9</importoAggiudicazione>
+    </aggiudicatario>
+  </aggiudicazione>
+  <contrattoEsecuzione>
+    <dataAvvio/>
+    <dataFinePrevista>2027-11-11</dataFinePrevista>
+  </contrattoEsecuzione>
+  <quadroEconomico>
+    <voceEconomica nome="IMPORTO_FORNITURE" valuta="EUR">137493.9</voceEconomica>
+    <voceEconomica nome="SOMME_A_DISPOSIZIONE" valuta="EUR">137493.9</voceEconomica>
+  </quadroEconomico>
+  <categorieOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>FB</idCategoria>
+      <descrizione>FORNITURA DI BENI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>33690000</codice>
+      <descrizione/>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>forniture</tipologia> avente per oggetto <oggetto>RECORDATI RARE DISEASES ITALY SRL - LOTTO 9</oggetto>. <categoria>fornitura di beni</categoria>. <luogo>Latina</luogo>.</descrizioneDocumentale>
+</contratto>

@@ -1,0 +1,2702 @@
+{
+  "metadata": {
+    "record_count": 15,
+    "valid_xml_count": 15,
+    "source_coverage": [
+      {
+        "format": "csv",
+        "available": 15,
+        "missing": 0,
+        "percent": 100.0
+      },
+      {
+        "format": "json",
+        "available": 15,
+        "missing": 0,
+        "percent": 100.0
+      },
+      {
+        "format": "html",
+        "available": 15,
+        "missing": 0,
+        "percent": 100.0
+      },
+      {
+        "format": "pdf",
+        "available": 15,
+        "missing": 0,
+        "percent": 100.0
+      }
+    ]
+  },
+  "territorial": {
+    "tender_locations": {
+      "rows": [
+        {
+          "label": "Roma",
+          "count": 4,
+          "percent": 26.67
+        },
+        {
+          "label": "Torino",
+          "count": 2,
+          "percent": 13.33
+        },
+        {
+          "label": "Grosseto",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Firenze",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Latina",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Perugia",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Milano",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Messina",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Dati mancanti",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Napoli",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Bolzano/Bozen",
+          "count": 1,
+          "percent": 6.67
+        }
+      ],
+      "missing": 1,
+      "missing_percent": 6.67,
+      "top": {
+        "label": "Roma",
+        "count": 4,
+        "percent": 26.67
+      }
+    },
+    "authority_cities": {
+      "rows": [
+        {
+          "label": "Torino",
+          "count": 2,
+          "percent": 13.33
+        },
+        {
+          "label": "Roma",
+          "count": 2,
+          "percent": 13.33
+        },
+        {
+          "label": "Grosseto",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Firenze",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Latina",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Spoleto",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Milano",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "San Fratello",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Frascati",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Colleferro",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Torriana",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Napoli",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Bressanone",
+          "count": 1,
+          "percent": 6.67
+        }
+      ],
+      "missing": 0,
+      "missing_percent": 0.0,
+      "top": {
+        "label": "Torino",
+        "count": 2,
+        "percent": 13.33
+      }
+    },
+    "regions": {
+      "rows": [
+        {
+          "label": "Lazio",
+          "count": 5,
+          "percent": 33.33
+        },
+        {
+          "label": "Toscana",
+          "count": 2,
+          "percent": 13.33
+        },
+        {
+          "label": "Piemonte",
+          "count": 2,
+          "percent": 13.33
+        },
+        {
+          "label": "Umbria",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Lombardia",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Sicilia",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Emilia-Romagna",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Campania",
+          "count": 1,
+          "percent": 6.67
+        },
+        {
+          "label": "Trentino-Alto Adige",
+          "count": 1,
+          "percent": 6.67
+        }
+      ],
+      "missing": 0,
+      "missing_percent": 0.0,
+      "top": {
+        "label": "Lazio",
+        "count": 5,
+        "percent": 33.33
+      }
+    },
+    "contract_types_by_city": [
+      {
+        "area": "Roma",
+        "contract_type": "FORNITURE",
+        "count": 2
+      },
+      {
+        "area": "Bressanone",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Colleferro",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Firenze",
+        "contract_type": "FORNITURE",
+        "count": 1
+      },
+      {
+        "area": "Frascati",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Grosseto",
+        "contract_type": "LAVORI",
+        "count": 1
+      },
+      {
+        "area": "Latina",
+        "contract_type": "FORNITURE",
+        "count": 1
+      },
+      {
+        "area": "Milano",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Napoli",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "San Fratello",
+        "contract_type": "FORNITURE",
+        "count": 1
+      },
+      {
+        "area": "Spoleto",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Torino",
+        "contract_type": "LAVORI",
+        "count": 1
+      },
+      {
+        "area": "Torino",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Torriana",
+        "contract_type": "SERVIZI",
+        "count": 1
+      }
+    ],
+    "contract_types_by_region": [
+      {
+        "area": "Lazio",
+        "contract_type": "FORNITURE",
+        "count": 3
+      },
+      {
+        "area": "Lazio",
+        "contract_type": "SERVIZI",
+        "count": 2
+      },
+      {
+        "area": "Campania",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Emilia-Romagna",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Lombardia",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Piemonte",
+        "contract_type": "LAVORI",
+        "count": 1
+      },
+      {
+        "area": "Piemonte",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Sicilia",
+        "contract_type": "FORNITURE",
+        "count": 1
+      },
+      {
+        "area": "Toscana",
+        "contract_type": "FORNITURE",
+        "count": 1
+      },
+      {
+        "area": "Toscana",
+        "contract_type": "LAVORI",
+        "count": 1
+      },
+      {
+        "area": "Trentino-Alto Adige",
+        "contract_type": "SERVIZI",
+        "count": 1
+      },
+      {
+        "area": "Umbria",
+        "contract_type": "SERVIZI",
+        "count": 1
+      }
+    ],
+    "amounts_by_city": [
+      {
+        "label": "Torino",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "752254.34",
+        "mean": "376127.17",
+        "median": "376127.17",
+        "min": "188700",
+        "max": "563554.34",
+        "q1": "282413.5850",
+        "q3": "469840.7550",
+        "iqr": "187427.1700"
+      },
+      {
+        "label": "Roma",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "807775",
+        "mean": "403887.5",
+        "median": "403887.5",
+        "min": "400000",
+        "max": "407775",
+        "q1": "401943.75",
+        "q3": "405831.25",
+        "iqr": "3887.50"
+      },
+      {
+        "label": "Grosseto",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "76216.47",
+        "mean": "76216.47",
+        "median": "76216.47",
+        "min": "76216.47",
+        "max": "76216.47",
+        "q1": "76216.47",
+        "q3": "76216.47",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Firenze",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "319800",
+        "mean": "319800",
+        "median": "319800",
+        "min": "319800",
+        "max": "319800",
+        "q1": "319800",
+        "q3": "319800",
+        "iqr": "0"
+      },
+      {
+        "label": "Latina",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "137493.9",
+        "mean": "137493.9",
+        "median": "137493.9",
+        "min": "137493.9",
+        "max": "137493.9",
+        "q1": "137493.9",
+        "q3": "137493.9",
+        "iqr": "0.0"
+      },
+      {
+        "label": "Spoleto",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "96150",
+        "mean": "96150",
+        "median": "96150",
+        "min": "96150",
+        "max": "96150",
+        "q1": "96150",
+        "q3": "96150",
+        "iqr": "0"
+      },
+      {
+        "label": "Milano",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "75000",
+        "mean": "75000",
+        "median": "75000",
+        "min": "75000",
+        "max": "75000",
+        "q1": "75000",
+        "q3": "75000",
+        "iqr": "0"
+      },
+      {
+        "label": "San Fratello",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "43800",
+        "mean": "43800",
+        "median": "43800",
+        "min": "43800",
+        "max": "43800",
+        "q1": "43800",
+        "q3": "43800",
+        "iqr": "0"
+      },
+      {
+        "label": "Frascati",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "872727.27",
+        "mean": "872727.27",
+        "median": "872727.27",
+        "min": "872727.27",
+        "max": "872727.27",
+        "q1": "872727.27",
+        "q3": "872727.27",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Colleferro",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "76500",
+        "mean": "76500",
+        "median": "76500",
+        "min": "76500",
+        "max": "76500",
+        "q1": "76500",
+        "q3": "76500",
+        "iqr": "0"
+      },
+      {
+        "label": "Torriana",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "60000",
+        "mean": "60000",
+        "median": "60000",
+        "min": "60000",
+        "max": "60000",
+        "q1": "60000",
+        "q3": "60000",
+        "iqr": "0"
+      },
+      {
+        "label": "Napoli",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "80457.59",
+        "mean": "80457.59",
+        "median": "80457.59",
+        "min": "80457.59",
+        "max": "80457.59",
+        "q1": "80457.59",
+        "q3": "80457.59",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Bressanone",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "84236.15",
+        "mean": "84236.15",
+        "median": "84236.15",
+        "min": "84236.15",
+        "max": "84236.15",
+        "q1": "84236.15",
+        "q3": "84236.15",
+        "iqr": "0.00"
+      }
+    ],
+    "amounts_by_region": [
+      {
+        "label": "Lazio",
+        "records": 5,
+        "available": 5,
+        "missing": 0,
+        "sum": "1894496.17",
+        "mean": "378899.234",
+        "median": "400000",
+        "min": "76500",
+        "max": "872727.27",
+        "q1": "137493.900",
+        "q3": "407775.0000",
+        "iqr": "270281.1000"
+      },
+      {
+        "label": "Toscana",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "396016.47",
+        "mean": "198008.235",
+        "median": "198008.235",
+        "min": "76216.47",
+        "max": "319800",
+        "q1": "137112.3525",
+        "q3": "258904.1175",
+        "iqr": "121791.7650"
+      },
+      {
+        "label": "Piemonte",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "752254.34",
+        "mean": "376127.17",
+        "median": "376127.17",
+        "min": "188700",
+        "max": "563554.34",
+        "q1": "282413.5850",
+        "q3": "469840.7550",
+        "iqr": "187427.1700"
+      },
+      {
+        "label": "Umbria",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "96150",
+        "mean": "96150",
+        "median": "96150",
+        "min": "96150",
+        "max": "96150",
+        "q1": "96150",
+        "q3": "96150",
+        "iqr": "0"
+      },
+      {
+        "label": "Lombardia",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "75000",
+        "mean": "75000",
+        "median": "75000",
+        "min": "75000",
+        "max": "75000",
+        "q1": "75000",
+        "q3": "75000",
+        "iqr": "0"
+      },
+      {
+        "label": "Sicilia",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "43800",
+        "mean": "43800",
+        "median": "43800",
+        "min": "43800",
+        "max": "43800",
+        "q1": "43800",
+        "q3": "43800",
+        "iqr": "0"
+      },
+      {
+        "label": "Emilia-Romagna",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "60000",
+        "mean": "60000",
+        "median": "60000",
+        "min": "60000",
+        "max": "60000",
+        "q1": "60000",
+        "q3": "60000",
+        "iqr": "0"
+      },
+      {
+        "label": "Campania",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "80457.59",
+        "mean": "80457.59",
+        "median": "80457.59",
+        "min": "80457.59",
+        "max": "80457.59",
+        "q1": "80457.59",
+        "q3": "80457.59",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Trentino-Alto Adige",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "84236.15",
+        "mean": "84236.15",
+        "median": "84236.15",
+        "min": "84236.15",
+        "max": "84236.15",
+        "q1": "84236.15",
+        "q3": "84236.15",
+        "iqr": "0.00"
+      }
+    ],
+    "location_authority_differences": [
+      {
+        "cig": "B5FDE25326",
+        "tender_location": "Perugia",
+        "authority_city": "Spoleto"
+      },
+      {
+        "cig": "B6A106A32A",
+        "tender_location": "Messina",
+        "authority_city": "San Fratello"
+      },
+      {
+        "cig": "B6DD95EE23",
+        "tender_location": "Roma",
+        "authority_city": "Frascati"
+      },
+      {
+        "cig": "B8297EE856",
+        "tender_location": "Roma",
+        "authority_city": "Colleferro"
+      },
+      {
+        "cig": "B85DEBAAC9",
+        "tender_location": "Bolzano/Bozen",
+        "authority_city": "Bressanone"
+      }
+    ]
+  },
+  "dates": {
+    "coverage": [
+      {
+        "field": "creation_date",
+        "available": 15,
+        "missing": 0,
+        "percent": 100.0
+      },
+      {
+        "field": "publication_date",
+        "available": 15,
+        "missing": 0,
+        "percent": 100.0
+      },
+      {
+        "field": "offer_deadline",
+        "available": 14,
+        "missing": 1,
+        "percent": 93.33
+      },
+      {
+        "field": "award_date",
+        "available": 10,
+        "missing": 5,
+        "percent": 66.67
+      },
+      {
+        "field": "start_date",
+        "available": 3,
+        "missing": 12,
+        "percent": 20.0
+      },
+      {
+        "field": "expected_end_date",
+        "available": 4,
+        "missing": 11,
+        "percent": 26.67
+      }
+    ],
+    "anomaly_counts": [
+      {
+        "type": "scadenza_anteriore_pubblicazione",
+        "count": 5
+      },
+      {
+        "type": "sequenza_cronologica_coerente",
+        "count": 5
+      },
+      {
+        "type": "data_mancante",
+        "count": 5
+      },
+      {
+        "type": "aggiudicazione_anteriore_pubblicazione",
+        "count": 3
+      },
+      {
+        "type": "aggiudicazione_anteriore_scadenza",
+        "count": 1
+      }
+    ],
+    "anomalies": [
+      {
+        "cig": "B474D3250C",
+        "type": "scadenza_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "offer_deadline"
+        ],
+        "dates": {
+          "creation_date": "2024-11-26",
+          "publication_date": "2025-01-13",
+          "offer_deadline": "2024-11-26T12:37",
+          "award_date": "2024-11-26",
+          "start_date": "2025-01-27",
+          "expected_end_date": "2025-03-01"
+        }
+      },
+      {
+        "cig": "B474D3250C",
+        "type": "aggiudicazione_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2024-11-26",
+          "publication_date": "2025-01-13",
+          "offer_deadline": "2024-11-26T12:37",
+          "award_date": "2024-11-26",
+          "start_date": "2025-01-27",
+          "expected_end_date": "2025-03-01"
+        }
+      },
+      {
+        "cig": "B6646262E7",
+        "type": "data_mancante",
+        "fields": [
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-04-07",
+          "publication_date": "2025-04-07",
+          "offer_deadline": "2025-04-28T12:00",
+          "award_date": "",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B675CE0615",
+        "type": "scadenza_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "offer_deadline"
+        ],
+        "dates": {
+          "creation_date": "2025-04-11",
+          "publication_date": "2025-04-14",
+          "offer_deadline": "2025-04-11T11:32",
+          "award_date": "2025-04-10",
+          "start_date": "2025-01-01",
+          "expected_end_date": "2025-12-31"
+        }
+      },
+      {
+        "cig": "B675CE0615",
+        "type": "aggiudicazione_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-04-11",
+          "publication_date": "2025-04-14",
+          "offer_deadline": "2025-04-11T11:32",
+          "award_date": "2025-04-10",
+          "start_date": "2025-01-01",
+          "expected_end_date": "2025-12-31"
+        }
+      },
+      {
+        "cig": "B675CE0615",
+        "type": "aggiudicazione_anteriore_scadenza",
+        "fields": [
+          "offer_deadline",
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-04-11",
+          "publication_date": "2025-04-14",
+          "offer_deadline": "2025-04-11T11:32",
+          "award_date": "2025-04-10",
+          "start_date": "2025-01-01",
+          "expected_end_date": "2025-12-31"
+        }
+      },
+      {
+        "cig": "B6A106A32A",
+        "type": "data_mancante",
+        "fields": [
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-04-28",
+          "publication_date": "2025-04-28",
+          "offer_deadline": "2025-05-08T07:30",
+          "award_date": "",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B74941928B",
+        "type": "data_mancante",
+        "fields": [
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-06-16",
+          "publication_date": "2025-06-16",
+          "offer_deadline": "2025-07-17T13:00",
+          "award_date": "",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B7B0353822",
+        "type": "data_mancante",
+        "fields": [
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-07-17",
+          "publication_date": "2025-07-17",
+          "offer_deadline": "2025-08-27T12:00",
+          "award_date": "",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B8297EE856",
+        "type": "scadenza_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "offer_deadline"
+        ],
+        "dates": {
+          "creation_date": "2025-09-08",
+          "publication_date": "2025-09-09",
+          "offer_deadline": "2025-09-08T15:42",
+          "award_date": "2025-09-29",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B82A8FBA72",
+        "type": "scadenza_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "offer_deadline"
+        ],
+        "dates": {
+          "creation_date": "2025-09-08",
+          "publication_date": "2025-09-09",
+          "offer_deadline": "2025-09-08T19:26",
+          "award_date": "2025-10-31",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B82CB38B8D",
+        "type": "data_mancante",
+        "fields": [
+          "offer_deadline",
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-09-09",
+          "publication_date": "2025-09-09",
+          "offer_deadline": "",
+          "award_date": "",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B85DEBAAC9",
+        "type": "scadenza_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "offer_deadline"
+        ],
+        "dates": {
+          "creation_date": "2025-09-24",
+          "publication_date": "2025-09-25",
+          "offer_deadline": "2025-09-24T14:19",
+          "award_date": "2025-09-24",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      },
+      {
+        "cig": "B85DEBAAC9",
+        "type": "aggiudicazione_anteriore_pubblicazione",
+        "fields": [
+          "publication_date",
+          "award_date"
+        ],
+        "dates": {
+          "creation_date": "2025-09-24",
+          "publication_date": "2025-09-25",
+          "offer_deadline": "2025-09-24T14:19",
+          "award_date": "2025-09-24",
+          "start_date": "",
+          "expected_end_date": ""
+        }
+      }
+    ],
+    "durations": {
+      "publication_to_deadline": {
+        "count": 9,
+        "mean": 13.11111111111111,
+        "median": 10.0
+      },
+      "deadline_to_award": {
+        "count": 9,
+        "mean": 11.777777777777779,
+        "median": 0.0
+      },
+      "publication_to_award": {
+        "count": 7,
+        "mean": 17,
+        "median": 6.0
+      }
+    },
+    "publication_months": [
+      {
+        "label": "2025-01",
+        "count": 2
+      },
+      {
+        "label": "2025-03",
+        "count": 3
+      },
+      {
+        "label": "2025-04",
+        "count": 3
+      },
+      {
+        "label": "2025-05",
+        "count": 1
+      },
+      {
+        "label": "2025-06",
+        "count": 1
+      },
+      {
+        "label": "2025-07",
+        "count": 1
+      },
+      {
+        "label": "2025-09",
+        "count": 4
+      }
+    ],
+    "deadline_months": [
+      {
+        "label": "2024-11",
+        "count": 1
+      },
+      {
+        "label": "2025-01",
+        "count": 1
+      },
+      {
+        "label": "2025-03",
+        "count": 3
+      },
+      {
+        "label": "2025-04",
+        "count": 2
+      },
+      {
+        "label": "2025-05",
+        "count": 2
+      },
+      {
+        "label": "2025-07",
+        "count": 1
+      },
+      {
+        "label": "2025-08",
+        "count": 1
+      },
+      {
+        "label": "2025-09",
+        "count": 3
+      }
+    ]
+  },
+  "amounts": {
+    "statistics": {
+      "tender_amount": {
+        "available": 15,
+        "missing": 0,
+        "sum": "3482410.72",
+        "mean": "232160.7146666666666666666667",
+        "median": "96150",
+        "min": "43800",
+        "max": "872727.27",
+        "q1": "76358.2350",
+        "q3": "359900.00",
+        "iqr": "283541.7650"
+      },
+      "lot_amount": {
+        "available": 15,
+        "missing": 0,
+        "sum": "3209735.72",
+        "mean": "213982.3813333333333333333333",
+        "median": "96150",
+        "min": "43800",
+        "max": "872727.27",
+        "q1": "76358.2350",
+        "q3": "254250.00",
+        "iqr": "177891.7650"
+      },
+      "award_amount": {
+        "available": 10,
+        "missing": 5,
+        "sum": "1986823.79",
+        "mean": "198682.379",
+        "median": "90193.075",
+        "min": "60000",
+        "max": "872727.27",
+        "q1": "76287.3525",
+        "q3": "175898.475",
+        "iqr": "99611.1225"
+      }
+    },
+    "bands": [
+      {
+        "label": "Meno di 50.000 €",
+        "count": 1
+      },
+      {
+        "label": "50.000–99.999 €",
+        "count": 7
+      },
+      {
+        "label": "100.000–249.999 €",
+        "count": 2
+      },
+      {
+        "label": "250.000–499.999 €",
+        "count": 3
+      },
+      {
+        "label": "500.000 € e oltre",
+        "count": 2
+      }
+    ],
+    "by_contract_type": [
+      {
+        "label": "SERVIZI",
+        "records": 8,
+        "available": 8,
+        "missing": 0,
+        "sum": "1533771.01",
+        "mean": "191721.37625",
+        "median": "82346.87",
+        "min": "60000",
+        "max": "872727.27",
+        "q1": "76125.00",
+        "q3": "119287.50",
+        "iqr": "43162.50"
+      },
+      {
+        "label": "FORNITURE",
+        "records": 5,
+        "available": 5,
+        "missing": 0,
+        "sum": "1308868.9",
+        "mean": "261773.78",
+        "median": "319800",
+        "min": "43800",
+        "max": "407775",
+        "q1": "137493.900",
+        "q3": "400000.00",
+        "iqr": "262506.100"
+      },
+      {
+        "label": "LAVORI",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "639770.81",
+        "mean": "319885.405",
+        "median": "319885.405",
+        "min": "76216.47",
+        "max": "563554.34",
+        "q1": "198050.9375",
+        "q3": "441719.8725",
+        "iqr": "243668.9350"
+      }
+    ],
+    "by_city": [
+      {
+        "label": "Torino",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "752254.34",
+        "mean": "376127.17",
+        "median": "376127.17",
+        "min": "188700",
+        "max": "563554.34",
+        "q1": "282413.5850",
+        "q3": "469840.7550",
+        "iqr": "187427.1700"
+      },
+      {
+        "label": "Roma",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "807775",
+        "mean": "403887.5",
+        "median": "403887.5",
+        "min": "400000",
+        "max": "407775",
+        "q1": "401943.75",
+        "q3": "405831.25",
+        "iqr": "3887.50"
+      },
+      {
+        "label": "Grosseto",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "76216.47",
+        "mean": "76216.47",
+        "median": "76216.47",
+        "min": "76216.47",
+        "max": "76216.47",
+        "q1": "76216.47",
+        "q3": "76216.47",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Firenze",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "319800",
+        "mean": "319800",
+        "median": "319800",
+        "min": "319800",
+        "max": "319800",
+        "q1": "319800",
+        "q3": "319800",
+        "iqr": "0"
+      },
+      {
+        "label": "Latina",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "137493.9",
+        "mean": "137493.9",
+        "median": "137493.9",
+        "min": "137493.9",
+        "max": "137493.9",
+        "q1": "137493.9",
+        "q3": "137493.9",
+        "iqr": "0.0"
+      },
+      {
+        "label": "Spoleto",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "96150",
+        "mean": "96150",
+        "median": "96150",
+        "min": "96150",
+        "max": "96150",
+        "q1": "96150",
+        "q3": "96150",
+        "iqr": "0"
+      },
+      {
+        "label": "Milano",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "75000",
+        "mean": "75000",
+        "median": "75000",
+        "min": "75000",
+        "max": "75000",
+        "q1": "75000",
+        "q3": "75000",
+        "iqr": "0"
+      },
+      {
+        "label": "San Fratello",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "43800",
+        "mean": "43800",
+        "median": "43800",
+        "min": "43800",
+        "max": "43800",
+        "q1": "43800",
+        "q3": "43800",
+        "iqr": "0"
+      },
+      {
+        "label": "Frascati",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "872727.27",
+        "mean": "872727.27",
+        "median": "872727.27",
+        "min": "872727.27",
+        "max": "872727.27",
+        "q1": "872727.27",
+        "q3": "872727.27",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Colleferro",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "76500",
+        "mean": "76500",
+        "median": "76500",
+        "min": "76500",
+        "max": "76500",
+        "q1": "76500",
+        "q3": "76500",
+        "iqr": "0"
+      },
+      {
+        "label": "Torriana",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "60000",
+        "mean": "60000",
+        "median": "60000",
+        "min": "60000",
+        "max": "60000",
+        "q1": "60000",
+        "q3": "60000",
+        "iqr": "0"
+      },
+      {
+        "label": "Napoli",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "80457.59",
+        "mean": "80457.59",
+        "median": "80457.59",
+        "min": "80457.59",
+        "max": "80457.59",
+        "q1": "80457.59",
+        "q3": "80457.59",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Bressanone",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "84236.15",
+        "mean": "84236.15",
+        "median": "84236.15",
+        "min": "84236.15",
+        "max": "84236.15",
+        "q1": "84236.15",
+        "q3": "84236.15",
+        "iqr": "0.00"
+      }
+    ],
+    "by_region": [
+      {
+        "label": "Lazio",
+        "records": 5,
+        "available": 5,
+        "missing": 0,
+        "sum": "1894496.17",
+        "mean": "378899.234",
+        "median": "400000",
+        "min": "76500",
+        "max": "872727.27",
+        "q1": "137493.900",
+        "q3": "407775.0000",
+        "iqr": "270281.1000"
+      },
+      {
+        "label": "Toscana",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "396016.47",
+        "mean": "198008.235",
+        "median": "198008.235",
+        "min": "76216.47",
+        "max": "319800",
+        "q1": "137112.3525",
+        "q3": "258904.1175",
+        "iqr": "121791.7650"
+      },
+      {
+        "label": "Piemonte",
+        "records": 2,
+        "available": 2,
+        "missing": 0,
+        "sum": "752254.34",
+        "mean": "376127.17",
+        "median": "376127.17",
+        "min": "188700",
+        "max": "563554.34",
+        "q1": "282413.5850",
+        "q3": "469840.7550",
+        "iqr": "187427.1700"
+      },
+      {
+        "label": "Umbria",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "96150",
+        "mean": "96150",
+        "median": "96150",
+        "min": "96150",
+        "max": "96150",
+        "q1": "96150",
+        "q3": "96150",
+        "iqr": "0"
+      },
+      {
+        "label": "Lombardia",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "75000",
+        "mean": "75000",
+        "median": "75000",
+        "min": "75000",
+        "max": "75000",
+        "q1": "75000",
+        "q3": "75000",
+        "iqr": "0"
+      },
+      {
+        "label": "Sicilia",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "43800",
+        "mean": "43800",
+        "median": "43800",
+        "min": "43800",
+        "max": "43800",
+        "q1": "43800",
+        "q3": "43800",
+        "iqr": "0"
+      },
+      {
+        "label": "Emilia-Romagna",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "60000",
+        "mean": "60000",
+        "median": "60000",
+        "min": "60000",
+        "max": "60000",
+        "q1": "60000",
+        "q3": "60000",
+        "iqr": "0"
+      },
+      {
+        "label": "Campania",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "80457.59",
+        "mean": "80457.59",
+        "median": "80457.59",
+        "min": "80457.59",
+        "max": "80457.59",
+        "q1": "80457.59",
+        "q3": "80457.59",
+        "iqr": "0.00"
+      },
+      {
+        "label": "Trentino-Alto Adige",
+        "records": 1,
+        "available": 1,
+        "missing": 0,
+        "sum": "84236.15",
+        "mean": "84236.15",
+        "median": "84236.15",
+        "min": "84236.15",
+        "max": "84236.15",
+        "q1": "84236.15",
+        "q3": "84236.15",
+        "iqr": "0.00"
+      }
+    ],
+    "highest": [
+      {
+        "cig": "B6DD95EE23",
+        "title": "PN VSF 15/25/SUA - CITTÀ DI FRASCATI (RM) - AFFIDAMENTO DEL SERVIZIO DI TRATTAMENTO E RECUPERO DEI RIFIUTI URBANI NON DIFFERENZIATI EER 20.03.01 SECCO RESIDUO, PRODOTTI DAL COMUNE DI FRASCATI.",
+        "amount": "872727.27"
+      },
+      {
+        "cig": "B7B0353822",
+        "title": "AZIENDA OSPEDALIERO-UNIVERSITARIA SAN LUIGI GONZAGA,ORBASSANO (TO) - LAVORI DI REALIZZAZIONE DI UNA BIOBANCA DIRICERCA E SVILUPPO PER IL DIPARTIMENTO DI SCIENZE CLINICHE EBIOLOGICHE.",
+        "amount": "563554.34"
+      },
+      {
+        "cig": "B74941928B",
+        "title": "FORNITURA DI ARREDI SANITARI ED ARREDI NON SANITARI PER LE NECESSITÀ DELLA FONDAZIONE PTV",
+        "amount": "407775"
+      },
+      {
+        "cig": "B6646262E7",
+        "title": "ACQUISIZIONE DELLE ATTIVITÀ INGEGNERISTICHE E TECNOLOGICHE PER L'IMPRESCINDIBILE ADEGUAMENTO, IN OTTICA DI SECURITY, DEI VOICE COMMUNICATION SYSTEMS DI EMERGENZA, PRESENTI NEGLI AEROPORTI DI MILANO LINATE, BOLOGNA, GENOVA, TORINO E FIUMICINO, CHE SONO STATI FORNITI E MESSI IN ESERCIZIO, PER ENAV, DA PARTE DELLA SOCIETÀ FREQUENTIS",
+        "amount": "400000"
+      },
+      {
+        "cig": "B55BB8E397",
+        "title": "DET. 1492 DEL 20/12/2024 AGG. FORN. PIASTRE /PLACCHE MONOUSO PER DEFIBR. TRANSTORAC. 14 DAL 01/03/2025 AL 28/02/2030 ZOLL MEDICAL ITALIA S.R.L.",
+        "amount": "319800"
+      }
+    ],
+    "outliers": [
+      {
+        "cig": "B6DD95EE23",
+        "title": "PN VSF 15/25/SUA - CITTÀ DI FRASCATI (RM) - AFFIDAMENTO DEL SERVIZIO DI TRATTAMENTO E RECUPERO DEI RIFIUTI URBANI NON DIFFERENZIATI EER 20.03.01 SECCO RESIDUO, PRODOTTI DAL COMUNE DI FRASCATI.",
+        "amount": "872727.27"
+      }
+    ],
+    "comparisons": {
+      "available": 10,
+      "mean_absolute": "0.00",
+      "median_absolute": "0",
+      "mean_percent": "0",
+      "median_percent": "0",
+      "unchanged": 10,
+      "award_lower": 0,
+      "award_higher": 0,
+      "records": [
+        {
+          "cig": "B474D3250C",
+          "tender_amount": "76216.47",
+          "award_amount": "76216.47",
+          "difference": "0.00",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B55BB8E397",
+          "tender_amount": "319800",
+          "award_amount": "319800",
+          "difference": "0",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B5F0937C10",
+          "tender_amount": "188700",
+          "award_amount": "188700",
+          "difference": "0",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B5F77EC7CD",
+          "tender_amount": "137493.9",
+          "award_amount": "137493.9",
+          "difference": "0.0",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B5FDE25326",
+          "tender_amount": "96150",
+          "award_amount": "96150",
+          "difference": "0",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B675CE0615",
+          "tender_amount": "75000",
+          "award_amount": "75000",
+          "difference": "0",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B6DD95EE23",
+          "tender_amount": "872727.27",
+          "award_amount": "872727.27",
+          "difference": "0.00",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B8297EE856",
+          "tender_amount": "76500",
+          "award_amount": "76500",
+          "difference": "0",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B82A8FBA72",
+          "tender_amount": "60000",
+          "award_amount": "60000",
+          "difference": "0",
+          "difference_percent": "0"
+        },
+        {
+          "cig": "B85DEBAAC9",
+          "tender_amount": "84236.15",
+          "award_amount": "84236.15",
+          "difference": "0.00",
+          "difference_percent": "0"
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "cig": "B474D3250C",
+      "title": "MANUTENZIONE STRAORDINARIA DELLA STRADA BIANCA DI ACCESSO IMPIANTO TRATTAMENTO RIFIUTI. LOC. STRILLAIE COMUNE DI GROSSETO",
+      "contract_type": "LAVORI",
+      "status": "ATTIVO",
+      "contracting_authority": "COMUNE DI GROSSETO",
+      "authority_city": "Grosseto",
+      "region": "Toscana",
+      "province": "Grosseto",
+      "tender_location": "Grosseto",
+      "tender_amount": "76216.47",
+      "lot_amount": "76216.47",
+      "award_amount": "76216.47",
+      "creation_date": "2024-11-26T00:00:00",
+      "publication_date": "2025-01-13T00:00:00",
+      "offer_deadline": "2024-11-26T12:37:00",
+      "award_date": "2024-11-26T00:00:00",
+      "start_date": "2025-01-27T00:00:00",
+      "expected_end_date": "2025-03-01T00:00:00",
+      "cpv": [
+        "45233141-9 — LAVORI DI MANUTENZIONE STRADALE"
+      ],
+      "participants": [
+        {
+          "name": "ARTIGIANA ASFALTI S.R.L.",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "00957150535",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B474D3250C.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B474D3250C.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B474D3250C.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B474D3250C.xml",
+      "raw_dates": {
+        "creation_date": "2024-11-26",
+        "publication_date": "2025-01-13",
+        "offer_deadline": "2024-11-26T12:37",
+        "award_date": "2024-11-26",
+        "start_date": "2025-01-27",
+        "expected_end_date": "2025-03-01"
+      },
+      "raw_amounts": {
+        "tender_amount": "76216.47",
+        "lot_amount": "76216.47",
+        "award_amount": "76216.47"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B55BB8E397",
+      "title": "DET. 1492 DEL 20/12/2024 AGG. FORN. PIASTRE /PLACCHE MONOUSO PER DEFIBR. TRANSTORAC. 14 DAL 01/03/2025 AL 28/02/2030 ZOLL MEDICAL ITALIA S.R.L.",
+      "contract_type": "FORNITURE",
+      "status": "ATTIVO",
+      "contracting_authority": "ESTAR (ENTE DI SUPPORTO TECNICO AMMINISTRATIVO REGIONALE)",
+      "authority_city": "Firenze",
+      "region": "Toscana",
+      "province": "Firenze",
+      "tender_location": "Firenze",
+      "tender_amount": "319800",
+      "lot_amount": "319800",
+      "award_amount": "319800",
+      "creation_date": "2025-01-27T00:00:00",
+      "publication_date": "2025-01-27T00:00:00",
+      "offer_deadline": "2025-01-27T12:23:00",
+      "award_date": "2025-01-27T00:00:00",
+      "start_date": "2025-03-01T00:00:00",
+      "expected_end_date": "2030-02-28T00:00:00",
+      "cpv": [
+        "33190000"
+      ],
+      "participants": [
+        {
+          "name": "ZOLL MEDICAL ITALIA S.R.L.",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "03301251207",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B55BB8E397.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B55BB8E397.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B55BB8E397.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B55BB8E397.xml",
+      "raw_dates": {
+        "creation_date": "2025-01-27",
+        "publication_date": "2025-01-27",
+        "offer_deadline": "2025-01-27T12:23",
+        "award_date": "2025-01-27",
+        "start_date": "2025-03-01",
+        "expected_end_date": "2030-02-28"
+      },
+      "raw_amounts": {
+        "tender_amount": "319800",
+        "lot_amount": "319800",
+        "award_amount": "319800"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B5F0937C10",
+      "title": "CONTRATTO APPLICATIVO SU ORDINE QUADRO N° 8820004336 - T_46450/2024 - TL-PROGETTAZIONE PER PREDISPOSIZIONE PRATICA AUTORIZZATIVACONDENSATORE AD ARIA CICLO COMBINATO TL800 - CENTRALE TURBIGO",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "IREN ENERGIA SPA",
+      "authority_city": "Torino",
+      "region": "Piemonte",
+      "province": "Milano",
+      "tender_location": "Torino",
+      "tender_amount": "188700",
+      "lot_amount": "188700",
+      "award_amount": "188700",
+      "creation_date": "2025-03-06T00:00:00",
+      "publication_date": "2025-03-06T00:00:00",
+      "offer_deadline": "2025-03-06T16:58:00",
+      "award_date": "2025-03-06T00:00:00",
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "71330000-0 — VARI SERVIZI DI INGEGNERIA"
+      ],
+      "participants": [
+        {
+          "name": "INCICO S.P.A.",
+          "role": "MANDATARIA",
+          "subject_type": "IMPRESA",
+          "tax_code": "00296780299",
+          "winner": false
+        },
+        {
+          "name": "AMBIENTE S.P.A.",
+          "role": "MANDANTE",
+          "subject_type": "IMPRESA",
+          "tax_code": "00262540453",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B5F0937C10.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B5F0937C10.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B5F0937C10.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B5F0937C10.xml",
+      "raw_dates": {
+        "creation_date": "2025-03-06",
+        "publication_date": "2025-03-06",
+        "offer_deadline": "2025-03-06T16:58",
+        "award_date": "2025-03-06",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "188700",
+        "lot_amount": "188700",
+        "award_amount": "188700"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B5F77EC7CD",
+      "title": "RECORDATI RARE DISEASES ITALY SRL - LOTTO 9",
+      "contract_type": "FORNITURE",
+      "status": "ATTIVO",
+      "contracting_authority": "AZIENDA UNITA SANITARIA LOCALE LATINA",
+      "authority_city": "Latina",
+      "region": "Lazio",
+      "province": "Latina",
+      "tender_location": "Latina",
+      "tender_amount": "137493.9",
+      "lot_amount": "137493.9",
+      "award_amount": "137493.9",
+      "creation_date": "2025-03-10T00:00:00",
+      "publication_date": "2025-03-10T00:00:00",
+      "offer_deadline": "2025-03-10T11:33:00",
+      "award_date": "2025-03-10T00:00:00",
+      "start_date": null,
+      "expected_end_date": "2027-11-11T00:00:00",
+      "cpv": [
+        "33690000"
+      ],
+      "participants": [
+        {
+          "name": "RECORDATI RARE DISEASES ITALY S.R.L.",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "12736110151",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B5F77EC7CD.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B5F77EC7CD.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B5F77EC7CD.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B5F77EC7CD.xml",
+      "raw_dates": {
+        "creation_date": "2025-03-10",
+        "publication_date": "2025-03-10",
+        "offer_deadline": "2025-03-10T11:33",
+        "award_date": "2025-03-10",
+        "start_date": "",
+        "expected_end_date": "2027-11-11"
+      },
+      "raw_amounts": {
+        "tender_amount": "137493.9",
+        "lot_amount": "137493.9",
+        "award_amount": "137493.9"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B5FDE25326",
+      "title": "BUONI PASTO 10",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "COMUNE DI SPOLETO",
+      "authority_city": "Spoleto",
+      "region": "Umbria",
+      "province": "Perugia",
+      "tender_location": "Perugia",
+      "tender_amount": "96150",
+      "lot_amount": "96150",
+      "award_amount": "96150",
+      "creation_date": "2025-03-11T00:00:00",
+      "publication_date": "2025-03-11T00:00:00",
+      "offer_deadline": "2025-03-11T12:41:00",
+      "award_date": "2025-03-17T00:00:00",
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "30199770-8 — BUONI PASTO"
+      ],
+      "participants": [
+        {
+          "name": "PLUXEE ITALIA SRL",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "05892970152",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B5FDE25326.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B5FDE25326.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B5FDE25326.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B5FDE25326.xml",
+      "raw_dates": {
+        "creation_date": "2025-03-11",
+        "publication_date": "2025-03-11",
+        "offer_deadline": "2025-03-11T12:41",
+        "award_date": "2025-03-17",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "96150",
+        "lot_amount": "96150",
+        "award_amount": "96150"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B6646262E7",
+      "title": "ACQUISIZIONE DELLE ATTIVITÀ INGEGNERISTICHE E TECNOLOGICHE PER L'IMPRESCINDIBILE ADEGUAMENTO, IN OTTICA DI SECURITY, DEI VOICE COMMUNICATION SYSTEMS DI EMERGENZA, PRESENTI NEGLI AEROPORTI DI MILANO LINATE, BOLOGNA, GENOVA, TORINO E FIUMICINO, CHE SONO STATI FORNITI E MESSI IN ESERCIZIO, PER ENAV, DA PARTE DELLA SOCIETÀ FREQUENTIS",
+      "contract_type": "FORNITURE",
+      "status": "ATTIVO",
+      "contracting_authority": "ENAV S.P.A.",
+      "authority_city": "Roma",
+      "region": "Lazio",
+      "province": "Roma",
+      "tender_location": "Roma",
+      "tender_amount": "400000",
+      "lot_amount": "400000",
+      "award_amount": null,
+      "creation_date": "2025-04-07T00:00:00",
+      "publication_date": "2025-04-07T00:00:00",
+      "offer_deadline": "2025-04-28T12:00:00",
+      "award_date": null,
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "32573000-0 — SISTEMA DI CONTROLLO PER COMUNICAZIONI"
+      ],
+      "participants": [],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B6646262E7.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B6646262E7.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B6646262E7.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B6646262E7.xml",
+      "raw_dates": {
+        "creation_date": "2025-04-07",
+        "publication_date": "2025-04-07",
+        "offer_deadline": "2025-04-28T12:00",
+        "award_date": "",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "400000",
+        "lot_amount": "400000",
+        "award_amount": ""
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B675CE0615",
+      "title": "AFFIDAMENTO IN-HOUSE AI SENSI DELL'ART. 7 D.LGS. 36/2023 A INNEXTA S.C.R.L. DEL SERVIZIODI FINANZIA LA TUA IMPRESA ANNO 2025",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "CAMERA DI COMMERCIO DI MILANO MONZA BRIANZA LODI",
+      "authority_city": "Milano",
+      "region": "Lombardia",
+      "province": "Milano",
+      "tender_location": "Milano",
+      "tender_amount": "75000",
+      "lot_amount": "75000",
+      "award_amount": "75000",
+      "creation_date": "2025-04-11T00:00:00",
+      "publication_date": "2025-04-14T00:00:00",
+      "offer_deadline": "2025-04-11T11:32:00",
+      "award_date": "2025-04-10T00:00:00",
+      "start_date": "2025-01-01T00:00:00",
+      "expected_end_date": "2025-12-31T00:00:00",
+      "cpv": [
+        "79400000-8 — SERVIZI DI CONSULENZA COMMERCIALE E DI GESTIONE E SERVIZI CONNESSI"
+      ],
+      "participants": [
+        {
+          "name": "INNEXTA S.C.R.L.",
+          "role": "",
+          "subject_type": "STAZIONE APPALTANTE",
+          "tax_code": "08502090155",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B675CE0615.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B675CE0615.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B675CE0615.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B675CE0615.xml",
+      "raw_dates": {
+        "creation_date": "2025-04-11",
+        "publication_date": "2025-04-14",
+        "offer_deadline": "2025-04-11T11:32",
+        "award_date": "2025-04-10",
+        "start_date": "2025-01-01",
+        "expected_end_date": "2025-12-31"
+      },
+      "raw_amounts": {
+        "tender_amount": "75000",
+        "lot_amount": "75000",
+        "award_amount": "75000"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B6A106A32A",
+      "title": "EX PALAZZO COMUNALE_INTERVENTO DI EFFICIENTAMENTO ENERGETICO ATTRAVERSO FV CON ACCUMULO",
+      "contract_type": "FORNITURE",
+      "status": "ATTIVO",
+      "contracting_authority": "COMUNE DI S FRATELLO",
+      "authority_city": "San Fratello",
+      "region": "Sicilia",
+      "province": "Messina",
+      "tender_location": "Messina",
+      "tender_amount": "43800",
+      "lot_amount": "43800",
+      "award_amount": null,
+      "creation_date": "2025-04-28T00:00:00",
+      "publication_date": "2025-04-28T00:00:00",
+      "offer_deadline": "2025-05-08T07:30:00",
+      "award_date": null,
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "09331000-8 — PANNELLI SOLARI"
+      ],
+      "participants": [
+        {
+          "name": "RI.E.CA. ENERGIE SRL",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "03396010831",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B6A106A32A.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B6A106A32A.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B6A106A32A.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B6A106A32A.xml",
+      "raw_dates": {
+        "creation_date": "2025-04-28",
+        "publication_date": "2025-04-28",
+        "offer_deadline": "2025-05-08T07:30",
+        "award_date": "",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "43800",
+        "lot_amount": "43800",
+        "award_amount": ""
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B6DD95EE23",
+      "title": "PN VSF 15/25/SUA - CITTÀ DI FRASCATI (RM) - AFFIDAMENTO DEL SERVIZIO DI TRATTAMENTO E RECUPERO DEI RIFIUTI URBANI NON DIFFERENZIATI EER 20.03.01 SECCO RESIDUO, PRODOTTI DAL COMUNE DI FRASCATI.",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "COMUNE DI FRASCATI",
+      "authority_city": "Frascati",
+      "region": "Lazio",
+      "province": "Roma",
+      "tender_location": "Roma",
+      "tender_amount": "872727.27",
+      "lot_amount": "872727.27",
+      "award_amount": "872727.27",
+      "creation_date": "2025-05-14T00:00:00",
+      "publication_date": "2025-05-14T00:00:00",
+      "offer_deadline": "2025-05-29T07:00:00",
+      "award_date": "2025-06-24T00:00:00",
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "90513000"
+      ],
+      "participants": [
+        {
+          "name": "PORCARELLI GINO & CO. SOCIETA' A RESPONSABILITA' LIMITATA",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "03667491009",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B6DD95EE23.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B6DD95EE23.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B6DD95EE23.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B6DD95EE23.xml",
+      "raw_dates": {
+        "creation_date": "2025-05-14",
+        "publication_date": "2025-05-14",
+        "offer_deadline": "2025-05-29T07:00",
+        "award_date": "2025-06-24",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "872727.27",
+        "lot_amount": "872727.27",
+        "award_amount": "872727.27"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B74941928B",
+      "title": "FORNITURA DI ARREDI SANITARI ED ARREDI NON SANITARI PER LE NECESSITÀ DELLA FONDAZIONE PTV",
+      "contract_type": "FORNITURE",
+      "status": "ATTIVO",
+      "contracting_authority": "FONDAZIONE POLICLINICO TOR VERGATA",
+      "authority_city": "Roma",
+      "region": "Lazio",
+      "province": "Roma",
+      "tender_location": "Roma",
+      "tender_amount": "407775",
+      "lot_amount": "135100",
+      "award_amount": null,
+      "creation_date": "2025-06-16T00:00:00",
+      "publication_date": "2025-06-16T00:00:00",
+      "offer_deadline": "2025-07-17T13:00:00",
+      "award_date": null,
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "33192000-2 — MOBILI PER USO MEDICO"
+      ],
+      "participants": [],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B74941928B.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B74941928B.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B74941928B.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B74941928B.xml",
+      "raw_dates": {
+        "creation_date": "2025-06-16",
+        "publication_date": "2025-06-16",
+        "offer_deadline": "2025-07-17T13:00",
+        "award_date": "",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "407775",
+        "lot_amount": "135100",
+        "award_amount": ""
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B7B0353822",
+      "title": "AZIENDA OSPEDALIERO-UNIVERSITARIA SAN LUIGI GONZAGA,ORBASSANO (TO) - LAVORI DI REALIZZAZIONE DI UNA BIOBANCA DIRICERCA E SVILUPPO PER IL DIPARTIMENTO DI SCIENZE CLINICHE EBIOLOGICHE.",
+      "contract_type": "LAVORI",
+      "status": "ATTIVO",
+      "contracting_authority": "UNIVERSITA' DEGLI STUDI DI TORINO",
+      "authority_city": "Torino",
+      "region": "Piemonte",
+      "province": "Torino",
+      "tender_location": "Torino",
+      "tender_amount": "563554.34",
+      "lot_amount": "563554.34",
+      "award_amount": null,
+      "creation_date": "2025-07-17T00:00:00",
+      "publication_date": "2025-07-17T00:00:00",
+      "offer_deadline": "2025-08-27T12:00:00",
+      "award_date": null,
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "45300000-0 — LAVORI DI INSTALLAZIONE DI IMPIANTI IN EDIFICI"
+      ],
+      "participants": [
+        {
+          "name": "MEDIGAS ITALIA S.R.L.",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "02466440167",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B7B0353822.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B7B0353822.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B7B0353822.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B7B0353822.xml",
+      "raw_dates": {
+        "creation_date": "2025-07-17",
+        "publication_date": "2025-07-17",
+        "offer_deadline": "2025-08-27T12:00",
+        "award_date": "",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "563554.34",
+        "lot_amount": "563554.34",
+        "award_amount": ""
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B8297EE856",
+      "title": "RICHIESTA DI PREVENTIVO PER SERVIZI DI CYBERSECURITY PER IL COMUNE DI COLLEFERRO.",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "COMUNE DI COLLEFERRO",
+      "authority_city": "Colleferro",
+      "region": "Lazio",
+      "province": "Roma",
+      "tender_location": "Roma",
+      "tender_amount": "76500",
+      "lot_amount": "76500",
+      "award_amount": "76500",
+      "creation_date": "2025-09-08T00:00:00",
+      "publication_date": "2025-09-09T00:00:00",
+      "offer_deadline": "2025-09-08T15:42:00",
+      "award_date": "2025-09-29T00:00:00",
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "72210000-0 — SERVIZI DI PROGRAMMAZIONE DI PRODOTTI SOFTWARE IN PACCHETTI"
+      ],
+      "participants": [
+        {
+          "name": "ENGAGE S.P.A.",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "09554090960",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B8297EE856.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B8297EE856.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B8297EE856.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B8297EE856.xml",
+      "raw_dates": {
+        "creation_date": "2025-09-08",
+        "publication_date": "2025-09-09",
+        "offer_deadline": "2025-09-08T15:42",
+        "award_date": "2025-09-29",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "76500",
+        "lot_amount": "76500",
+        "award_amount": "76500"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B82A8FBA72",
+      "title": "AFFIDAMENTO DEL SERVIZIO DI TRASPORTO SCOLASTICO NEL TERRITORIO DEL COMUNE DI POGGIO TORRIANA (PER GLI ISTITUTI SCOLASTICI PRESENTI SUL TERRITORIO DI TORRIANA), PER ANNO SCOLASTICO 2025/2026",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "COMUNE DI POGGIO TORRIANA",
+      "authority_city": "Torriana",
+      "region": "Emilia-Romagna",
+      "province": "Rimini",
+      "tender_location": "",
+      "tender_amount": "60000",
+      "lot_amount": "60000",
+      "award_amount": "60000",
+      "creation_date": "2025-09-08T00:00:00",
+      "publication_date": "2025-09-09T00:00:00",
+      "offer_deadline": "2025-09-08T19:26:00",
+      "award_date": "2025-10-31T00:00:00",
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "60130000-8 — SERVIZI SPECIALI DI TRASPORTO PASSEGGERI SU STRADA"
+      ],
+      "participants": [
+        {
+          "name": "S.A.M. DI BIANCHINI BERNARDINO E C. S.N.C.",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "01315780401",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B82A8FBA72.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B82A8FBA72.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B82A8FBA72.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B82A8FBA72.xml",
+      "raw_dates": {
+        "creation_date": "2025-09-08",
+        "publication_date": "2025-09-09",
+        "offer_deadline": "2025-09-08T19:26",
+        "award_date": "2025-10-31",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "60000",
+        "lot_amount": "60000",
+        "award_amount": "60000"
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B82CB38B8D",
+      "title": "COLLOCAMENTO MINORI IN COMUNITA INNOCENTI LUGLIO - DICEMBRE 2025 - IMPORTO MERAMENTE PRESUNTO IN QUANTO DETERMINATO DA DISPOSIZIONI A.G. NON PREVENTIVAMENTE VALUTABILI",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "CENTRO GIUSTIZIA MINORILE CAMPANIA E MOLISE",
+      "authority_city": "Napoli",
+      "region": "Campania",
+      "province": "",
+      "tender_location": "Napoli",
+      "tender_amount": "80457.59",
+      "lot_amount": "80457.59",
+      "award_amount": null,
+      "creation_date": "2025-09-09T00:00:00",
+      "publication_date": "2025-09-09T00:00:00",
+      "offer_deadline": null,
+      "award_date": null,
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [],
+      "participants": [],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B82CB38B8D.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B82CB38B8D.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B82CB38B8D.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B82CB38B8D.xml",
+      "raw_dates": {
+        "creation_date": "2025-09-09",
+        "publication_date": "2025-09-09",
+        "offer_deadline": "",
+        "award_date": "",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "80457.59",
+        "lot_amount": "80457.59",
+        "award_amount": ""
+      },
+      "unparseable_dates": []
+    },
+    {
+      "cig": "B85DEBAAC9",
+      "title": "AOI 195 ADATTAMENTO E AMPLIAMENTO DELL'IMPIANTO DI EVACUAZIONE NEGLI OSPEDALI DI BRESSANONE E VIPITENO PROGETTAZIONE, DIREZIONE LAVORI E COORDINAMENTO DELLA SICUREZZA",
+      "contract_type": "SERVIZI",
+      "status": "ATTIVO",
+      "contracting_authority": "SANITAETSBETRIEB DER AUTONOMEN PROVINZ BOZEN",
+      "authority_city": "Bressanone",
+      "region": "Trentino-Alto Adige",
+      "province": "Bolzano",
+      "tender_location": "Bolzano/Bozen",
+      "tender_amount": "84236.15",
+      "lot_amount": "84236.15",
+      "award_amount": "84236.15",
+      "creation_date": "2025-09-24T00:00:00",
+      "publication_date": "2025-09-25T00:00:00",
+      "offer_deadline": "2025-09-24T14:19:00",
+      "award_date": "2025-09-24T00:00:00",
+      "start_date": null,
+      "expected_end_date": null,
+      "cpv": [
+        "71300000-1 — SERVIZI DI INGEGNERIA"
+      ],
+      "participants": [
+        {
+          "name": "BUEROGEMEINSCHAFT VON LUTZ MEINHARD, ANDREAS UND ALEXA",
+          "role": "OPERATORE ECONOMICO MONOSOGGETTIVO",
+          "subject_type": "IMPRESA",
+          "tax_code": "02695690210",
+          "winner": false
+        }
+      ],
+      "sources": [
+        {
+          "kind": "csv",
+          "mime_type": "text/csv",
+          "path": "fonti_originali/csv/20260510_125151.csv",
+          "description": "Riga del CSV esportato dal cruscotto ANAC"
+        },
+        {
+          "kind": "html",
+          "mime_type": "text/html",
+          "path": "fonti_originali/html/dati-cig-B85DEBAAC9.html",
+          "description": "Fonte originale HTML del CIG"
+        },
+        {
+          "kind": "json",
+          "mime_type": "application/json",
+          "path": "fonti_originali/json/CIG_B85DEBAAC9.json",
+          "description": "Fonte originale JSON del CIG"
+        },
+        {
+          "kind": "pdf",
+          "mime_type": "application/pdf",
+          "path": "fonti_originali/pdf/CIG_B85DEBAAC9.pdf",
+          "description": "Fonte originale PDF del CIG"
+        }
+      ],
+      "xml_valid": true,
+      "xml_filename": "CIG_B85DEBAAC9.xml",
+      "raw_dates": {
+        "creation_date": "2025-09-24",
+        "publication_date": "2025-09-25",
+        "offer_deadline": "2025-09-24T14:19",
+        "award_date": "2025-09-24",
+        "start_date": "",
+        "expected_end_date": ""
+      },
+      "raw_amounts": {
+        "tender_amount": "84236.15",
+        "lot_amount": "84236.15",
+        "award_amount": "84236.15"
+      },
+      "unparseable_dates": []
+    }
+  ],
+  "methodology_notes": {
+    "sample": "Il campione coincide con i documenti inclusi nel progetto e non è rappresentativo dell'intero sistema degli appalti pubblici.",
+    "dates": "Le incongruenze sono segnalate senza attribuirle automaticamente a errori della fonte: alcune date possono riferirsi a eventi o pubblicazioni successive alla procedura effettiva.",
+    "amounts": "Le differenze tra importo iniziale e importo di aggiudicazione sono descrittive e non sono denominate automaticamente ribassi."
+  }
+}

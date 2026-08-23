@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Archivio statico e analisi dei CIG ANAC inclusi nel progetto universitario.">
+  <title>{% block title %}Archivio CIG ANAC{% endblock %}</title>
+  <link rel="stylesheet" href="{{ base }}assets/css/app.css">
+  <script defer src="{{ base }}assets/js/app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Salta al contenuto</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ base }}index.html" aria-label="Archivio CIG ANAC, pagina iniziale">
+      <span class="brand-mark" aria-hidden="true">CIG</span>
+      <span>Archivio XML ANAC</span>
+    </a>
+    <nav aria-label="Navigazione principale">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <ul id="main-nav" class="main-nav">
+        <li><a href="{{ base }}index.html">Home</a></li>
+        <li><a href="{{ base }}archivio.html">Archivio</a></li>
+        <li><a href="{{ base }}report.html">Report</a></li>
+        <li><a href="{{ base }}metodologia.html">Metodologia</a></li>
+        <li><a href="{{ base }}qualita-dati.html">Qualità dei dati</a></li>
+        {% if report_available %}<li><a href="{{ base }}downloads/report/report_progetto.pdf">PDF</a></li>{% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenuto">
+  {% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p><strong>Fonte:</strong> documenti ANAC inclusi nel progetto. Il campione non rappresenta necessariamente la totalità dei contratti pubblici.</p>
+    <p>Generazione: {{ generated_at }} · {{ record_count }} CIG elaborati.</p>
+  </div>
+</footer>
+</body>
+</html>

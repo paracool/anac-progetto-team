@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B6646262E7" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B6646262E7.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B6646262E7.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B6646262E7.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>501-3023</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>ACQUISIZIONE DELLE ATTIVITÀ INGEGNERISTICHE E TECNOLOGICHE PER L'IMPRESCINDIBILE ADEGUAMENTO, IN OTTICA DI SECURITY, DEI VOICE COMMUNICATION SYSTEMS DI EMERGENZA, PRESENTI NEGLI AEROPORTI DI MILANO LINATE, BOLOGNA, GENOVA, TORINO E FIUMICINO, CHE SONO STATI FORNITI E MESSI IN ESERCIZIO, PER ENAV, DA PARTE DELLA SOCIETÀ FREQUENTIS</oggettoGara>
+    <oggettoLotto>ACQUISIZIONE DELLE ATTIVITÀ INGEGNERISTICHE E TECNOLOGICHE PER L'IMPRESCINDIBILE ADEGUAMENTO, IN OTTICA DI SECURITY, DEI VOICE COMMUNICATION SYSTEMS DI EMERGENZA, PRESENTI NEGLI AEROPORTI DI MILANO LINATE, BOLOGNA, GENOVA, TORINO E FIUMICINO, CHE SONO STATI FORNITI E MESSI IN ESERCIZIO, PER ENAV, DA PARTE DELLA SOCIETÀ FREQUENTIS</oggettoLotto>
+    <importoGara valuta="EUR">400000</importoGara>
+    <importoLotto valuta="EUR">400000</importoLotto>
+    <provincia>ROMA</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>FORNITURE</oggettoPrincipaleContratto>
+    <tipologiaContratto>FORNITURE</tipologiaContratto>
+    <localizzazione>Roma</localizzazione>
+    <scadenzaOfferte>2025-04-28T12:00</scadenzaOfferte>
+    <dataAggiudicazione/>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>97016000586</codiceFiscale>
+    <denominazione>ENAV S.P.A.</denominazione>
+    <centroCosto>ACQUISTI</centroCosto>
+    <citta>ROMA</citta>
+    <regione>LAZIO</regione>
+    <indirizzo>VIA SALARIA</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>PIER PAOLO</nome>
+      <cognome>RAVAGLI</cognome>
+      <codiceFiscale>RVGPPL78R13H501E</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-04-07</dataCreazione>
+    <dataPubblicazione>2025-04-07</dataPubblicazione>
+  </pubblicazioni>
+  <categorieOpera>
+    <categoriaOpera tipo="SCORPORABILE">
+      <idCategoria>FB</idCategoria>
+      <descrizione>FORNITURA DI BENI</descrizione>
+    </categoriaOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>FB</idCategoria>
+      <descrizione>FORNITURA DI BENI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>32573000-0</codice>
+      <descrizione>SISTEMA DI CONTROLLO PER COMUNICAZIONI</descrizione>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>forniture</tipologia> avente per oggetto <oggetto>ACQUISIZIONE DELLE ATTIVITÀ INGEGNERISTICHE E TECNOLOGICHE PER L'IMPRESCINDIBILE ADEGUAMENTO, IN OTTICA DI SECURITY, DEI VOICE COMMUNICATION SYSTEMS DI EMERGENZA, PRESENTI NEGLI AEROPORTI DI MILANO LINATE, BOLOGNA, GENOVA, TORINO E FIUMICINO, CHE SONO STATI FORNITI E MESSI IN ESERCIZIO, PER ENAV, DA PARTE DELLA SOCIETÀ FREQUENTIS</oggetto>. <termine>sistema di controllo per comunicazioni</termine>. <categoria>fornitura di beni</categoria>. <luogo>Roma</luogo>.</descrizioneDocumentale>
+</contratto>

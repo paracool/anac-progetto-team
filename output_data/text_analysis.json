@@ -1,0 +1,126 @@
+{
+  "documents": 15,
+  "tokens": 278,
+  "top_terms": [
+    {
+      "term": "servizi",
+      "count": 22
+    },
+    {
+      "term": "oggetto",
+      "count": 15
+    },
+    {
+      "term": "fornitura",
+      "count": 12
+    },
+    {
+      "term": "lavori",
+      "count": 6
+    },
+    {
+      "term": "forniture",
+      "count": 5
+    },
+    {
+      "term": "beni",
+      "count": 5
+    },
+    {
+      "term": "2025",
+      "count": 4
+    },
+    {
+      "term": "roma",
+      "count": 4
+    },
+    {
+      "term": "torino",
+      "count": 3
+    },
+    {
+      "term": "manutenzione",
+      "count": 2
+    },
+    {
+      "term": "strada",
+      "count": 2
+    },
+    {
+      "term": "impianto",
+      "count": 2
+    },
+    {
+      "term": "grosseto",
+      "count": 2
+    },
+    {
+      "term": "2024",
+      "count": 2
+    },
+    {
+      "term": "progettazione",
+      "count": 2
+    },
+    {
+      "term": "ingegneria",
+      "count": 2
+    },
+    {
+      "term": "lotto",
+      "count": 2
+    },
+    {
+      "term": "buoni",
+      "count": 2
+    },
+    {
+      "term": "pasto",
+      "count": 2
+    },
+    {
+      "term": "negli",
+      "count": 2
+    },
+    {
+      "term": "milano",
+      "count": 2
+    },
+    {
+      "term": "affidamento",
+      "count": 2
+    },
+    {
+      "term": "dell",
+      "count": 2
+    },
+    {
+      "term": "edifici",
+      "count": 2
+    },
+    {
+      "term": "trasporto",
+      "count": 2
+    },
+    {
+      "term": "non",
+      "count": 2
+    },
+    {
+      "term": "straordinaria",
+      "count": 1
+    },
+    {
+      "term": "bianca",
+      "count": 1
+    },
+    {
+      "term": "accesso",
+      "count": 1
+    },
+    {
+      "term": "trattamento",
+      "count": 1
+    }
+  ]
+}

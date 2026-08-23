@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contratto cig="B675CE0615" fonte="ANAC">
+  <fonti>
+    <fonte tipo="csv" formato="text/csv" percorso="fonti_originali/csv/20260510_125151.csv">Riga del CSV esportato dal cruscotto ANAC</fonte>
+    <fonte tipo="html" formato="text/html" percorso="fonti_originali/html/dati-cig-B675CE0615.html">Fonte originale HTML del CIG</fonte>
+    <fonte tipo="json" formato="application/json" percorso="fonti_originali/json/CIG_B675CE0615.json">Fonte originale JSON del CIG</fonte>
+    <fonte tipo="pdf" formato="application/pdf" percorso="fonti_originali/pdf/CIG_B675CE0615.pdf">Fonte originale PDF del CIG</fonte>
+  </fonti>
+  <informazioniGara>
+    <numeroGara>tender://milomb_camcom/id/1431</numeroGara>
+    <tipoCig>ORDINARIO</tipoCig>
+    <stato>ATTIVO</stato>
+    <oggettoGara>AFFIDAMENTO IN-HOUSE AI SENSI DELL'ART. 7 D.LGS. 36/2023 A INNEXTA S.C.R.L. DEL SERVIZIODI FINANZIA LA TUA IMPRESA ANNO 2025</oggettoGara>
+    <oggettoLotto>AFFIDAMENTO IN-HOUSE AI SENSI DELL'ART. 7 D.LGS. 36/2023 A INNEXTA S.C.R.L. DEL SERVIZIODI FINANZIA LA TUA IMPRESA ANNO 2025</oggettoLotto>
+    <importoGara valuta="EUR">75000</importoGara>
+    <importoLotto valuta="EUR">75000</importoLotto>
+    <provincia>MILANO</provincia>
+    <settore>SETTORI ORDINARI</settore>
+    <cup/>
+    <oggettoPrincipaleContratto>SERVIZI</oggettoPrincipaleContratto>
+    <tipologiaContratto>SERVIZI</tipologiaContratto>
+    <localizzazione>Milano</localizzazione>
+    <scadenzaOfferte>2025-04-11T11:32</scadenzaOfferte>
+    <dataAggiudicazione>2025-04-10</dataAggiudicazione>
+  </informazioniGara>
+  <stazioneAppaltante>
+    <codiceFiscale>09920840965</codiceFiscale>
+    <denominazione>CAMERA DI COMMERCIO DI MILANO MONZA BRIANZA LODI</denominazione>
+    <centroCosto>AREA TUTELA DEL MERCATO E AMBIENTE</centroCosto>
+    <citta>MILANO</citta>
+    <regione>LOMBARDIA</regione>
+    <indirizzo>VIA MERAVIGLI 9/B</indirizzo>
+  </stazioneAppaltante>
+  <incaricati>
+    <incaricato ruolo="RESPONSABILE UNICO DEL PROCEDIMENTO">
+      <nome>MONICA</nome>
+      <cognome>MAURI</cognome>
+      <codiceFiscale>MRAMNC66T62F205J</codiceFiscale>
+    </incaricato>
+  </incaricati>
+  <pubblicazioni>
+    <dataCreazione>2025-04-11</dataCreazione>
+    <dataPubblicazione>2025-04-14</dataPubblicazione>
+  </pubblicazioni>
+  <partecipanti>
+    <partecipante aggiudicatario="20605946">
+      <denominazione>INNEXTA S.C.R.L.</denominazione>
+      <tipoSoggetto>STAZIONE APPALTANTE</tipoSoggetto>
+      <codiceFiscale>08502090155</codiceFiscale>
+      <ruolo/>
+    </partecipante>
+  </partecipanti>
+  <aggiudicazione>
+    <aggiudicatario>
+      <denominazione/>
+      <codiceFiscale/>
+      <importoAggiudicazione valuta="EUR">75000</importoAggiudicazione>
+    </aggiudicatario>
+  </aggiudicazione>
+  <contrattoEsecuzione>
+    <dataAvvio>2025-01-01</dataAvvio>
+    <dataFinePrevista>2025-12-31</dataFinePrevista>
+  </contrattoEsecuzione>
+  <quadroEconomico>
+    <voceEconomica nome="IMPORTO_SERVIZI" valuta="EUR">75000</voceEconomica>
+    <voceEconomica nome="SOMME_A_DISPOSIZIONE" valuta="EUR">35</voceEconomica>
+  </quadroEconomico>
+  <categorieOpera>
+    <categoriaOpera tipo="PREVALENTE">
+      <idCategoria>FS</idCategoria>
+      <descrizione>FORNITURA DI SERVIZI</descrizione>
+    </categoriaOpera>
+  </categorieOpera>
+  <cpv>
+    <voceCpv tipo="Prevalente">
+      <codice>79400000-8</codice>
+      <descrizione>SERVIZI DI CONSULENZA COMMERCIALE E DI GESTIONE E SERVIZI CONNESSI</descrizione>
+    </voceCpv>
+  </cpv>
+  <descrizioneDocumentale>Procedura relativa a <tipologia>servizi</tipologia> avente per oggetto <oggetto>AFFIDAMENTO IN-HOUSE AI SENSI DELL'ART. 7 D.LGS. 36/2023 A INNEXTA S.C.R.L. DEL SERVIZIODI FINANZIA LA TUA IMPRESA ANNO 2025</oggetto>. <termine>servizi di consulenza commerciale e di gestione e servizi connessi</termine>. <categoria>fornitura di servizi</categoria>. <luogo>Milano</luogo>.</descrizioneDocumentale>
+</contratto>
